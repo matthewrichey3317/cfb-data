@@ -1,0 +1,1 @@
+- [GitHub authorization verification](github-authorization.md) — verify authenticated provider access before publishing; a connected card has not guaranteed CLI credentials here.
