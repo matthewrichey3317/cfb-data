@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CFBD Data Collector"
+description = "A small backend data collector for historical FBS games, betting lines and drives from 2015 through 2026, with CSV exports and a simple job status page."
+version = "1.0.0"
+id = "artifacts/cfbd-collector"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22387
+
+[services.development]
+run = "pnpm --filter @workspace/cfbd-collector run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/cfbd-collector", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/cfbd-collector/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22387"
+BASE_PATH = "/"

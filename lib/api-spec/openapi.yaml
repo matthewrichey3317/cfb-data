@@ -11,6 +11,36 @@ tags:
   - name: health
     description: Health operations
 paths:
+  /collector/status:
+    get:
+      operationId: getCollectorStatus
+      responses:
+        "200":
+          description: Manifest and active job
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectorStatus"
+  /collector/pull:
+    post:
+      operationId: startHistoricalPull
+      responses:
+        "202":
+          description: Started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectorJob"
+  /collector/refresh:
+    post:
+      operationId: refreshCurrentSeason
+      responses:
+        "202":
+          description: Started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectorJob"
   /healthz:
     get:
       operationId: healthCheck
@@ -26,6 +56,42 @@ paths:
                 $ref: "#/components/schemas/HealthStatus"
 components:
   schemas:
+    CollectorFile:
+      type: object
+      required: [file, season, type, rowCount, pulledAt, bytes, warnings]
+      properties:
+        file: { type: string }
+        season: { type: integer }
+        type: { type: string, enum: [games, lines, drives] }
+        rowCount: { type: integer }
+        pulledAt: { type: string }
+        bytes: { type: integer }
+        warnings: { type: array, items: { type: string } }
+    CollectorJob:
+      type: object
+      required: [state, mode, message, completedFiles, totalFiles, calls, skippedFiles, startedAt, finishedAt, error]
+      properties:
+        state: { type: string, enum: [idle, running, completed, failed] }
+        mode: { type: string }
+        message: { type: string }
+        completedFiles: { type: integer }
+        totalFiles: { type: integer }
+        calls: { type: integer }
+        skippedFiles: { type: integer }
+        startedAt: { type: [string, "null"] }
+        finishedAt: { type: [string, "null"] }
+        error: { type: [string, "null"] }
+    CollectorStatus:
+      type: object
+      required: [files, job, keyConfigured, currentSeason, expectedFiles]
+      properties:
+        files:
+          type: array
+          items: { $ref: "#/components/schemas/CollectorFile" }
+        job: { $ref: "#/components/schemas/CollectorJob" }
+        keyConfigured: { type: boolean }
+        currentSeason: { type: integer }
+        expectedFiles: { type: integer }
     HealthStatus:
       type: object
       properties:
