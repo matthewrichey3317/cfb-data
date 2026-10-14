@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { logger } from "./logger";
 import { parseCsv, toCsv, type Row } from "./collector-csv";
+import { buildCompactExport } from "./compact-export";
 
 // Both src/lib/collector.ts and bundled dist/index.mjs resolve to this package.
 const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist")
@@ -185,7 +186,10 @@ async function run(mode: "historical" | "refresh") {
         await saveJob();
       }
     }
-    job.state = "completed"; job.message = "Collection complete";
+    job.message = "Building compact export";
+    await saveJob();
+    await buildCompactExport(dataDir, path.resolve(dataDir, "../export"), seasons);
+    job.state = "completed"; job.message = "Collection and compact export complete";
   } catch (e) {
     job.state = "failed"; job.error = e instanceof Error ? e.message : "Collection failed";
     job.message = "Collection stopped; saved CSVs are intact";

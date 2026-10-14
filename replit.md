@@ -11,6 +11,9 @@ A backend collection tool for analysts: download historical FBS games, betting l
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required Secret: `CFBD_API_KEY` — read only by the backend. Never put its value in code, files, logs, or frontend variables.
+- `pnpm --filter @workspace/api-server run export:compact` — rebuild all compact parts from local raw CSVs; no API calls
+- `pnpm --filter @workspace/api-server run export:compact 2026` — rebuild just 2026 compact parts
+- `pnpm --filter @workspace/api-server run test:compact` — compact aggregation/splitting regression checks
 
 ## Stack
 
@@ -29,6 +32,7 @@ A backend collection tool for analysts: download historical FBS games, betting l
 - `artifacts/cfbd-collector/src/pages/home.tsx` — status page
 - `lib/api-spec/openapi.yaml` — HTTP contract; regenerate clients after changes
 - `data/*.csv` — analysis inputs; `data/manifest.json` — file metadata; `data/job.json` — last job status
+- `export/games_compact_<season>_part<n>.csv` — compact game-level inputs under 90,000 bytes each; `export/index.json` — part metadata
 
 ## Architecture decisions
 
@@ -43,9 +47,15 @@ Collect seasons 2015 through 2026 inclusive, regular plus postseason. Full pull 
 
 Use the status page buttons, or send `POST /api/collector/pull` and `POST /api/collector/refresh`. Query `GET /api/collector/status`. To explicitly refresh a historical season, move its three CSVs out of `data` and run the full pull; other existing years are skipped.
 
+After a successful raw pull, build compact exports for its seasons. Refresh 2026 replaces only 2026 raw CSVs and compact parts, updating the shared export index while preserving other seasons. Export-only CLI commands never call CFBD.
+
+Compact columns use UTC kickoff times, 1/0 flags, blank missing data, one-decimal rounded numbers (without unnecessary trailing .0), closing/opening total medians and home-perspective closing spread median. `total_providers` counts distinct providers with a nonblank closing total. Offense statistics are summed per drive using `isHomeOffense`. Touchdown counts include offensive TD results with at least six points of offense-score gain, not defensive return TDs; field goals are successful FG results. Offensive drive points are the exact sum of end-minus-start offense score. Rows are sorted by numeric week within each season; keep whole weeks per part when possible, splitting oversized weeks when necessary. CSV quotes are used only if required for valid CSV.
+
 ## User preferences
 
 Keep the UI simple. This is a backend data job. The pinned current-season refresh is 2026, not the system's automatically advancing year.
+
+The analysis reader accepts text files only below about 100 KB; compact exports must stay strictly under 90,000 bytes including headers. Use the top-level `export` folder for these analysis inputs.
 
 ## Gotchas
 
