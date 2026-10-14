@@ -1,0 +1,211 @@
+{
+  "files": [
+    {
+      "file": "games_compact_2015_part1.csv",
+      "season": 2015,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 612,
+      "bytes": 87855
+    },
+    {
+      "file": "games_compact_2015_part2.csv",
+      "season": 2015,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 258,
+      "bytes": 37446
+    },
+    {
+      "file": "games_compact_2016_part1.csv",
+      "season": 2016,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 610,
+      "bytes": 87585
+    },
+    {
+      "file": "games_compact_2016_part2.csv",
+      "season": 2016,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 263,
+      "bytes": 38153
+    },
+    {
+      "file": "games_compact_2017_part1.csv",
+      "season": 2017,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 609,
+      "bytes": 87438
+    },
+    {
+      "file": "games_compact_2017_part2.csv",
+      "season": 2017,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 265,
+      "bytes": 38576
+    },
+    {
+      "file": "games_compact_2018_part1.csv",
+      "season": 2018,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 613,
+      "bytes": 88587
+    },
+    {
+      "file": "games_compact_2018_part2.csv",
+      "season": 2018,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 271,
+      "bytes": 39575
+    },
+    {
+      "file": "games_compact_2019_part1.csv",
+      "season": 2019,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 598,
+      "bytes": 86620
+    },
+    {
+      "file": "games_compact_2019_part2.csv",
+      "season": 2019,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 290,
+      "bytes": 42171
+    },
+    {
+      "file": "games_compact_2020_part1.csv",
+      "season": 2020,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 16,
+      "rowCount": 568,
+      "bytes": 81904
+    },
+    {
+      "file": "games_compact_2021_part1.csv",
+      "season": 2021,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 8,
+      "rowCount": 567,
+      "bytes": 83642
+    },
+    {
+      "file": "games_compact_2021_part2.csv",
+      "season": 2021,
+      "part": 2,
+      "firstWeek": 9,
+      "lastWeek": 15,
+      "rowCount": 320,
+      "bytes": 47604
+    },
+    {
+      "file": "games_compact_2022_part1.csv",
+      "season": 2022,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 8,
+      "rowCount": 582,
+      "bytes": 85674
+    },
+    {
+      "file": "games_compact_2022_part2.csv",
+      "season": 2022,
+      "part": 2,
+      "firstWeek": 9,
+      "lastWeek": 15,
+      "rowCount": 314,
+      "bytes": 46563
+    },
+    {
+      "file": "games_compact_2023_part1.csv",
+      "season": 2023,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 8,
+      "rowCount": 582,
+      "bytes": 85865
+    },
+    {
+      "file": "games_compact_2023_part2.csv",
+      "season": 2023,
+      "part": 2,
+      "firstWeek": 9,
+      "lastWeek": 15,
+      "rowCount": 328,
+      "bytes": 48701
+    },
+    {
+      "file": "games_compact_2024_part1.csv",
+      "season": 2024,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 8,
+      "rowCount": 567,
+      "bytes": 83751
+    },
+    {
+      "file": "games_compact_2024_part2.csv",
+      "season": 2024,
+      "part": 2,
+      "firstWeek": 9,
+      "lastWeek": 16,
+      "rowCount": 353,
+      "bytes": 52670
+    },
+    {
+      "file": "games_compact_2025_part1.csv",
+      "season": 2025,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 8,
+      "rowCount": 577,
+      "bytes": 85767
+    },
+    {
+      "file": "games_compact_2025_part2.csv",
+      "season": 2025,
+      "part": 2,
+      "firstWeek": 9,
+      "lastWeek": 16,
+      "rowCount": 357,
+      "bytes": 53362
+    },
+    {
+      "file": "games_compact_2026_part1.csv",
+      "season": 2026,
+      "part": 1,
+      "firstWeek": 1,
+      "lastWeek": 9,
+      "rowCount": 622,
+      "bytes": 86677
+    },
+    {
+      "file": "games_compact_2026_part2.csv",
+      "season": 2026,
+      "part": 2,
+      "firstWeek": 10,
+      "lastWeek": 15,
+      "rowCount": 266,
+      "bytes": 30318
+    }
+  ]
+}

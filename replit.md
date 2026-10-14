@@ -39,7 +39,7 @@ A backend collection tool for analysts: download historical FBS games, betting l
 - The user explicitly requires plain CSV files in the top-level `data` folder for another analysis tool, not database records or object-storage-only exports.
 - Collect whole seasons only: never add per-week/per-game API calls. A fresh historical run needs 72 calls, excluding retries; a 2026 refresh needs 6.
 - CFBD `/lines` lacks classification filtering; match lines to game IDs from the FBS games CSV. FBS includes games involving either FBS team, including FCS opponents.
-- Files are excluded from Git and published images to avoid committing large generated data. Keep the workspace data directory; publishing is not a way to transfer collected files.
+- The user explicitly requested public GitHub publication of raw CSVs, the raw manifest, compact parts, and the export index alongside app code. These analysis files are intentionally no longer Git-ignored. Runtime job state, partial downloads, environment files, dependencies, and build output remain ignored. Data folders remain excluded from app deployment images.
 
 ## Product
 

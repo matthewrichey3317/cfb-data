@@ -1,0 +1,611 @@
+game_id,season,week,season_type,kickoff_utc,completed,neutral_site,conference_game,home_team,away_team,home_conference,away_conference,home_points,away_points,ou_close,ou_open,spread_close,total_providers,home_drives,home_plays,home_yards,home_td,home_fg,home_drive_points,away_drives,away_plays,away_yards,away_td,away_fg,away_drive_points
+400876038,2016,1,postseason,2016-12-17T19:00:00Z,1,1,0,UTSA,New Mexico,Conference USA,Mountain West,20,23,54,,9,2,8,66,354,2,2,20,9,59,311,3,0,23
+400876039,2016,1,postseason,2016-12-17T20:30:00Z,1,1,0,San Diego State,Houston,Mountain West,American Athletic,34,10,50.8,,4.5,2,13,53,255,2,2,20,14,76,254,1,1,10
+400876040,2016,1,postseason,2016-12-17T22:30:00Z,1,1,0,Toledo,App State,Mid-American,Sun Belt,28,31,60,,1,2,13,55,355,4,0,28,13,83,449,3,1,24
+400903611,2016,1,postseason,2016-12-17T22:30:00Z,1,0,0,UCF,Arkansas State,American Athletic,Sun Belt,13,31,51,,4,2,19,80,263,1,2,13,19,64,215,3,0,24
+400876041,2016,1,postseason,2016-12-18T02:00:00Z,1,1,0,Louisiana,Southern Miss,Sun Belt,Conference USA,21,28,56.5,,5.5,2,12,69,283,3,0,21,13,75,456,4,0,28
+400876042,2016,1,postseason,2016-12-19T19:30:00Z,1,1,0,Tulsa,Central Michigan,American Athletic,Mid-American,55,10,67.5,,-13,2,10,87,576,6,2,48,13,73,350,1,1,10
+400876043,2016,1,postseason,2016-12-21T00:00:00Z,1,1,0,Western Kentucky,Memphis,Conference USA,American Athletic,51,31,78.5,,-6.5,2,14,80,606,7,1,51,13,82,536,4,1,31
+400876044,2016,1,postseason,2016-12-22T02:00:00Z,1,1,0,Wyoming,BYU,Mountain West,FBS Independents,21,24,56.5,,9.5,2,12,80,382,3,0,21,13,51,317,3,1,24
+400876045,2016,1,postseason,2016-12-23T00:00:00Z,1,1,0,Colorado State,Idaho,Mountain West,Sun Belt,50,61,64.8,,-16,2,17,66,628,7,0,50,17,82,607,9,0,61
+400876046,2016,1,postseason,2016-12-23T18:00:00Z,1,1,0,Old Dominion,Eastern Michigan,Conference USA,Mid-American,24,20,63,,-5,2,10,60,399,3,1,24,10,87,530,2,2,20
+400876047,2016,1,postseason,2016-12-23T21:30:00Z,1,1,0,Navy,Louisiana Tech,American Athletic,Conference USA,45,48,67,,7.5,2,11,62,489,6,1,45,11,75,554,6,1,48
+400876048,2016,1,postseason,2016-12-24T01:00:00Z,1,1,0,Troy,Ohio,Sun Belt,Mid-American,28,23,49.5,,-6,2,15,73,340,3,0,21,15,81,453,2,3,23
+400876049,2016,1,postseason,2016-12-25T01:00:00Z,1,1,0,Middle Tennessee,Hawai'i,Conference USA,Mountain West,35,52,70,,-7.5,2,14,74,542,5,0,35,13,73,477,5,1,38
+400876090,2016,1,postseason,2016-12-26T16:00:00Z,1,1,0,Mississippi State,Miami (OH),SEC,Mid-American,17,16,57.5,,-14.5,2,10,61,345,2,1,17,10,68,442,2,1,16
+400876091,2016,1,postseason,2016-12-26T19:30:00Z,1,1,0,Boston College,Maryland,ACC,Big Ten,36,30,43.5,,1,2,18,77,337,4,1,29,19,70,327,4,1,30
+400876092,2016,1,postseason,2016-12-26T22:00:00Z,1,1,0,Vanderbilt,NC State,SEC,ACC,17,41,46.3,,5.5,2,14,83,309,2,1,17,13,67,406,4,0,28
+400876093,2016,1,postseason,2016-12-27T17:00:00Z,1,1,0,North Texas,Army,Conference USA,FBS Independents,31,38,47,,10.5,2,12,68,370,3,1,24,12,78,523,6,0,38
+400876094,2016,1,postseason,2016-12-27T20:30:00Z,1,1,0,Wake Forest,Temple,ACC,American Athletic,34,26,41.5,,10.5,2,15,74,350,3,2,27,13,76,401,1,4,19
+400876095,2016,1,postseason,2016-12-28T00:00:00Z,1,1,0,Washington State,Minnesota,Pac-12,Big Ten,12,17,61,,-8.5,2,12,76,293,1,2,12,13,62,249,2,1,17
+400876096,2016,1,postseason,2016-12-28T03:25:00Z,1,1,0,Baylor,Boise State,Big 12,Mountain West,31,12,70.5,,7,2,12,84,481,4,1,31,11,90,387,1,2,12
+400876097,2016,1,postseason,2016-12-28T19:00:00Z,1,1,0,Northwestern,Pittsburgh,Big Ten,ACC,31,24,63,,3.5,2,12,87,475,4,1,31,12,63,438,3,1,24
+400876098,2016,1,postseason,2016-12-28T22:30:00Z,1,1,0,Miami,West Virginia,ACC,Big 12,31,14,57.8,,-3,2,14,69,387,3,1,24,14,65,206,2,0,14
+400903226,2016,1,postseason,2016-12-29T01:30:00Z,1,1,0,Utah,Indiana,Pac-12,Big Ten,26,24,54,,-4,2,14,80,420,1,4,19,15,79,354,3,1,24
+400876099,2016,1,postseason,2016-12-29T02:00:00Z,1,1,0,Kansas State,Texas A&M,Big 12,SEC,33,28,56.3,,4,2,12,63,413,3,2,26,12,77,460,4,0,28
+400876100,2016,1,postseason,2016-12-29T19:00:00Z,1,1,0,South Carolina,South Florida,SEC,American Athletic,39,46,59,,10.5,2,15,78,499,5,1,39,14,82,477,4,1,32
+400876101,2016,1,postseason,2016-12-29T22:30:00Z,1,1,0,Virginia Tech,Arkansas,ACC,SEC,35,24,61.3,,-7,2,16,79,425,4,0,28,16,66,302,3,1,24
+400876102,2016,1,postseason,2016-12-30T02:00:00Z,1,1,0,Colorado,Oklahoma State,Pac-12,Big 12,8,38,64.3,,-3,2,12,68,318,1,0,8,12,76,537,5,1,38
+400876103,2016,1,postseason,2016-12-30T17:00:00Z,1,1,0,TCU,Georgia,Big 12,SEC,23,31,48.8,,-3,2,12,70,344,3,1,23,13,67,402,4,1,31
+400878692,2016,1,postseason,2016-12-30T19:00:00Z,1,1,0,North Carolina,Stanford,ACC,Pac-12,23,25,54.8,,2.5,2,13,78,400,3,1,23,12,66,262,1,4,19
+400876104,2016,1,postseason,2016-12-30T20:30:00Z,1,1,0,Tennessee,Nebraska,SEC,Big Ten,38,24,59.8,,-9.5,2,14,77,507,5,1,38,15,71,323,3,0,24
+400928102,2016,1,postseason,2016-12-30T22:30:00Z,1,1,0,Air Force,South Alabama,Mountain West,Sun Belt,45,21,54,,-14,2,12,76,487,5,3,45,12,47,303,3,0,21
+400876105,2016,1,postseason,2016-12-31T01:00:00Z,1,1,0,Florida State,Michigan,ACC,Big Ten,33,32,49.8,,7,2,15,64,383,3,2,26,14,77,267,2,3,24
+400876106,2016,1,postseason,2016-12-31T16:00:00Z,1,1,0,Louisville,LSU,ACC,SEC,9,29,59.3,,3,2,14,65,210,0,2,9,14,73,422,3,2,27
+400876113,2016,1,postseason,2016-12-31T16:00:00Z,1,1,0,Kentucky,Georgia Tech,SEC,ACC,18,33,61.3,,3,2,10,71,319,2,1,18,10,69,351,2,3,26
+400876107,2016,1,postseason,2016-12-31T20:00:00Z,1,1,0,Alabama,Washington,SEC,Pac-12,24,7,51,,-13,2,13,65,270,2,1,17,14,67,184,1,0,7
+400876108,2016,1,postseason,2017-01-01T00:00:00Z,1,1,0,Clemson,Ohio State,ACC,Big Ten,31,0,56.8,,1.5,2,14,87,440,4,1,31,15,58,220,0,0,0
+400876109,2016,1,postseason,2017-01-02T18:00:00Z,1,1,0,Iowa,Florida,Big Ten,SEC,3,30,40.8,,1.5,2,13,67,241,0,1,3,13,60,301,1,3,16
+400876110,2016,1,postseason,2017-01-02T18:00:00Z,1,1,0,Wisconsin,Western Michigan,Big Ten,Mid-American,24,16,53.8,,-9,2,8,53,332,3,1,24,8,60,270,2,1,16
+400876111,2016,1,postseason,2017-01-02T22:00:00Z,1,1,0,Penn State,USC,Big Ten,Pac-12,49,52,60,,7,2,15,62,500,4,0,28,16,93,615,6,2,52
+400876112,2016,1,postseason,2017-01-03T01:50:00Z,1,1,0,Oklahoma,Auburn,Big 12,SEC,35,19,66.5,,-2,2,10,72,519,5,0,35,10,75,369,2,2,19
+400876570,2016,1,postseason,2017-01-10T01:00:00Z,1,1,0,Alabama,Clemson,SEC,ACC,31,35,51,,-6.5,2,17,67,366,4,1,31,18,99,570,5,0,35
+400869090,2016,1,regular,2016-08-27T02:00:00Z,1,1,0,California,Hawai'i,Pac-12,Mountain West,51,31,66,,-22.3,1,13,91,623,6,2,51,12,73,497,4,1,31
+400869257,2016,1,regular,2016-09-01T23:00:00Z,1,0,0,Central Michigan,Presbyterian,Mid-American,Big South,49,3,,,-33,0,15,65,480,6,0,42,16,57,119,0,1,3
+400869341,2016,1,regular,2016-09-01T23:00:00Z,1,0,0,Louisville,Charlotte,ACC,Conference USA,70,14,58.5,,-39,1,15,70,681,10,0,70,15,63,161,2,0,14
+400869421,2016,1,regular,2016-09-01T23:00:00Z,1,0,0,Wake Forest,Tulane,ACC,American Athletic,7,3,43,,-15,1,11,55,155,1,0,7,10,72,275,0,1,3
+400869502,2016,1,regular,2016-09-01T23:00:00Z,1,0,0,Cincinnati,UT Martin,American Athletic,OVC,28,7,,,-24,0,10,69,377,3,0,21,12,77,303,1,0,7
+400869503,2016,1,regular,2016-09-01T23:00:00Z,1,0,0,UConn,Maine,American Athletic,CAA,24,21,,,-27,0,11,74,373,3,1,24,11,54,334,2,0,14
+400868977,2016,1,regular,2016-09-01T23:30:00Z,1,0,0,Tennessee,App State,SEC,Sun Belt,20,13,58,,-22.3,1,11,74,299,2,2,20,13,68,266,2,0,13
+400869342,2016,1,regular,2016-09-01T23:30:00Z,1,0,0,Florida International,Indiana,Conference USA,Big Ten,13,34,64,,6.5,1,14,70,349,1,2,13,14,82,488,2,1,20
+400869422,2016,1,regular,2016-09-01T23:30:00Z,1,0,0,NC State,William & Mary,ACC,CAA,48,14,,,-30.5,0,12,87,506,7,0,48,12,47,178,2,0,14
+400868968,2016,1,regular,2016-09-02T00:00:00Z,1,0,1,Vanderbilt,South Carolina,SEC,SEC,10,13,40.5,,-0.5,1,13,67,229,1,1,10,12,64,276,1,2,13
+400869091,2016,1,regular,2016-09-02T00:00:00Z,1,0,0,Utah,Southern Utah,Pac-12,Big Sky,24,0,,,-34,0,13,78,411,3,1,24,13,50,143,0,0,0
+400869173,2016,1,regular,2016-09-02T00:00:00Z,1,0,0,Utah State,Weber State,Mountain West,Big Sky,45,6,,,-21,0,11,62,518,5,1,38,10,69,250,1,0,6
+400869347,2016,1,regular,2016-09-02T00:00:00Z,1,0,1,Western Kentucky,Rice,Conference USA,Conference USA,46,14,64.5,,-16.8,1,13,69,640,5,3,44,13,70,272,2,0,14
+400869092,2016,1,regular,2016-09-02T01:00:00Z,1,0,0,Minnesota,Oregon State,Big Ten,Pac-12,30,23,56,,-10,1,13,75,290,4,1,30,13,74,342,3,0,21
+400869177,2016,1,regular,2016-09-02T01:00:00Z,1,0,0,New Mexico,South Dakota,Mountain West,MVFC,48,21,,,-11,0,13,70,595,6,2,48,13,63,318,3,0,21
+400869725,2016,1,regular,2016-09-02T01:00:00Z,1,0,0,Idaho,Montana State,Sun Belt,Big Sky,20,17,,,-7,0,13,60,353,2,2,20,13,76,320,2,1,17
+400869174,2016,1,regular,2016-09-02T02:00:00Z,1,1,0,UNLV,Jackson State,Mountain West,SWAC,63,13,,,-40,0,13,57,492,7,0,49,14,80,292,1,2,13
+400869263,2016,1,regular,2016-09-02T22:00:00Z,1,0,0,Eastern Michigan,Mississippi Valley State,Mid-American,SWAC,61,14,,,-46,0,14,70,494,7,1,52,14,70,233,2,0,14
+400868910,2016,1,regular,2016-09-02T23:00:00Z,1,0,0,Temple,Army,American Athletic,FBS Independents,13,28,45.3,,-15.5,2,9,56,251,1,2,13,9,74,340,4,0,28
+400869258,2016,1,regular,2016-09-02T23:00:00Z,1,0,0,Georgia State,Ball State,Sun Belt,Mid-American,21,31,55.3,,-4.5,2,13,65,266,2,0,14,14,83,437,4,1,31
+400869259,2016,1,regular,2016-09-02T23:00:00Z,1,0,0,Buffalo,UAlbany,Mid-American,CAA,16,22,,,-23,0,13,86,393,1,3,16,14,56,252,3,0,22
+400869423,2016,1,regular,2016-09-02T23:00:00Z,1,0,0,Syracuse,Colgate,ACC,Patriot,33,7,,,-25.5,0,12,85,519,2,4,26,12,56,128,1,0,7
+400869651,2016,1,regular,2016-09-02T23:00:00Z,1,0,0,Michigan State,Furman,Big Ten,Southern,28,13,,,-45,0,12,59,316,4,0,28,11,67,272,1,2,13
+400868876,2016,1,regular,2016-09-02T23:30:00Z,1,0,0,Baylor,Northwestern State,Big 12,Southland,55,7,,,-48.5,0,15,74,450,7,2,55,15,59,96,1,0,7
+400869093,2016,1,regular,2016-09-03T00:00:00Z,1,1,0,Colorado,Colorado State,Pac-12,Mountain West,44,7,56.3,,-7,2,13,92,548,5,3,44,13,64,225,1,0,7
+400869094,2016,1,regular,2016-09-03T01:00:00Z,1,0,0,Stanford,Kansas State,Pac-12,Big 12,26,13,49,,-12.5,2,12,50,277,3,1,24,12,76,321,1,1,13
+400869265,2016,1,regular,2016-09-03T01:00:00Z,1,0,0,Arkansas State,Toledo,Sun Belt,Mid-American,10,31,64.8,,-4,2,12,64,276,1,1,10,12,78,549,4,1,31
+400869181,2016,1,regular,2016-09-03T01:30:00Z,1,0,0,Nevada,Cal Poly,Mountain West,Big Sky,30,27,,,-19,0,11,60,330,3,1,24,12,85,382,2,2,17
+400869424,2016,1,regular,2016-09-03T11:30:00Z,1,1,1,Boston College,Georgia Tech,ACC,ACC,14,17,42.8,,3,2,10,56,320,1,0,7,11,60,239,2,1,17
+400868975,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Mississippi State,South Alabama,SEC,Sun Belt,20,21,52.5,,-28.5,2,11,69,389,2,2,20,11,64,380,3,0,21
+400868976,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,West Virginia,Missouri,Big 12,SEC,26,11,51,,-10,2,15,89,509,2,4,26,16,103,471,1,1,11
+400869176,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Louisiana,Boise State,Sun Belt,Mountain West,10,45,63.8,,18.5,2,11,75,271,1,1,10,11,75,599,6,1,45
+400869180,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Michigan,Hawai'i,Big Ten,Mountain West,63,3,54.8,,-38,2,9,59,513,7,0,49,11,61,195,0,1,3
+400869260,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Ohio State,Bowling Green,Big Ten,Mid-American,77,10,64,,-27.5,2,13,94,763,10,0,70,14,73,254,0,1,3
+400869267,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Northwestern,Western Michigan,Big Ten,Mid-American,21,22,53,,-3.5,2,10,63,321,3,1,21,8,78,348,2,2,19
+400869507,2016,1,regular,2016-09-03T16:00:00Z,1,1,0,Houston,Oklahoma,American Athletic,Big 12,33,23,66,,13,2,12,84,435,2,3,26,12,62,398,3,1,23
+400869509,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Navy,Fordham,American Athletic,Patriot,52,16,,,-24,0,12,58,550,6,1,45,12,84,449,1,3,16
+400869578,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Purdue,Eastern Kentucky,Big Ten,OVC,45,24,,,-15,0,15,85,527,5,1,38,15,85,401,3,1,24
+400869653,2016,1,regular,2016-09-03T16:00:00Z,1,0,0,Maryland,Howard,Big Ten,MEAC,52,13,,,-51,0,12,74,524,6,1,45,13,64,249,2,0,13
+400869428,2016,1,regular,2016-09-03T16:30:00Z,1,0,0,Virginia Tech,Liberty,ACC,Big South,36,13,,,-35,0,16,92,458,4,2,49,15,62,118,1,0,6
+400869426,2016,1,regular,2016-09-03T17:30:00Z,1,0,0,Pittsburgh,Villanova,ACC,CAA,28,7,,,-27,0,14,69,276,3,0,21,13,65,172,0,0,0
+400869097,2016,1,regular,2016-09-03T18:00:00Z,1,0,0,Washington,Rutgers,Pac-12,Big Ten,48,13,56.8,,-25,2,15,62,395,3,1,27,15,90,310,1,2,13
+400869175,2016,1,regular,2016-09-03T18:00:00Z,1,0,0,Air Force,Abilene Christian,Mountain West,Southland,37,21,,,-44,0,14,78,616,5,1,37,14,65,366,3,0,21
+400868974,2016,1,regular,2016-09-03T19:30:00Z,1,1,0,Wisconsin,LSU,Big Ten,SEC,16,14,43.8,,12.5,2,13,76,331,1,3,16,12,50,262,1,0,7
+400868978,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Texas A&M,UCLA,SEC,Pac-12,31,24,55,,-5,2,17,85,444,4,1,31,16,91,520,2,3,24
+400869261,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Penn State,Kent State,Big Ten,Mid-American,33,13,43.8,,-23.5,2,14,71,346,3,2,26,13,72,269,0,2,6
+400869262,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Iowa,Miami (OH),Big Ten,Mid-American,45,21,52.3,,-27.5,2,10,51,401,6,1,45,11,71,419,3,0,21
+400869264,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Ohio,Texas State,Mid-American,Sun Belt,54,56,59.3,,-18,2,18,117,523,3,4,47,16,84,462,5,0,35
+400869427,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Virginia,Richmond,ACC,CAA,20,37,,,-14,0,11,55,331,3,0,20,12,79,484,4,3,37
+400869619,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Oklahoma State,SE Louisiana,Big 12,Southland,61,7,,,-48.5,0,14,74,371,7,2,54,15,61,236,1,0,7
+400869652,2016,1,regular,2016-09-03T19:30:00Z,1,0,0,Illinois,Murray State,Big Ten,OVC,52,3,,,-31,0,13,65,528,6,1,45,13,63,184,0,1,3
+400868970,2016,1,regular,2016-09-03T20:00:00Z,1,0,0,Arkansas,Louisiana Tech,SEC,Conference USA,21,20,52.3,,-21,2,10,69,282,3,0,21,10,58,311,2,2,20
+400869096,2016,1,regular,2016-09-03T21:00:00Z,1,0,0,Oregon,UC Davis,Pac-12,Big Sky,53,28,,,-47,0,14,68,507,7,1,53,16,81,408,4,0,28
+400868972,2016,1,regular,2016-09-03T21:30:00Z,1,1,0,North Carolina,Georgia,ACC,SEC,24,33,59.8,,3.5,2,12,60,288,2,1,17,13,74,485,3,1,24
+400869343,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,Florida Atlantic,Southern Illinois,Conference USA,MVFC,38,30,,,-8,0,16,77,475,4,1,31,15,88,530,4,1,30
+400869425,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,Duke,North Carolina Central,ACC,MEAC,49,6,,,-37,0,17,89,535,6,0,42,16,56,104,0,2,6
+400869505,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,East Carolina,Western Carolina,American Athletic,Southern,52,7,,,-17,0,11,73,678,7,1,52,13,65,304,1,0,7
+400869718,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,Miami,Florida A&M,ACC,MEAC,70,3,,,-59,0,13,58,517,8,0,56,15,70,173,0,1,3
+400869808,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,Georgia Southern,Savannah State,Sun Belt,MEAC,54,0,,,-53,0,12,84,623,7,0,47,13,46,119,0,0,0
+400869810,2016,1,regular,2016-09-03T22:00:00Z,1,0,0,Troy,Austin Peay,Sun Belt,OVC,57,17,,,-37,0,13,80,653,7,1,51,13,64,289,2,1,17
+400869266,2016,1,regular,2016-09-03T22:30:00Z,1,0,0,Akron,VMI,Mid-American,Southern,47,24,,,-28,0,14,67,567,7,0,47,15,86,420,3,1,24
+400869183,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,Tulsa,San José State,American Athletic,Mountain West,45,10,65,,-4,2,12,84,507,4,1,38,12,62,292,1,1,10
+400869344,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,Middle Tennessee,Alabama A&M,Conference USA,SWAC,55,0,,,-47,0,15,95,644,7,2,55,15,51,141,0,0,0
+400869345,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,North Texas,SMU,Conference USA,American Athletic,21,34,67.5,,7,2,12,79,376,3,0,21,13,76,542,4,2,34
+400869349,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,UTSA,Alabama State,Conference USA,SWAC,26,13,,,-28.5,0,12,67,409,4,0,26,14,60,243,2,0,13
+400869504,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,UCF,South Carolina State,American Athletic,MEAC,38,0,,,-27,0,16,95,516,4,4,38,15,71,174,0,0,0
+400869506,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,South Florida,Towson,American Athletic,CAA,56,20,,,-17,0,16,66,482,6,0,42,15,92,297,2,2,20
+400869508,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,Memphis,Southeast Missouri State,American Athletic,OVC,35,17,,,-24,0,14,75,451,4,2,35,14,64,258,2,1,17
+400869597,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,Kansas,Rhode Island,Big 12,CAA,55,6,,,-35,0,14,74,545,8,0,55,14,63,201,1,0,6
+400869809,2016,1,regular,2016-09-03T23:00:00Z,1,0,0,UL Monroe,Southern,Sun Belt,SWAC,38,21,,,-16,0,13,80,528,5,1,38,13,81,374,2,3,21
+400868957,2016,1,regular,2016-09-03T23:30:00Z,1,0,0,Florida,Massachusetts,SEC,FBS Independents,24,7,51.3,,-34.5,2,10,76,343,2,3,24,11,52,227,1,0,7
+400868973,2016,1,regular,2016-09-03T23:30:00Z,1,0,0,Kentucky,Southern Miss,SEC,Conference USA,35,44,62.3,,-3.5,2,16,50,437,5,0,35,15,98,593,5,3,44
+400868887,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,Iowa State,Northern Iowa,Big 12,MVFC,20,25,,,-11,0,15,53,307,3,0,20,16,88,381,3,1,23
+400868969,2016,1,regular,2016-09-04T00:00:00Z,1,1,0,Alabama,USC,SEC,Pac-12,52,6,51.5,,-13,2,15,64,455,6,1,45,16,69,192,0,2,6
+400869098,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,Washington State,Eastern Washington,Pac-12,Big Sky,42,45,,,-27.5,0,12,78,499,6,0,42,13,68,573,6,1,45
+400869179,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,Nebraska,Fresno State,Big Ten,Mountain West,43,10,62.3,,-29,2,12,64,395,6,0,43,12,71,284,1,1,10
+400869348,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,UTEP,New Mexico State,Conference USA,Sun Belt,38,22,58,,-9,2,13,78,533,4,1,31,12,72,354,2,1,16
+400869624,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,TCU,South Dakota State,Big 12,MVFC,59,41,,,-39.5,0,14,88,603,7,1,52,15,67,476,5,2,41
+400869625,2016,1,regular,2016-09-04T00:00:00Z,1,0,0,Texas Tech,Stephen F. Austin,Big 12,Southland,69,17,,,-42,0,18,101,742,7,2,55,19,92,371,2,1,17
+400869182,2016,1,regular,2016-09-04T00:30:00Z,1,1,0,San Diego State,New Hampshire,Mountain West,CAA,31,0,,,-34,0,,,,,,,,,,,,
+400868971,2016,1,regular,2016-09-04T01:00:00Z,1,0,0,Auburn,Clemson,SEC,ACC,13,19,62.3,,7.5,2,13,73,277,1,2,13,12,80,419,2,1,19
+400868922,2016,1,regular,2016-09-04T02:30:00Z,1,1,0,Arizona,BYU,Pac-12,FBS Independents,16,18,63.3,,1,2,,,,,,,,,,,,
+400869178,2016,1,regular,2016-09-04T02:30:00Z,1,0,0,Wyoming,Northern Illinois,Mountain West,Mid-American,40,34,54.3,,7,2,15,86,469,4,2,33,15,81,382,5,0,34
+400869095,2016,1,regular,2016-09-04T03:00:00Z,1,0,0,Arizona State,Northern Arizona,Pac-12,Big Sky,44,13,,,-26,0,12,76,465,4,3,37,14,69,405,1,2,13
+400869346,2016,1,regular,2016-09-04T19:30:00Z,1,0,0,Old Dominion,Hampton,Conference USA,MEAC,54,21,,,-28,0,16,69,474,6,1,45,17,85,338,3,0,21
+400868946,2016,1,regular,2016-09-04T23:30:00Z,1,0,0,Texas,Notre Dame,Big 12,FBS Independents,50,47,54.8,,3.5,2,16,87,521,7,1,50,16,79,429,5,1,38
+400868979,2016,1,regular,2016-09-06T00:00:00Z,1,1,0,Florida State,Ole Miss,ACC,SEC,45,34,57.8,,-4.5,2,14,99,559,4,6,45,14,64,408,5,0,34
+400869351,2016,2,regular,2016-09-09T23:30:00Z,1,0,0,Florida International,Maryland,Conference USA,Big Ten,14,41,56.3,,11.5,2,13,68,337,2,0,14,13,68,442,4,2,34
+400869429,2016,2,regular,2016-09-10T00:00:00Z,1,0,1,Syracuse,Louisville,ACC,ACC,28,62,69.3,,17,2,20,94,449,4,0,28,19,83,835,5,2,41
+400868911,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Army,Rice,FBS Independents,Conference USA,31,14,52.3,,-8.5,2,13,76,379,4,1,31,12,51,279,1,0,7
+400868958,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Massachusetts,Boston College,FBS Independents,ACC,7,26,37.5,,16.5,2,17,61,105,1,0,7,17,65,339,1,2,13
+400868984,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Georgia,Nicholls,SEC,Southland,26,24,,,-49.5,0,12,65,354,2,2,20,13,62,212,3,1,24
+400868990,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Texas A&M,Prairie View A&M,SEC,SWAC,67,0,,,-49.5,0,14,90,712,6,3,51,16,70,190,0,0,0
+400869187,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Nebraska,Wyoming,Big Ten,Mountain West,52,17,56.5,,-25,2,14,79,547,4,1,31,15,66,353,2,1,17
+400869270,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Oklahoma State,Central Michigan,Big 12,Mid-American,27,30,59.3,,-17.5,2,13,72,387,3,2,27,13,69,438,4,1,30
+400869435,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,East Carolina,NC State,American Athletic,ACC,33,30,58.5,,6,2,12,79,463,4,2,33,13,66,498,4,1,30
+400869436,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Pittsburgh,Penn State,ACC,Big Ten,42,39,44.8,,-3.5,2,16,72,402,6,0,42,15,67,408,5,1,39
+400869510,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Michigan,UCF,Big Ten,American Athletic,51,14,53.8,,-35.5,2,14,85,467,5,3,44,13,70,327,2,0,14
+400869511,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Purdue,Cincinnati,Big Ten,American Athletic,20,38,57.5,,4,2,12,83,524,3,0,20,13,79,511,5,1,38
+400869514,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Houston,Lamar,American Athletic,Southland,42,0,,,-48,0,13,99,521,6,0,42,11,41,68,0,0,0
+400869633,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Rutgers,Howard,Big Ten,MEAC,52,14,,,-42,0,15,78,497,6,1,45,14,64,222,1,0,8
+400869654,2016,2,regular,2016-09-10T16:00:00Z,1,0,0,Minnesota,Indiana State,Big Ten,MVFC,58,28,,,-44.5,0,12,79,573,7,3,58,12,70,393,4,0,28
+400869430,2016,2,regular,2016-09-10T16:30:00Z,1,0,0,Clemson,Troy,ACC,Sun Belt,30,24,62,,-34.5,2,17,88,435,3,3,30,17,80,398,3,1,24
+400869432,2016,2,regular,2016-09-10T16:30:00Z,1,0,0,Florida State,Charleston Southern,ACC,Big South,52,8,,,-59.5,0,13,72,433,6,1,45,13,60,275,1,0,6
+400869513,2016,2,regular,2016-09-10T17:00:00Z,1,0,0,Temple,Stony Brook,American Athletic,CAA,38,0,,,-22,0,15,65,304,5,1,39,14,54,133,0,0,0
+400869101,2016,2,regular,2016-09-10T18:00:00Z,1,0,0,USC,Utah State,Pac-12,Mountain West,45,7,55,,-15.5,2,11,83,448,5,1,38,12,66,264,1,0,7
+400869184,2016,2,regular,2016-09-10T18:00:00Z,1,0,0,Air Force,Georgia State,Mountain West,Sun Belt,48,14,52.8,,-23,2,12,94,501,5,2,41,10,42,144,2,0,14
+400869626,2016,2,regular,2016-09-10T18:00:00Z,1,0,0,West Virginia,Youngstown State,Big 12,MVFC,38,21,,,-25.5,0,13,81,638,4,1,31,12,73,395,3,0,21
+400869277,2016,2,regular,2016-09-10T18:30:00Z,1,0,0,Kansas,Ohio,Big 12,Mid-American,21,37,61,,-3,2,12,39,239,2,0,14,15,103,511,3,5,35
+400869433,2016,2,regular,2016-09-10T19:00:00Z,1,0,0,Georgia Tech,Mercer,ACC,Southern,35,10,,,,,9,62,459,5,0,35,9,70,315,1,1,10
+400868877,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Baylor,SMU,Big 12,American Athletic,40,13,72.5,,-33,2,16,105,504,4,2,34,17,84,424,1,2,13
+400868947,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Notre Dame,Nevada,FBS Independents,Mountain West,39,10,62,,-27.5,2,13,73,435,5,1,37,13,57,301,1,1,10
+400868980,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Alabama,Western Kentucky,SEC,Conference USA,38,10,59.5,,-27,2,13,83,421,4,1,31,14,62,254,1,1,10
+400868983,2016,2,regular,2016-09-10T19:30:00Z,1,0,1,Florida,Kentucky,SEC,SEC,45,7,48.8,,-14,2,12,86,564,4,1,31,12,49,154,1,0,7
+400869268,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Wisconsin,Akron,Big Ten,Mid-American,54,10,45.8,,-21.5,2,12,83,631,7,1,52,11,47,233,0,0,3
+400869276,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Bowling Green,North Dakota,Mid-American,Big Sky,27,26,,,-20,0,15,76,412,3,0,20,15,83,345,2,2,19
+400869355,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,App State,Old Dominion,Sun Belt,Conference USA,31,7,54,,-21,2,11,71,418,4,1,31,12,67,366,1,0,7
+400869431,2016,2,regular,2016-09-10T19:30:00Z,1,0,1,Duke,Wake Forest,ACC,ACC,14,24,45.3,,-6.5,2,14,80,364,2,0,14,14,66,379,3,1,24
+400869512,2016,2,regular,2016-09-10T19:30:00Z,1,0,1,Navy,UConn,American Athletic,American Athletic,28,24,43.8,,-5,2,10,59,356,3,0,21,10,62,371,2,1,17
+400869516,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Ohio State,Tulsa,Big Ten,American Athletic,48,3,72.3,,-28.5,2,14,72,386,4,2,34,16,70,185,0,1,3
+400869655,2016,2,regular,2016-09-10T19:30:00Z,1,0,0,Northwestern,Illinois State,Big Ten,MVFC,7,9,,,-12.5,0,11,73,264,1,0,7,11,73,379,1,1,9
+400868986,2016,2,regular,2016-09-10T20:00:00Z,1,0,0,Ole Miss,Wofford,SEC,Southern,38,13,,,-44.5,0,10,65,406,5,1,38,10,68,295,1,2,13
+400868991,2016,2,regular,2016-09-10T20:00:00Z,1,0,0,Vanderbilt,Middle Tennessee,SEC,Conference USA,47,24,51,,-3,2,15,74,356,5,1,40,14,88,470,3,1,24
+400869185,2016,2,regular,2016-09-10T20:00:00Z,1,0,0,Colorado State,UTSA,Mountain West,Conference USA,23,14,51.8,,-9,2,13,73,314,2,3,23,12,64,215,2,0,14
+400869269,2016,2,regular,2016-09-10T20:00:00Z,1,0,0,Indiana,Ball State,Big Ten,Mid-American,30,20,62.8,,-16.5,2,14,75,428,3,3,30,13,70,395,1,2,13
+400869190,2016,2,regular,2016-09-10T20:30:00Z,1,0,0,San José State,Portland State,Mountain West,Big Sky,66,35,,,,,17,79,648,8,1,59,18,66,466,4,0,28
+400869271,2016,2,regular,2016-09-10T20:30:00Z,1,0,0,Miami (OH),Eastern Illinois,Mid-American,OVC,17,21,,,-10,0,10,67,382,2,1,17,9,71,346,3,0,21
+400869105,2016,2,regular,2016-09-10T21:00:00Z,1,0,0,Washington,Idaho,Pac-12,Sun Belt,59,14,60.5,,-36.5,2,12,64,472,6,1,45,14,77,305,2,0,14
+400869103,2016,2,regular,2016-09-10T21:30:00Z,1,0,0,Colorado,Idaho State,Pac-12,Big Sky,56,7,,,-41.5,0,15,89,650,8,0,56,16,55,88,1,0,7
+400869274,2016,2,regular,2016-09-10T22:00:00Z,1,0,0,Kent State,North Carolina A&T,Mid-American,MEAC,36,39,,,-13.5,0,,,,,,,,,,,,
+400869350,2016,2,regular,2016-09-10T22:00:00Z,1,0,0,Charlotte,Elon,Conference USA,CAA,47,14,,,-9,0,15,69,479,6,0,40,16,85,429,2,0,14
+400869353,2016,2,regular,2016-09-10T22:00:00Z,1,0,0,Marshall,Morgan State,Conference USA,MEAC,62,0,,,-41.5,0,,,,,,,,,,,,
+400869719,2016,2,regular,2016-09-10T22:00:00Z,1,0,0,Miami,Florida Atlantic,ACC,Conference USA,38,10,63,,-25,2,15,72,415,5,1,38,15,72,219,1,1,10
+400868981,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,TCU,Arkansas,Big 12,SEC,38,41,57.8,,-10,2,15,92,517,5,1,38,14,76,368,4,2,34
+400868987,2016,2,regular,2016-09-10T23:00:00Z,1,0,1,Mississippi State,South Carolina,SEC,SEC,27,14,49.3,,-7.5,2,13,77,490,3,2,27,12,71,243,2,0,14
+400869272,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Toledo,Maine,Mid-American,CAA,45,3,,,-30,0,13,62,537,4,1,31,14,69,205,0,1,3
+400869273,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,South Florida,Northern Illinois,American Athletic,Mid-American,48,17,56,,-14,2,14,91,656,6,2,59,15,77,340,2,1,17
+400869275,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Western Michigan,North Carolina Central,Mid-American,MEAC,70,21,,,,,13,84,598,8,0,56,14,59,285,3,0,21
+400869352,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Louisiana Tech,South Carolina State,Conference USA,MEAC,53,24,,,-33,0,14,93,701,6,3,51,15,71,319,3,1,24
+400869354,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,North Texas,Bethune-Cookman,Conference USA,MEAC,41,20,,,-13,0,13,86,484,4,2,34,12,51,234,1,0,7
+400869356,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Southern Miss,Savannah State,Conference USA,MEAC,56,0,,,-57,0,12,79,580,7,0,49,13,43,26,0,0,0
+400869357,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Texas,UTEP,Big 12,Conference USA,41,7,58.5,,-31,2,14,77,415,5,2,41,14,61,231,1,0,7
+400869612,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Oklahoma,UL Monroe,Big 12,Sun Belt,59,17,63.5,,-46,2,15,82,625,7,1,52,15,67,335,2,1,17
+400869811,2016,2,regular,2016-09-10T23:00:00Z,1,0,1,South Alabama,Georgia Southern,Sun Belt,Sun Belt,9,24,57.3,,13.5,2,10,73,347,0,3,9,11,74,436,3,1,24
+400869812,2016,2,regular,2016-09-10T23:00:00Z,1,0,0,Louisiana,McNeese,Sun Belt,Southland,30,22,,,-4.5,0,11,61,360,3,1,23,12,92,346,2,3,22
+400868888,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,Iowa,Iowa State,Big Ten,Big 12,42,3,49.5,,-15.5,2,12,66,448,6,0,42,12,71,266,0,1,3
+400868923,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,Utah,BYU,Pac-12,FBS Independents,20,19,43.5,,-3,2,12,67,347,1,2,13,14,70,313,2,2,19
+400868982,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,Auburn,Arkansas State,SEC,Sun Belt,51,14,51,,-20.5,2,12,88,732,6,3,51,11,66,321,2,0,14
+400868985,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,LSU,Jacksonville State,SEC,OVC,34,13,,,-30,0,12,57,378,4,0,27,11,70,340,1,2,13
+400868988,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,Missouri,Eastern Michigan,SEC,Mid-American,61,21,58.5,,-23,2,14,78,677,6,0,41,16,92,445,3,0,21
+400869434,2016,2,regular,2016-09-10T23:30:00Z,1,0,0,Illinois,North Carolina,Big Ten,ACC,23,48,59.5,,7,2,15,71,299,3,0,21,14,65,470,6,2,48
+400868989,2016,2,regular,2016-09-11T00:00:00Z,1,1,0,Tennessee,Virginia Tech,SEC,ACC,45,24,52.5,,-11,2,16,67,346,4,1,31,15,75,385,3,1,24
+400869102,2016,2,regular,2016-09-11T00:00:00Z,1,0,0,UCLA,UNLV,Pac-12,Mountain West,42,21,57.5,,-27,2,11,76,458,6,0,42,10,63,301,3,0,21
+400869186,2016,2,regular,2016-09-11T00:00:00Z,1,0,0,New Mexico State,New Mexico,Sun Belt,Mountain West,32,31,61.5,,11.5,2,11,74,337,3,4,32,11,69,371,4,1,31
+400869515,2016,2,regular,2016-09-11T00:00:00Z,1,0,0,Tulane,Southern,American Athletic,SWAC,66,21,,,-31,0,13,64,466,7,1,52,12,54,345,2,0,14
+400869100,2016,2,regular,2016-09-11T02:00:00Z,1,0,0,Arizona State,Texas Tech,Pac-12,Big 12,68,55,79.5,,1,2,16,91,711,8,1,59,15,75,642,8,0,55
+400869188,2016,2,regular,2016-09-11T02:00:00Z,1,0,0,Fresno State,Sacramento State,Mountain West,Big Sky,31,3,,,,,15,86,429,4,1,31,16,59,170,0,1,0
+400869106,2016,2,regular,2016-09-11T02:15:00Z,1,0,0,Boise State,Washington State,Mountain West,Pac-12,31,28,73.5,,-13,2,12,62,425,3,1,24,14,92,491,3,0,21
+400869104,2016,2,regular,2016-09-11T02:30:00Z,1,0,0,Oregon,Virginia,Pac-12,ACC,44,26,71,,-24,2,12,77,642,6,0,44,12,80,420,3,0,26
+400869107,2016,2,regular,2016-09-11T02:30:00Z,1,0,0,San Diego State,California,Mountain West,Pac-12,45,40,59.8,,-6.5,2,15,71,428,3,1,24,17,96,594,5,2,40
+400869099,2016,2,regular,2016-09-11T02:45:00Z,1,0,0,Arizona,Grambling,Pac-12,SWAC,31,21,,,-45.5,0,14,78,436,4,1,31,13,80,452,3,0,21
+400869189,2016,2,regular,2016-09-11T03:59:00Z,1,0,0,Hawai'i,UT Martin,Mountain West,OVC,41,36,,,,,15,57,363,6,0,41,13,71,382,4,1,30
+400869517,2016,3,regular,2016-09-15T23:30:00Z,1,0,1,Cincinnati,Houston,American Athletic,American Athletic,16,40,63.5,,8,2,16,65,292,2,1,16,15,93,470,3,1,24
+400869361,2016,3,regular,2016-09-17T00:00:00Z,1,0,0,Rice,Baylor,Conference USA,Big 12,10,38,66.3,,33.5,2,14,70,289,1,1,10,15,99,608,5,1,38
+400869193,2016,3,regular,2016-09-17T01:00:00Z,1,0,0,Utah State,Arkansas State,Mountain West,Sun Belt,34,20,55.8,,-8.5,2,15,74,349,4,2,34,16,66,338,2,2,20
+400869109,2016,3,regular,2016-09-17T01:30:00Z,1,0,0,UTSA,Arizona State,Conference USA,Pac-12,28,32,58.3,,21.5,2,16,67,312,3,0,21,13,84,455,3,4,32
+400868889,2016,3,regular,2016-09-17T16:00:00Z,1,0,1,TCU,Iowa State,Big 12,Big 12,41,20,61,,-24.5,2,14,74,465,4,2,34,14,85,355,2,2,20
+400869000,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Tennessee,Ohio,SEC,Mid-American,28,19,57.8,,-27,2,14,70,389,4,0,28,13,80,337,1,4,19
+400869192,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Rutgers,New Mexico,Big Ten,Mountain West,37,28,56.5,,-6.5,2,15,65,340,2,3,23,16,81,424,3,0,21
+400869278,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Marshall,Akron,Conference USA,Mid-American,38,65,55.5,,-17.5,2,17,98,549,5,1,38,13,63,536,6,1,45
+400869281,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Bowling Green,Middle Tennessee,Mid-American,Conference USA,21,41,72.8,,5.5,2,15,93,436,3,0,21,16,68,465,6,0,41
+400869438,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Clemson,South Carolina State,ACC,MEAC,59,0,,,-54,0,14,80,549,7,1,52,12,54,121,0,0,0
+400869440,2016,3,regular,2016-09-17T16:00:00Z,1,0,1,Louisville,Florida State,ACC,ACC,63,20,66.5,,1,2,15,67,548,7,0,49,16,70,279,2,2,20
+400869519,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Penn State,Temple,Big Ten,American Athletic,34,27,49.8,,-8.5,2,13,63,441,4,2,34,13,64,304,3,2,27
+400869520,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Memphis,Kansas,American Athletic,Big 12,43,7,60.5,,-20,2,16,76,362,3,3,29,17,72,333,1,0,7
+400869656,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Iowa,North Dakota State,Big Ten,MVFC,21,23,,,-14.5,0,11,49,231,3,0,21,10,70,364,2,0,16
+400869657,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,Wisconsin,Georgia State,Big Ten,Sun Belt,23,17,51,,-35.5,2,11,83,415,2,3,23,10,55,287,2,1,17
+400869720,2016,3,regular,2016-09-17T16:00:00Z,1,0,0,App State,Miami,Sun Belt,ACC,10,45,51,,4,2,13,72,241,1,1,10,14,59,531,5,1,38
+400869001,2016,3,regular,2016-09-17T16:30:00Z,1,0,0,Georgia Tech,Vanderbilt,ACC,SEC,38,7,44,,-6.5,2,12,64,516,5,1,38,13,61,290,1,0,7
+400869444,2016,3,regular,2016-09-17T17:30:00Z,1,0,0,UConn,Virginia,American Athletic,ACC,13,10,48.3,,-4.5,2,12,66,341,1,2,13,12,75,389,1,1,10
+400869116,2016,3,regular,2016-09-17T18:00:00Z,1,0,0,Washington State,Idaho,Pac-12,Sun Belt,56,6,68.8,,-27.5,2,11,80,509,6,0,42,14,71,250,0,2,6
+400869523,2016,3,regular,2016-09-17T18:00:00Z,1,0,0,Tulsa,North Carolina A&T,American Athletic,MEAC,58,21,,,-25,0,17,82,519,5,3,44,18,75,368,3,0,21
+400869358,2016,3,regular,2016-09-17T18:30:00Z,1,0,0,Kansas State,Florida Atlantic,Big 12,Conference USA,63,7,49.5,,-23.5,2,14,72,460,6,0,56,16,65,196,0,0,7
+400869195,2016,3,regular,2016-09-17T19:00:00Z,1,0,0,Toledo,Fresno State,Mid-American,Mountain West,52,17,57.5,,-20.5,2,16,85,619,7,1,52,15,54,176,1,1,10
+400869198,2016,3,regular,2016-09-17T19:00:00Z,1,0,0,Central Michigan,UNLV,Mid-American,Mountain West,44,21,55,,-12,2,17,72,509,5,0,35,15,79,285,2,0,14
+400869279,2016,3,regular,2016-09-17T19:00:00Z,1,0,0,Ball State,Eastern Kentucky,Mid-American,OVC,41,14,,,-13,0,14,95,454,5,2,41,14,63,259,2,0,14
+400868959,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Massachusetts,Florida International,FBS Independents,Conference USA,21,13,48.5,,1,2,13,79,390,3,0,21,12,70,328,1,2,13
+400868997,2016,3,regular,2016-09-17T19:30:00Z,1,0,1,Ole Miss,Alabama,SEC,SEC,43,48,53,,10,2,16,76,537,4,3,36,13,82,467,3,2,27
+400869111,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Michigan,Colorado,Big Ten,Pac-12,45,28,55.5,,-17.5,2,15,74,396,3,1,24,17,68,319,3,0,21
+400869113,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Nebraska,Oregon,Big Ten,Pac-12,35,32,72.5,,-3,2,13,82,422,5,0,35,13,70,437,5,0,32
+400869197,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Northern Illinois,San Diego State,Mid-American,Mountain West,28,42,48,,12.5,2,14,75,399,4,0,28,14,65,425,5,0,35
+400869282,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Kent State,Monmouth,Mid-American,Big South,27,7,,,-13,0,12,69,326,3,2,27,11,66,194,1,0,7
+400869283,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Miami (OH),Western Kentucky,Mid-American,Conference USA,24,31,64,,17.5,2,15,81,437,3,1,24,15,67,386,3,1,24
+400869437,2016,3,regular,2016-09-17T19:30:00Z,1,0,1,Virginia Tech,Boston College,ACC,ACC,49,0,39.3,,-6.5,2,16,76,503,6,0,42,15,57,114,0,0,0
+400869441,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,North Carolina,James Madison,ACC,CAA,56,28,,,-24.5,0,11,65,660,8,0,56,11,87,530,4,0,28
+400869442,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Oklahoma State,Pittsburgh,Big 12,ACC,45,38,57.5,,-2.5,2,19,80,678,6,1,45,17,85,532,3,1,24
+400869443,2016,3,regular,2016-09-17T19:30:00Z,1,0,0,Syracuse,South Florida,ACC,American Athletic,20,45,74.5,,12.5,2,14,107,536,2,2,20,14,65,454,5,1,38
+400868995,2016,3,regular,2016-09-17T20:00:00Z,1,0,0,Kentucky,New Mexico State,SEC,Sun Belt,62,42,65.8,,-21.5,2,16,75,642,7,0,48,16,79,494,5,0,35
+400868999,2016,3,regular,2016-09-17T20:00:00Z,1,0,0,South Carolina,East Carolina,SEC,American Athletic,20,15,51.3,,-2,2,12,55,322,2,2,20,11,95,528,1,3,15
+400869191,2016,3,regular,2016-09-17T20:00:00Z,1,0,0,Colorado State,Northern Colorado,Mountain West,Big Sky,47,21,,,-22,0,11,73,565,6,2,47,10,68,416,3,0,21
+400869194,2016,3,regular,2016-09-17T20:00:00Z,1,0,0,Wyoming,UC Davis,Mountain West,Big Sky,45,22,,,-22.5,0,12,64,452,5,1,38,12,61,262,2,1,16
+400869284,2016,3,regular,2016-09-17T20:00:00Z,1,0,0,Illinois,Western Michigan,Big Ten,Mid-American,10,34,56,,3,2,13,58,298,1,1,10,14,68,421,4,2,34
+400869114,2016,3,regular,2016-09-17T21:00:00Z,1,0,0,Oregon State,Idaho State,Pac-12,Big Sky,37,7,,,-35,0,15,75,416,2,3,23,16,71,403,1,0,7
+400869280,2016,3,regular,2016-09-17T22:00:00Z,1,0,0,Charlotte,Eastern Michigan,Conference USA,Mid-American,19,37,63.8,,1.5,2,12,86,411,2,2,19,12,64,353,3,3,30
+400869360,2016,3,regular,2016-09-17T22:00:00Z,1,0,0,NC State,Old Dominion,ACC,Conference USA,49,22,58,,-24.5,2,12,71,486,7,0,49,11,60,311,3,1,22
+400869813,2016,3,regular,2016-09-17T22:00:00Z,1,0,1,Georgia Southern,UL Monroe,Sun Belt,Sun Belt,23,21,57.5,,-27,2,14,91,376,2,3,23,14,63,370,3,0,21
+400869445,2016,3,regular,2016-09-17T22:30:00Z,1,0,0,Wake Forest,Delaware,ACC,CAA,38,21,,,-24,0,11,89,471,5,1,38,11,42,129,3,0,21
+400868912,2016,3,regular,2016-09-17T23:00:00Z,1,0,0,UTEP,Army,Conference USA,FBS Independents,14,66,46.8,,3.5,2,11,42,235,2,0,21,10,81,612,8,1,59
+400868993,2016,3,regular,2016-09-17T23:00:00Z,1,0,1,Auburn,Texas A&M,SEC,SEC,16,29,55.5,,-2.5,2,15,90,419,2,0,16,15,82,447,2,5,29
+400868996,2016,3,regular,2016-09-17T23:00:00Z,1,0,1,LSU,Mississippi State,SEC,SEC,23,20,47,,-13,2,12,72,381,3,1,23,13,66,280,2,2,20
+400869359,2016,3,regular,2016-09-17T23:00:00Z,1,0,0,Texas Tech,Louisiana Tech,Big 12,Conference USA,59,45,81.5,,-11,2,12,81,651,8,1,59,11,69,563,6,1,45
+400869362,2016,3,regular,2016-09-17T23:00:00Z,1,0,0,Southern Miss,Troy,Conference USA,Sun Belt,31,37,62.5,,-9.5,2,18,81,416,3,1,24,19,81,324,4,3,37
+400869518,2016,3,regular,2016-09-17T23:00:00Z,1,0,0,UCF,Maryland,American Athletic,Big Ten,24,30,56.3,,10.5,2,15,92,414,3,1,24,16,76,341,4,1,30
+400869521,2016,3,regular,2016-09-17T23:00:00Z,1,0,1,Tulane,Navy,American Athletic,American Athletic,14,21,42.8,,7,2,10,60,225,2,0,14,10,67,341,3,0,21
+400869522,2016,3,regular,2016-09-17T23:00:00Z,1,0,0,SMU,Liberty,American Athletic,Big South,29,14,,,-13.5,0,13,83,553,2,3,22,15,73,295,2,0,14
+400869814,2016,3,regular,2016-09-17T23:00:00Z,1,0,1,Louisiana,South Alabama,Sun Belt,Sun Belt,28,23,53,,-1.5,2,13,64,507,4,1,28,13,67,338,3,1,23
+400868948,2016,3,regular,2016-09-17T23:30:00Z,1,0,0,Notre Dame,Michigan State,FBS Independents,Big Ten,28,36,49.8,,-7,2,13,63,420,4,0,28,14,78,516,4,0,28
+400868992,2016,3,regular,2016-09-17T23:30:00Z,1,0,0,Arkansas,Texas State,SEC,Sun Belt,42,3,60.3,,-28.5,2,10,66,472,5,0,35,12,53,105,0,1,3
+400868994,2016,3,regular,2016-09-17T23:30:00Z,1,0,0,Florida,North Texas,SEC,Conference USA,32,0,52.8,,-33,2,13,73,474,4,1,30,13,50,83,0,0,0
+400868998,2016,3,regular,2016-09-17T23:30:00Z,1,0,1,Missouri,Georgia,SEC,SEC,27,28,53.8,,7,2,16,77,446,1,2,13,17,95,429,4,0,28
+400869613,2016,3,regular,2016-09-17T23:30:00Z,1,0,0,Oklahoma,Ohio State,Big 12,Big Ten,24,45,58.5,,2,2,13,68,426,2,1,17,12,69,416,4,1,31
+400869110,2016,3,regular,2016-09-18T00:00:00Z,1,0,1,Stanford,USC,Pac-12,Pac-12,27,10,50,,-7.5,2,10,64,384,3,2,27,9,62,322,1,1,10
+400869115,2016,3,regular,2016-09-18T00:00:00Z,1,0,0,Washington,Portland State,Pac-12,Big Sky,41,3,,,-41.5,0,12,57,386,6,0,41,10,60,212,0,1,3
+400869439,2016,3,regular,2016-09-18T00:00:00Z,1,0,0,Northwestern,Duke,Big Ten,ACC,24,13,44.5,,-4,2,16,85,428,2,1,17,15,84,393,2,0,13
+400869196,2016,3,regular,2016-09-18T01:00:00Z,1,0,0,Nevada,Buffalo,Mountain West,Mid-American,38,14,50,,-11,2,11,90,505,5,1,38,10,59,356,2,0,14
+400868924,2016,3,regular,2016-09-18T02:15:00Z,1,0,0,BYU,UCLA,FBS Independents,Pac-12,14,17,50.3,,3.5,2,14,75,287,2,0,14,14,76,337,2,1,17
+400869112,2016,3,regular,2016-09-18T02:30:00Z,1,0,0,San José State,Utah,Mountain West,Pac-12,17,34,46,,13,2,13,72,344,2,1,17,14,69,446,4,2,34
+400869117,2016,3,regular,2016-09-18T02:30:00Z,1,0,0,California,Texas,Pac-12,Big 12,50,43,79.8,,7.5,2,15,80,503,7,0,50,15,94,584,4,2,34
+400869108,2016,3,regular,2016-09-18T02:45:00Z,1,0,0,Arizona,Hawai'i,Pac-12,Mountain West,47,28,62.8,,-23.5,2,13,72,577,5,2,40,12,81,410,4,0,28
+400869446,2016,4,regular,2016-09-22T23:30:00Z,1,0,1,Georgia Tech,Clemson,ACC,ACC,7,26,58,,10.5,2,12,52,160,1,0,7,13,84,421,3,1,26
+400869201,2016,4,regular,2016-09-23T23:30:00Z,1,0,0,Eastern Michigan,Wyoming,Mid-American,Mountain West,27,24,60.3,,3.5,2,15,83,500,3,2,27,14,69,323,1,1,10
+400869524,2016,4,regular,2016-09-24T00:00:00Z,1,0,0,SMU,TCU,American Athletic,Big 12,3,33,68,,21.5,2,13,71,334,0,1,3,13,82,569,3,4,33
+400869118,2016,4,regular,2016-09-24T01:00:00Z,1,0,1,Utah,USC,Pac-12,Pac-12,31,27,45.5,,-2.5,2,10,82,465,4,1,31,10,61,460,2,2,20
+400869002,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,Alabama,Kent State,SEC,Mid-American,48,0,49.8,,-42.5,2,12,82,497,5,2,41,12,47,177,0,0,0
+400869005,2016,4,regular,2016-09-24T16:00:00Z,1,0,1,Ole Miss,Georgia,SEC,SEC,45,14,61.3,,-7,2,13,63,507,4,1,31,14,82,381,2,0,14
+400869200,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,Minnesota,Colorado State,Big Ten,Mountain West,31,24,56,,-17,2,11,66,422,4,1,31,11,81,407,3,1,24
+400869203,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,Purdue,Nevada,Big Ten,Mountain West,24,14,59.8,,-5,2,9,76,441,3,1,24,10,67,243,2,0,14
+400869204,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,Iowa State,San José State,Big 12,Mountain West,44,10,53,,-6.5,2,11,62,508,6,1,44,11,75,332,1,1,10
+400869363,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,Temple,Charlotte,American Athletic,Conference USA,48,20,52.8,,-27,2,13,68,529,5,2,41,13,84,444,3,0,20
+400869448,2016,4,regular,2016-09-24T16:00:00Z,1,0,0,South Florida,Florida State,American Athletic,ACC,35,55,63.5,,5,2,14,55,455,5,0,35,14,84,662,7,2,55
+400869634,2016,4,regular,2016-09-24T16:00:00Z,1,0,1,Rutgers,Iowa,Big Ten,Big Ten,7,14,56.3,,14,2,11,77,353,0,0,0,11,61,303,0,0,0
+400869659,2016,4,regular,2016-09-24T16:00:00Z,1,0,1,Michigan State,Wisconsin,Big Ten,Big Ten,6,30,41.5,,-3.5,2,12,72,330,0,2,6,11,68,300,2,1,16
+400869288,2016,4,regular,2016-09-24T16:30:00Z,1,0,0,Virginia,Central Michigan,ACC,Mid-American,49,35,50.5,,3.5,2,15,69,569,6,0,42,14,80,485,4,0,28
+400869451,2016,4,regular,2016-09-24T16:30:00Z,1,0,0,Virginia Tech,East Carolina,ACC,American Athletic,54,17,57,,-13,2,15,69,452,6,1,45,16,71,433,2,1,17
+400869447,2016,4,regular,2016-09-24T17:00:00Z,1,0,0,Boston College,Wagner,ACC,NEC,42,10,,,-35,0,13,76,460,5,0,35,13,48,137,0,1,3
+400869450,2016,4,regular,2016-09-24T17:00:00Z,1,0,0,UConn,Syracuse,American Athletic,ACC,24,31,57.8,,-3,2,12,92,425,3,1,24,12,69,449,3,1,24
+400869289,2016,4,regular,2016-09-24T18:00:00Z,1,0,0,Ohio,Gardner-Webb,Mid-American,Big South,37,21,,,-27,0,10,84,492,5,0,35,10,59,336,3,0,21
+400868925,2016,4,regular,2016-09-24T19:30:00Z,1,1,0,West Virginia,BYU,Big 12,FBS Independents,35,32,52.3,,-7,2,11,75,497,4,0,28,12,78,506,4,2,32
+400868949,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Notre Dame,Duke,FBS Independents,ACC,35,38,60.3,,-20,2,14,75,529,5,0,35,15,75,508,3,1,24
+400868960,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Massachusetts,Mississippi State,FBS Independents,SEC,35,47,48.3,,22.5,2,15,69,400,4,0,28,14,87,572,5,2,40
+400869007,2016,4,regular,2016-09-24T19:30:00Z,1,0,1,Tennessee,Florida,SEC,SEC,38,28,42.8,,-5,2,16,80,518,5,1,38,14,70,382,4,0,28
+400869123,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Oregon State,Boise State,Pac-12,Mountain West,24,38,60.5,,14,2,15,71,272,2,1,17,15,80,502,4,1,31
+400869285,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Akron,App State,Mid-American,Sun Belt,38,45,57,,5.5,2,12,70,493,5,1,38,12,81,592,6,1,45
+400869291,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Cincinnati,Miami (OH),American Athletic,Mid-American,27,20,56.3,,-17.5,2,13,90,448,3,2,27,14,56,310,1,2,13
+400869292,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Northern Illinois,Western Illinois,Mid-American,MVFC,23,28,,,-7,0,14,79,492,3,1,23,15,74,402,4,0,28
+400869368,2016,4,regular,2016-09-24T19:30:00Z,1,0,1,Old Dominion,UTSA,Conference USA,Conference USA,33,19,50.8,,-5,2,13,80,492,5,0,33,13,70,347,2,1,17
+400869449,2016,4,regular,2016-09-24T19:30:00Z,1,0,1,North Carolina,Pittsburgh,ACC,ACC,37,36,67,,-7,2,12,70,450,5,0,37,12,75,406,4,2,34
+400869452,2016,4,regular,2016-09-24T19:30:00Z,1,0,0,Indiana,Wake Forest,Big Ten,ACC,28,33,46.3,,-7,2,16,80,607,4,0,28,15,81,402,3,2,26
+400869658,2016,4,regular,2016-09-24T19:30:00Z,1,0,1,Michigan,Penn State,Big Ten,Big Ten,49,10,56,,-15.5,2,12,84,484,7,0,49,11,56,244,1,1,10
+400869006,2016,4,regular,2016-09-24T20:00:00Z,1,0,0,Missouri,Delaware State,SEC,MEAC,79,0,,,-50.5,0,15,79,678,9,1,65,14,54,140,0,0,0
+400869009,2016,4,regular,2016-09-24T20:30:00Z,1,0,0,Western Kentucky,Vanderbilt,Conference USA,SEC,30,31,49.8,,-8,2,12,75,516,4,1,30,13,72,427,4,1,31
+400869202,2016,4,regular,2016-09-24T20:30:00Z,1,0,0,Fresno State,Tulsa,Mountain West,American Athletic,41,48,66.3,,14.5,2,19,91,458,3,2,27,19,103,576,6,2,48
+400869122,2016,4,regular,2016-09-24T21:30:00Z,1,0,1,Oregon,Colorado,Pac-12,Pac-12,38,41,69,,-11,2,13,79,505,5,1,38,14,86,598,5,2,41
+400869003,2016,4,regular,2016-09-24T22:00:00Z,1,0,1,Auburn,LSU,SEC,SEC,18,13,45.3,,3.5,2,11,81,408,0,6,18,12,62,335,1,2,13
+400869286,2016,4,regular,2016-09-24T22:00:00Z,1,0,0,Florida Atlantic,Ball State,Conference USA,Mid-American,27,31,54.8,,3,2,13,75,440,3,2,27,14,82,498,4,1,31
+400869367,2016,4,regular,2016-09-24T22:00:00Z,1,0,1,Rice,North Texas,Conference USA,Conference USA,35,42,54,,-7.5,2,16,102,476,4,2,35,16,71,434,4,0,28
+400868913,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,Buffalo,Army,Mid-American,FBS Independents,23,20,50.3,,13,2,12,65,255,3,1,23,11,81,399,2,2,20
+400869290,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,Western Michigan,Georgia Southern,Mid-American,Sun Belt,49,31,55.8,,-8,2,12,65,383,5,0,35,12,67,375,4,1,31
+400869364,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,Florida International,UCF,Conference USA,American Athletic,14,53,52.5,,10,2,13,57,193,1,0,7,15,78,496,6,1,46
+400869365,2016,4,regular,2016-09-24T23:00:00Z,1,0,1,Middle Tennessee,Louisiana Tech,Conference USA,Conference USA,38,34,69.5,,-4,1,14,80,562,5,1,38,13,98,647,4,2,34
+400869525,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,Texas State,Houston,Sun Belt,American Athletic,3,64,63.8,,31,2,13,52,103,0,1,3,14,83,575,7,1,57
+400869815,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,Arkansas State,Central Arkansas,Sun Belt,Southland,23,28,,,-15.5,0,15,73,465,3,1,23,14,87,402,2,3,21
+400869816,2016,4,regular,2016-09-24T23:00:00Z,1,0,1,Troy,New Mexico State,Sun Belt,Sun Belt,52,6,66.3,,-20,2,14,79,522,5,1,38,14,88,540,1,0,6
+400869817,2016,4,regular,2016-09-24T23:00:00Z,1,0,0,South Alabama,Nicholls,Sun Belt,Southland,41,40,,,-16.5,0,17,95,471,4,2,34,18,64,209,3,2,27
+400869605,2016,4,regular,2016-09-24T23:10:00Z,1,0,0,Kansas State,Missouri State,Big 12,MVFC,35,0,,,-46.5,0,8,36,260,5,0,35,7,29,68,0,0,0
+400868878,2016,4,regular,2016-09-24T23:30:00Z,1,0,1,Baylor,Oklahoma State,Big 12,Big 12,35,24,73.5,,-7,2,12,65,518,5,0,35,14,103,517,2,1,17
+400869004,2016,4,regular,2016-09-24T23:30:00Z,1,0,1,Kentucky,South Carolina,SEC,SEC,17,10,57.5,,-2.5,2,12,70,350,2,1,17,11,66,262,1,1,10
+400869660,2016,4,regular,2016-09-24T23:30:00Z,1,0,1,Northwestern,Nebraska,Big Ten,Big Ten,13,24,47.8,,9.5,2,12,71,398,1,0,6,13,77,557,3,1,24
+400869121,2016,4,regular,2016-09-25T00:00:00Z,1,0,1,UCLA,Stanford,Pac-12,Pac-12,13,22,47.3,,2.5,2,10,62,320,1,2,13,10,68,340,1,3,16
+400869287,2016,4,regular,2016-09-25T00:00:00Z,1,0,0,Memphis,Bowling Green,American Athletic,Mid-American,77,3,66.8,,-17,2,17,77,635,9,0,63,17,77,310,0,1,3
+400869366,2016,4,regular,2016-09-25T00:00:00Z,1,0,0,Marshall,Louisville,Conference USA,ACC,28,59,69,,30.5,2,15,64,238,3,0,21,15,87,700,8,1,59
+400869369,2016,4,regular,2016-09-25T00:00:00Z,1,0,1,UTEP,Southern Miss,Conference USA,Conference USA,7,34,58.8,,13.5,2,14,54,233,1,0,7,13,68,380,2,2,20
+400869526,2016,4,regular,2016-09-25T00:00:00Z,1,0,0,Tulane,Louisiana,American Athletic,Sun Belt,41,39,46.5,,-3,2,21,78,276,2,4,27,21,105,369,4,4,39
+400869008,2016,4,regular,2016-09-25T01:00:00Z,1,1,1,Texas A&M,Arkansas,SEC,SEC,45,24,51.5,,-7,2,12,61,621,6,1,45,13,83,516,3,1,24
+400869205,2016,4,regular,2016-09-25T01:00:00Z,1,0,0,UNLV,Idaho,Mountain West,Sun Belt,30,33,61.8,,-14.5,2,13,78,550,3,3,30,13,73,422,3,2,26
+400869120,2016,4,regular,2016-09-25T02:00:00Z,1,0,1,Arizona State,California,Pac-12,Pac-12,51,41,84.5,,-3.5,2,16,83,468,4,3,37,16,96,635,5,2,41
+400869199,2016,4,regular,2016-09-25T02:15:00Z,1,0,1,Utah State,Air Force,Mountain West,Mountain West,20,27,53.5,,5.5,2,13,82,430,2,2,20,13,67,322,3,2,27
+400869119,2016,4,regular,2016-09-25T02:30:00Z,1,0,1,Arizona,Washington,Pac-12,Pac-12,28,35,58.3,,14.5,2,11,74,498,4,0,28,13,74,502,5,0,35
+400869527,2016,5,regular,2016-09-30T00:00:00Z,1,0,1,Houston,UConn,American Athletic,American Athletic,42,14,49,,-27.5,2,15,79,533,6,0,42,14,63,325,2,0,14
+400869598,2016,5,regular,2016-09-30T00:30:00Z,1,0,1,Texas Tech,Kansas,Big 12,Big 12,55,19,79,,-27.5,2,15,79,596,8,0,55,17,77,296,2,1,17
+400869124,2016,5,regular,2016-10-01T01:00:00Z,1,0,1,Washington,Stanford,Pac-12,Pac-12,44,6,46.5,,-3.5,2,9,63,459,6,1,44,9,57,238,1,0,6
+400868926,2016,5,regular,2016-10-01T02:15:00Z,1,0,0,BYU,Toledo,FBS Independents,Mid-American,55,53,51.3,,-3.5,2,14,68,594,7,1,55,14,81,711,7,1,53
+400868879,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Iowa State,Baylor,Big 12,Big 12,42,45,62,,17,2,10,77,444,6,0,42,10,85,627,6,0,45
+400868950,2016,5,regular,2016-10-01T16:00:00Z,1,1,0,Syracuse,Notre Dame,ACC,FBS Independents,33,50,74.3,,12,2,17,89,509,5,0,33,16,75,679,5,2,41
+400869011,2016,5,regular,2016-10-01T16:00:00Z,1,0,0,Arkansas,Alcorn State,SEC,SWAC,52,10,,,-53,0,12,58,540,4,1,31,13,59,298,1,1,10
+400869017,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Vanderbilt,Florida,SEC,SEC,6,13,41,,11,2,11,71,272,0,2,6,12,65,248,1,2,13
+400869528,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,East Carolina,UCF,American Athletic,American Athletic,29,47,61,,-3,2,19,101,570,4,0,29,19,74,355,4,1,31
+400869530,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Temple,SMU,American Athletic,American Athletic,45,20,52.5,,-12,2,16,64,373,4,1,31,15,76,275,2,0,13
+400869620,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Oklahoma State,Texas,Big 12,Big 12,49,31,67.5,,-2.5,2,13,70,554,6,2,47,16,86,590,5,0,31
+400869635,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Ohio State,Rutgers,Big Ten,Big Ten,58,0,58.8,,-39,2,11,90,631,8,1,58,12,54,117,0,0,0
+400869662,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Iowa,Northwestern,Big Ten,Big Ten,31,38,44.5,,-11.5,2,15,69,258,3,1,24,15,73,402,5,1,38
+400869721,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,Georgia Tech,Miami,ACC,ACC,21,35,53.5,,7.5,2,12,73,338,3,0,21,11,46,334,3,0,21
+400869818,2016,5,regular,2016-10-01T16:00:00Z,1,0,1,App State,Georgia State,Sun Belt,Sun Belt,17,3,52,,-19,2,13,76,377,2,1,17,13,71,248,0,1,3
+400869454,2016,5,regular,2016-10-01T16:30:00Z,1,0,1,Duke,Virginia,ACC,ACC,20,34,60.8,,-3.5,2,16,87,449,2,2,20,15,77,391,4,0,27
+400869294,2016,5,regular,2016-10-01T17:00:00Z,1,0,0,Boston College,Buffalo,ACC,Mid-American,35,3,40,,-18,2,12,84,411,5,0,35,13,43,67,0,1,3
+400869127,2016,5,regular,2016-10-01T18:30:00Z,1,0,1,Colorado,Oregon State,Pac-12,Pac-12,47,6,56.3,,-17.5,2,12,86,538,5,2,40,16,70,222,0,2,6
+400869296,2016,5,regular,2016-10-01T18:30:00Z,1,0,1,Miami (OH),Ohio,Mid-American,Mid-American,7,17,50.8,,2,2,12,66,218,1,0,7,12,69,247,1,1,10
+400869295,2016,5,regular,2016-10-01T19:20:00Z,1,0,1,Bowling Green,Eastern Michigan,Mid-American,Mid-American,25,28,65,,-2.5,2,12,91,492,3,1,25,12,75,502,4,0,28
+400868961,2016,5,regular,2016-10-01T19:30:00Z,1,0,0,Massachusetts,Tulane,FBS Independents,American Athletic,24,31,41.5,,2.5,2,12,55,297,2,1,17,13,86,460,4,1,31
+400869012,2016,5,regular,2016-10-01T19:30:00Z,1,0,0,Auburn,UL Monroe,SEC,Sun Belt,58,7,57,,-33,2,12,85,723,8,0,56,12,66,256,1,0,7
+400869013,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Georgia,Tennessee,SEC,SEC,31,34,52,,3.5,2,14,75,402,4,1,31,13,64,360,3,0,27
+400869206,2016,5,regular,2016-10-01T19:30:00Z,1,0,0,Air Force,Navy,Mountain West,American Athletic,28,14,49.8,,-7,2,12,70,400,3,2,28,12,69,337,2,0,14
+400869293,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Kent State,Akron,Mid-American,Mid-American,27,31,51.5,,9,2,14,80,392,3,2,27,14,61,378,4,1,31
+400869297,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Ball State,Northern Illinois,Mid-American,Mid-American,24,31,57.5,,-3,2,14,87,447,3,1,24,14,90,642,4,1,31
+400869455,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Florida State,North Carolina,ACC,ACC,35,37,72.8,,-10.5,2,10,78,549,5,0,35,10,72,553,5,0,37
+400869456,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,NC State,Wake Forest,ACC,ACC,33,16,48,,-14,2,12,78,496,4,2,33,11,70,417,1,3,16
+400869606,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,West Virginia,Kansas State,Big 12,Big 12,17,16,56,,-3,2,12,78,417,2,1,17,12,76,296,1,3,16
+400869663,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Maryland,Purdue,Big Ten,Big Ten,50,7,55,,-10.5,2,15,63,479,7,0,50,15,81,211,1,0,7
+400869664,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Michigan,Wisconsin,Big Ten,Big Ten,14,7,44.8,,-11.5,2,14,79,308,2,0,14,13,53,154,1,0,7
+400869665,2016,5,regular,2016-10-01T19:30:00Z,1,0,1,Nebraska,Illinois,Big Ten,Big Ten,31,16,52.5,,-20.5,2,9,74,423,4,1,31,9,47,257,1,2,16
+400869666,2016,5,regular,2016-10-01T19:40:00Z,1,0,1,Penn State,Minnesota,Big Ten,Big Ten,29,26,54.5,,-3,2,14,72,511,2,3,23,14,92,513,2,4,26
+400869016,2016,5,regular,2016-10-01T20:00:00Z,1,0,1,South Carolina,Texas A&M,SEC,SEC,13,24,50.3,,19.5,2,13,74,378,1,2,13,14,81,396,3,1,24
+400869209,2016,5,regular,2016-10-01T20:00:00Z,1,0,1,New Mexico,San José State,Mountain West,Mountain West,48,41,51.3,,-10.5,2,14,74,501,5,2,41,14,57,498,6,0,41
+400869614,2016,5,regular,2016-10-01T21:00:00Z,1,0,1,TCU,Oklahoma,Big 12,Big 12,46,52,65.8,,3.5,2,16,75,509,4,0,31,16,79,515,7,1,52
+400869819,2016,5,regular,2016-10-01T21:00:00Z,1,0,1,Idaho,Troy,Sun Belt,Sun Belt,13,34,57.8,,15,2,,,,,,,,,,,,
+400869128,2016,5,regular,2016-10-01T22:00:00Z,1,0,1,California,Utah,Pac-12,Pac-12,28,23,63.8,,2,2,10,49,347,4,0,28,11,99,457,3,1,23
+400869370,2016,5,regular,2016-10-01T22:00:00Z,1,0,1,Charlotte,Old Dominion,Conference USA,Conference USA,17,52,57.3,,8.5,2,,,,,,,,,,,,
+400869010,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Alabama,Kentucky,SEC,SEC,34,6,54.8,,-37,2,10,78,478,3,2,27,11,60,151,0,2,6
+400869015,2016,5,regular,2016-10-01T23:00:00Z,1,0,0,Ole Miss,Memphis,SEC,American Athletic,48,28,71.5,,-15.5,2,12,90,624,5,2,41,13,78,502,4,0,28
+400869298,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Central Michigan,Western Michigan,Mid-American,Mid-American,10,49,60.8,,3.5,2,10,63,247,1,1,10,8,62,429,6,0,42
+400869371,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Florida International,Florida Atlantic,Conference USA,Conference USA,33,31,52.8,,3,2,14,81,489,3,2,27,12,58,318,3,1,24
+400869372,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Louisiana Tech,UTEP,Conference USA,Conference USA,28,7,57.3,,-22,2,9,50,375,4,0,28,9,69,370,1,0,7
+400869374,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,North Texas,Middle Tennessee,Conference USA,Conference USA,13,30,65,,17,2,13,76,308,2,0,13,12,80,473,3,3,30
+400869375,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Southern Miss,Rice,Conference USA,Conference USA,44,28,58.5,,-26,2,14,73,715,5,3,44,14,65,298,4,0,28
+400869376,2016,5,regular,2016-10-01T23:00:00Z,1,0,0,Western Kentucky,Houston Christian,Conference USA,Southland,50,3,,,,,11,54,535,5,1,37,12,80,241,0,1,3
+400869529,2016,5,regular,2016-10-01T23:00:00Z,1,0,1,Cincinnati,South Florida,American Athletic,American Athletic,20,45,64.5,,7,2,14,77,414,3,0,20,14,82,464,5,1,38
+400869014,2016,5,regular,2016-10-01T23:30:00Z,1,0,1,LSU,Missouri,SEC,SEC,42,7,51.3,,-12,2,12,83,657,6,0,42,12,60,265,1,0,7
+400869373,2016,5,regular,2016-10-01T23:30:00Z,1,0,0,Pittsburgh,Marshall,ACC,Conference USA,43,27,57.5,,-16.5,2,9,66,574,5,1,37,11,62,368,4,0,27
+400869821,2016,5,regular,2016-10-01T23:30:00Z,1,0,0,Texas State,Incarnate Word,Sun Belt,Southland,48,17,,,-17,0,14,91,598,6,0,48,15,68,409,2,1,17
+400869212,2016,5,regular,2016-10-02T00:00:00Z,1,0,0,South Alabama,San Diego State,Sun Belt,Mountain West,42,24,49.3,,18,2,13,61,351,4,0,28,13,64,306,3,1,24
+400869453,2016,5,regular,2016-10-02T00:00:00Z,1,0,1,Clemson,Louisville,ACC,ACC,42,36,64.3,,1,2,17,62,534,6,0,42,17,102,552,4,3,36
+400869661,2016,5,regular,2016-10-02T00:00:00Z,1,0,1,Indiana,Michigan State,Big Ten,Big Ten,24,21,52.8,,5.5,2,12,70,415,3,1,24,12,77,408,3,0,21
+400869820,2016,5,regular,2016-10-02T00:00:00Z,1,0,1,New Mexico State,Louisiana,Sun Belt,Sun Belt,37,31,67.8,,5.5,2,14,98,446,2,1,17,15,92,369,2,3,31
+400869126,2016,5,regular,2016-10-02T00:30:00Z,1,0,1,USC,Arizona State,Pac-12,Pac-12,41,20,64.3,,-9.5,2,14,73,558,5,2,41,14,72,325,2,2,20
+400869129,2016,5,regular,2016-10-02T01:30:00Z,1,0,1,Washington State,Oregon,Pac-12,Pac-12,51,33,74.5,,1.5,2,12,89,644,7,0,49,12,64,404,4,0,27
+400869207,2016,5,regular,2016-10-02T02:15:00Z,1,0,1,Boise State,Utah State,Mountain West,Mountain West,21,10,60.5,,-23.5,2,11,66,369,3,0,21,13,78,357,1,1,10
+400869208,2016,5,regular,2016-10-02T02:15:00Z,1,0,1,Colorado State,Wyoming,Mountain West,Mountain West,17,38,53.8,,-5.5,2,14,78,444,2,0,17,13,68,424,3,1,24
+400869125,2016,5,regular,2016-10-02T02:30:00Z,1,0,1,UCLA,Arizona,Pac-12,Pac-12,45,24,58.5,,-10.5,2,16,71,500,5,1,38,15,81,442,3,1,24
+400869210,2016,5,regular,2016-10-02T02:30:00Z,1,0,1,UNLV,Fresno State,Mountain West,Mountain West,45,20,56.5,,-10,2,15,71,508,6,1,45,15,79,380,2,2,20
+400869211,2016,5,regular,2016-10-02T03:59:00Z,1,0,1,Hawai'i,Nevada,Mountain West,Mountain West,38,17,55.5,,3.5,1,11,59,546,5,1,38,11,77,387,2,1,17
+400869822,2016,6,regular,2016-10-06T00:00:00Z,1,0,1,Arkansas State,Georgia Southern,Sun Belt,Sun Belt,27,26,53.5,,6.5,2,14,79,525,3,2,27,15,72,340,1,4,19
+400869379,2016,6,regular,2016-10-07T00:00:00Z,1,0,1,Louisiana Tech,Western Kentucky,Conference USA,Conference USA,55,52,69,,2.5,2,13,74,560,7,2,55,12,74,432,6,1,45
+400869531,2016,6,regular,2016-10-07T00:00:00Z,1,0,1,Memphis,Temple,American Athletic,American Athletic,34,27,57.5,,-9.5,2,14,61,323,2,1,20,15,92,510,3,1,27
+400869457,2016,6,regular,2016-10-07T23:30:00Z,1,0,1,Boston College,Clemson,ACC,ACC,10,56,43,,17.5,2,15,73,244,1,1,10,13,61,525,6,0,42
+400868962,2016,6,regular,2016-10-08T00:00:00Z,1,0,0,Old Dominion,Massachusetts,Conference USA,FBS Independents,36,16,54.8,,-11,2,12,85,553,4,3,36,13,67,382,2,0,14
+400869533,2016,6,regular,2016-10-08T00:00:00Z,1,0,1,Tulsa,SMU,American Athletic,American Athletic,43,40,68,,-16,2,17,83,360,4,1,30,19,122,496,3,5,33
+400869214,2016,6,regular,2016-10-08T01:00:00Z,1,0,1,New Mexico,Boise State,Mountain West,Mountain West,21,49,62,,18.5,2,11,76,396,3,0,21,11,59,504,7,0,49
+400869534,2016,6,regular,2016-10-08T15:30:00Z,1,0,1,UConn,Cincinnati,American Athletic,American Athletic,20,9,49,,3,2,12,77,437,1,2,13,12,81,335,0,3,9
+400868951,2016,6,regular,2016-10-08T16:00:00Z,1,0,0,NC State,Notre Dame,ACC,FBS Independents,10,3,56,,-2.5,2,12,67,204,0,1,3,13,65,107,0,1,3
+400869021,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,Mississippi State,Auburn,SEC,SEC,14,38,55,,3,2,13,69,249,2,0,14,11,75,417,4,1,31
+400869381,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,UTSA,Southern Miss,Conference USA,Conference USA,55,32,53.8,,16.5,2,13,49,548,6,2,48,12,90,607,4,1,32
+400869535,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,South Florida,East Carolina,American Athletic,American Athletic,38,22,68,,-14.5,2,13,72,477,5,1,38,12,95,479,2,3,22
+400869599,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,Kansas,TCU,Big 12,Big 12,23,24,61.3,,28.5,2,16,95,464,2,3,23,17,68,357,2,1,17
+400869615,2016,6,regular,2016-10-08T16:00:00Z,1,1,1,Oklahoma,Texas,Big 12,Big 12,45,40,72.5,,-11.5,2,14,88,667,6,1,45,16,84,465,5,1,40
+400869668,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,Minnesota,Iowa,Big Ten,Big Ten,7,14,50,,-2.5,2,14,62,230,1,0,7,15,75,311,0,2,6
+400869669,2016,6,regular,2016-10-08T16:00:00Z,1,0,1,Penn State,Maryland,Big Ten,Big Ten,38,14,55.8,,1,2,14,82,513,5,1,38,14,54,260,2,0,14
+400869458,2016,6,regular,2016-10-08T16:30:00Z,1,0,1,Pittsburgh,Georgia Tech,ACC,ACC,37,34,52.5,,-6.5,2,10,65,407,4,3,37,9,57,349,3,2,27
+400869300,2016,6,regular,2016-10-08T18:00:00Z,1,0,1,Ohio,Bowling Green,Mid-American,Mid-American,30,24,60.3,,-11.5,2,13,68,371,4,1,30,13,78,393,3,1,24
+400869302,2016,6,regular,2016-10-08T19:00:00Z,1,0,1,Akron,Miami (OH),Mid-American,Mid-American,35,13,54.3,,-11,2,13,64,339,4,0,28,14,64,250,1,2,13
+400869304,2016,6,regular,2016-10-08T19:00:00Z,1,0,1,Eastern Michigan,Toledo,Mid-American,Mid-American,20,35,65.5,,19.5,2,12,60,312,2,2,20,13,82,463,5,0,35
+400869536,2016,6,regular,2016-10-08T19:00:00Z,1,0,1,Navy,Houston,American Athletic,American Athletic,46,40,52.3,,15.5,2,11,71,392,4,2,37,12,85,469,5,2,40
+400868914,2016,6,regular,2016-10-08T19:30:00Z,1,0,0,Duke,Army,ACC,FBS Independents,13,6,43.3,,-6,2,,,,,,,,,,,,
+400868927,2016,6,regular,2016-10-08T19:30:00Z,1,0,0,Michigan State,BYU,Big Ten,FBS Independents,14,31,48.3,,-3.5,2,9,53,206,2,0,14,10,79,413,4,1,31
+400869023,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Texas A&M,Tennessee,SEC,SEC,45,38,60.3,,-7.5,2,21,82,450,0,0,21,17,76,484,0,0,17
+400869213,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Wyoming,Air Force,Mountain West,Mountain West,35,26,50,,13.5,2,15,75,362,4,0,28,15,60,317,3,2,26
+400869299,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Central Michigan,Ball State,Mid-American,Mid-American,24,21,56.5,,-12.5,2,12,70,422,2,1,17,13,69,330,3,0,21
+400869301,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Buffalo,Kent State,Mid-American,Mid-American,20,44,42.5,,3,2,12,80,371,2,2,20,11,61,435,4,3,37
+400869459,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,North Carolina,Virginia Tech,ACC,ACC,3,34,50.3,,2.5,2,15,63,120,0,1,3,16,85,264,3,2,27
+400869590,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Oklahoma State,Iowa State,Big 12,Big 12,38,31,68.3,,-14.5,2,16,78,439,5,1,38,17,87,461,4,1,31
+400869643,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Ohio State,Indiana,Big Ten,Big Ten,38,17,60.8,,-28,2,15,72,348,5,1,38,15,69,259,2,1,17
+400869667,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Illinois,Purdue,Big Ten,Big Ten,31,34,49,,-9,2,13,73,504,3,3,31,13,80,514,4,2,34
+400869823,2016,6,regular,2016-10-08T19:30:00Z,1,0,1,Georgia State,Texas State,Sun Belt,Sun Belt,41,21,58.3,,-10,2,15,79,534,5,2,41,15,89,431,3,0,21
+400869020,2016,6,regular,2016-10-08T20:00:00Z,1,0,1,Kentucky,Vanderbilt,SEC,SEC,20,13,48.3,,-3,2,12,78,292,2,2,20,11,65,247,0,2,6
+400869132,2016,6,regular,2016-10-08T20:00:00Z,1,0,1,USC,Colorado,Pac-12,Pac-12,21,17,62.3,,-5,2,13,80,522,3,0,21,12,74,359,1,1,10
+400869217,2016,6,regular,2016-10-08T20:30:00Z,1,0,1,San José State,Hawai'i,Mountain West,Mountain West,17,34,63,,-3,2,14,75,334,1,1,10,14,66,411,4,2,34
+400869303,2016,6,regular,2016-10-08T22:30:00Z,1,0,1,Western Michigan,Northern Illinois,Mid-American,Mid-American,45,30,68.3,,-17.5,2,11,65,557,5,1,38,11,72,478,3,3,27
+400869018,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,Arkansas,Alabama,SEC,SEC,30,49,48.5,,14.5,2,14,85,514,4,1,30,13,51,512,5,0,35
+400869216,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,Nevada,Fresno State,Mountain West,Mountain West,27,22,54.3,,-8.5,2,11,73,396,4,0,27,10,79,437,2,3,22
+400869380,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,North Texas,Marshall,Conference USA,Conference USA,38,21,60.5,,13.5,2,13,84,438,4,1,31,14,72,254,2,0,14
+400869460,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,Wake Forest,Syracuse,ACC,ACC,28,9,53.5,,-4.5,2,13,73,358,3,0,21,14,66,311,1,0,7
+400869607,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,Kansas State,Texas Tech,Big 12,Big 12,44,38,67.5,,-9.5,2,11,62,335,3,3,30,13,92,557,5,1,38
+400869636,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,Rutgers,Michigan,Big Ten,Big Ten,0,78,52.5,,30,2,17,54,14,0,0,0,18,72,592,10,0,71
+400869824,2016,6,regular,2016-10-08T23:00:00Z,1,0,1,UL Monroe,Idaho,Sun Belt,Sun Belt,31,34,57.3,,-3,2,12,77,554,4,1,31,12,75,392,2,4,27
+400869133,2016,6,regular,2016-10-08T23:30:00Z,1,0,1,Oregon,Washington,Pac-12,Pac-12,21,70,67.3,,10,2,16,77,414,3,0,21,16,73,678,9,0,63
+400869378,2016,6,regular,2016-10-09T00:00:00Z,1,0,1,UTEP,Florida International,Conference USA,Conference USA,21,35,48.8,,-4.5,2,13,64,352,3,0,21,12,77,494,4,2,35
+400869722,2016,6,regular,2016-10-09T00:00:00Z,1,0,1,Miami,Florida State,ACC,ACC,19,20,61.8,,-1.5,2,12,62,293,2,2,19,12,78,432,2,2,20
+400869134,2016,6,regular,2016-10-09T01:00:00Z,1,0,1,Oregon State,California,Pac-12,Pac-12,47,44,70,,13.5,2,14,76,567,6,2,47,12,92,452,4,3,37
+400869130,2016,6,regular,2016-10-09T02:00:00Z,1,0,1,Utah,Arizona,Pac-12,Pac-12,36,23,53.5,,-9.5,2,13,76,437,4,2,34,13,68,490,3,1,23
+400869215,2016,6,regular,2016-10-09T02:00:00Z,1,0,1,Colorado State,Utah State,Mountain West,Mountain West,31,24,52.3,,6,2,16,82,470,4,1,31,14,73,504,3,1,24
+400869131,2016,6,regular,2016-10-09T02:30:00Z,1,0,1,Arizona State,UCLA,Pac-12,Pac-12,23,20,57.5,,8,2,18,76,270,2,3,23,18,81,438,2,2,20
+400869135,2016,6,regular,2016-10-09T02:30:00Z,1,0,1,Stanford,Washington State,Pac-12,Pac-12,16,42,55.5,,-7.5,2,13,63,281,0,1,9,12,72,427,6,0,42
+400869218,2016,6,regular,2016-10-09T02:30:00Z,1,0,1,San Diego State,UNLV,Mountain West,Mountain West,26,7,53.3,,-16.5,2,12,76,410,3,2,26,11,49,137,0,0,0
+400869377,2016,6,regular,2016-10-09T16:00:00Z,1,0,1,Florida Atlantic,Charlotte,Conference USA,Conference USA,23,28,61.8,,-13,2,13,84,437,3,1,23,11,65,443,4,0,28
+400869022,2016,6,regular,2016-10-09T18:30:00Z,1,0,1,South Carolina,Georgia,SEC,SEC,14,28,41.5,,8.5,2,12,62,298,2,0,14,13,67,335,3,0,21
+400869825,2016,7,regular,2016-10-13T00:00:00Z,1,0,1,Louisiana,App State,Sun Belt,Sun Belt,0,24,49.5,,10.5,2,13,78,272,0,0,0,13,64,407,3,1,24
+400869461,2016,7,regular,2016-10-14T23:00:00Z,1,0,1,Louisville,Duke,ACC,ACC,24,14,69.5,,-34.5,2,10,63,473,3,1,24,10,61,249,2,0,14
+400869538,2016,7,regular,2016-10-15T00:00:00Z,1,0,1,Tulane,Memphis,American Athletic,American Athletic,14,24,52.5,,11.5,2,13,75,332,2,0,14,16,70,391,2,3,24
+400869221,2016,7,regular,2016-10-15T02:00:00Z,1,0,1,Fresno State,San Diego State,Mountain West,Mountain West,3,17,51,,18.5,2,9,52,226,0,1,3,10,74,344,2,1,17
+400868928,2016,7,regular,2016-10-15T02:15:00Z,1,0,0,BYU,Mississippi State,FBS Independents,SEC,28,21,55.5,,-7,2,14,76,339,3,0,21,13,87,405,3,0,21
+400868915,2016,7,regular,2016-10-15T16:00:00Z,1,0,0,Army,Lafayette,FBS Independents,Patriot,62,7,,,-33,0,12,67,622,8,0,55,11,55,193,1,0,7
+400869026,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Georgia,Vanderbilt,SEC,SEC,16,17,42.5,,-14,2,12,78,416,1,3,16,12,51,172,2,1,17
+400869462,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Clemson,NC State,ACC,ACC,24,17,60.8,,-20,2,11,92,509,3,1,24,11,78,352,1,1,10
+400869608,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Oklahoma,Kansas State,Big 12,Big 12,38,17,57,,-13.5,2,11,66,490,4,1,31,12,70,325,2,1,17
+400869627,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Texas Tech,West Virginia,Big 12,Big 12,17,48,82,,3,2,11,78,343,2,1,17,11,80,622,6,2,48
+400869637,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Rutgers,Illinois,Big Ten,Big Ten,7,24,51.8,,4,2,12,80,390,1,0,7,13,60,275,2,1,17
+400869671,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Maryland,Minnesota,Big Ten,Big Ten,10,31,47.3,,-3,2,13,74,231,1,1,10,13,65,296,3,1,24
+400869673,2016,7,regular,2016-10-15T16:00:00Z,1,0,1,Purdue,Iowa,Big Ten,Big Ten,35,49,52,,12,2,14,82,543,5,0,35,13,73,503,6,0,42
+400869464,2016,7,regular,2016-10-15T16:30:00Z,1,0,0,Georgia Tech,Georgia Southern,ACC,Sun Belt,35,24,48,,-10,2,9,56,453,5,0,35,9,84,345,3,1,24
+400869465,2016,7,regular,2016-10-15T16:30:00Z,1,0,1,Virginia,Pittsburgh,ACC,ACC,31,45,60.8,,3.5,2,14,72,398,4,1,31,14,72,378,4,1,31
+400869308,2016,7,regular,2016-10-15T18:00:00Z,1,0,1,Ohio,Eastern Michigan,Mid-American,Mid-American,20,27,53.8,,-8,2,12,75,420,2,2,20,13,74,400,3,2,27
+400869309,2016,7,regular,2016-10-15T18:30:00Z,1,0,1,Miami (OH),Kent State,Mid-American,Mid-American,18,14,43.3,,2.3,2,13,59,265,2,1,16,12,62,253,2,0,14
+400869384,2016,7,regular,2016-10-15T18:30:00Z,1,0,1,Middle Tennessee,Western Kentucky,Conference USA,Conference USA,43,44,75,,-0.5,1,10,78,545,4,3,30,11,72,462,3,3,27
+400868880,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Baylor,Kansas,Big 12,Big 12,49,7,65,,-33.5,2,15,82,444,5,0,35,17,74,222,1,0,7
+400868963,2016,7,regular,2016-10-15T19:30:00Z,1,0,0,Massachusetts,Louisiana Tech,FBS Independents,Conference USA,28,56,64.3,,19,2,15,75,364,3,0,21,14,69,685,7,0,49
+400869028,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Tennessee,Alabama,SEC,SEC,10,49,53.8,,14,2,15,64,163,1,1,10,13,77,579,5,0,35
+400869136,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Arizona,USC,Pac-12,Pac-12,14,48,64.3,,14,2,14,70,376,2,0,14,14,79,560,7,0,48
+400869219,2016,7,regular,2016-10-15T19:30:00Z,1,1,1,Air Force,New Mexico,Mountain West,Mountain West,40,45,53.5,,-14,2,13,75,520,5,2,40,13,64,448,6,1,45
+400869305,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Buffalo,Ball State,Mid-American,Mid-American,21,31,52,,11,2,15,84,474,3,0,21,14,82,558,4,1,31
+400869306,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Toledo,Bowling Green,Mid-American,Mid-American,42,35,70.8,,-31.5,2,,,,,,,,,,,,
+400869307,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Northern Illinois,Central Michigan,Mid-American,Mid-American,28,34,61,,-1.5,2,16,59,307,3,0,28,14,84,411,3,0,21
+400869310,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Akron,Western Michigan,Mid-American,Mid-American,0,41,67,,14,2,10,59,271,0,0,0,10,88,569,6,0,41
+400869463,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Florida State,Wake Forest,ACC,ACC,17,6,51.3,,-24,2,14,77,442,2,1,17,14,69,252,0,2,6
+400869670,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Indiana,Nebraska,Big Ten,Big Ten,22,27,58.5,,3.5,2,14,71,353,2,2,20,14,73,338,2,2,20
+400869672,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Michigan State,Northwestern,Big Ten,Big Ten,40,54,41.3,,-6.5,2,15,67,465,3,2,26,17,87,489,6,1,45
+400869723,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Miami,North Carolina,ACC,ACC,13,20,67,,-6,2,12,71,360,1,2,13,12,92,412,2,2,20
+400869827,2016,7,regular,2016-10-15T19:30:00Z,1,0,1,Troy,Georgia State,Sun Belt,Sun Belt,31,21,54,,-19.5,2,14,82,336,2,3,24,13,76,438,3,0,21
+400869466,2016,7,regular,2016-10-15T19:45:00Z,1,0,1,Syracuse,Virginia Tech,ACC,ACC,31,17,65.3,,23,2,13,103,562,4,0,31,13,74,450,2,1,17
+400869025,2016,7,regular,2016-10-15T20:00:00Z,1,0,1,Florida,Missouri,SEC,SEC,40,14,51,,-13,2,14,80,478,2,2,19,16,68,354,2,0,14
+400869139,2016,7,regular,2016-10-15T20:00:00Z,1,0,1,Oregon State,Utah,Pac-12,Pac-12,14,19,42.8,,7.5,2,14,67,277,2,0,14,15,74,312,2,1,17
+400869828,2016,7,regular,2016-10-15T21:00:00Z,1,0,1,Idaho,New Mexico State,Sun Belt,Sun Belt,55,23,67.3,,-4,2,,,,,,,,,,,,
+400869382,2016,7,regular,2016-10-15T22:00:00Z,1,0,1,Charlotte,Florida International,Conference USA,Conference USA,26,27,56.3,,2,2,13,81,408,3,2,26,14,66,359,3,2,27
+400869024,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Arkansas,Ole Miss,SEC,SEC,34,30,65,,10,2,14,85,444,4,2,34,13,71,418,4,1,30
+400869383,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Marshall,Florida Atlantic,Conference USA,Conference USA,27,21,61,,-12,2,,,,,,,,,,,,
+400869385,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Rice,UTSA,Conference USA,Conference USA,13,14,53,,2.5,2,11,71,358,2,0,13,12,63,309,1,0,7
+400869540,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,South Florida,UConn,American Athletic,American Athletic,42,27,53.5,,-19,2,16,84,524,5,0,35,16,77,389,2,2,20
+400869541,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Houston,Tulsa,American Athletic,American Athletic,38,31,68,,-22,2,12,90,487,4,1,31,13,87,496,4,1,31
+400869591,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Texas,Iowa State,Big 12,Big 12,27,6,68.5,,-17,2,12,87,485,3,2,27,12,80,280,0,2,6
+400869826,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,Arkansas State,South Alabama,Sun Belt,Sun Belt,17,7,54.8,,-4.5,2,10,69,327,1,1,10,10,59,236,1,0,7
+400869829,2016,7,regular,2016-10-15T23:00:00Z,1,0,1,UL Monroe,Texas State,Sun Belt,Sun Belt,40,34,65.8,,-10,2,15,98,520,5,2,40,14,62,335,3,0,21
+400868952,2016,7,regular,2016-10-15T23:30:00Z,1,0,0,Notre Dame,Stanford,FBS Independents,Pac-12,10,17,53,,-3.3,2,11,65,277,1,1,10,9,61,271,1,0,8
+400869027,2016,7,regular,2016-10-15T23:30:00Z,1,0,0,LSU,Southern Miss,SEC,Conference USA,45,10,55,,-24.5,2,11,43,449,4,1,31,12,74,262,1,1,10
+400869539,2016,7,regular,2016-10-15T23:30:00Z,1,0,1,UCF,Temple,American Athletic,American Athletic,25,26,51.5,,-3.5,2,14,60,310,3,1,25,13,77,394,3,2,26
+400869137,2016,7,regular,2016-10-16T00:00:00Z,1,0,1,Colorado,Arizona State,Pac-12,Pac-12,40,16,62.5,,-10,2,15,87,565,5,2,40,17,66,199,1,3,16
+400869644,2016,7,regular,2016-10-16T00:00:00Z,1,0,1,Wisconsin,Ohio State,Big Ten,Big Ten,23,30,46.3,,10,2,13,77,430,2,3,23,13,78,381,3,3,30
+400869220,2016,7,regular,2016-10-16T02:15:00Z,1,0,1,Boise State,Colorado State,Mountain West,Mountain West,28,23,59.3,,-28,2,10,73,434,4,0,28,13,68,353,3,1,23
+400869138,2016,7,regular,2016-10-16T02:30:00Z,1,0,1,Washington State,UCLA,Pac-12,Pac-12,27,21,51.5,,-7,2,13,85,364,3,2,27,12,65,310,3,0,21
+400869223,2016,7,regular,2016-10-16T02:30:00Z,1,0,1,San José State,Nevada,Mountain West,Mountain West,14,10,56,,-2.5,2,10,71,294,2,0,14,11,57,272,1,1,10
+400869222,2016,7,regular,2016-10-16T03:59:00Z,1,0,1,Hawai'i,UNLV,Mountain West,Mountain West,38,41,54,,-10,1,12,66,473,5,1,48,12,82,541,5,2,41
+400869467,2016,8,regular,2016-10-20T23:00:00Z,1,0,1,Virginia Tech,Miami,ACC,ACC,37,16,52.5,,-4.5,2,15,82,543,4,3,37,14,68,348,2,1,16
+400869830,2016,8,regular,2016-10-20T23:30:00Z,1,0,1,South Alabama,Troy,Sun Belt,Sun Belt,21,28,48.5,,9.5,2,14,59,309,3,0,21,13,83,595,2,2,21
+400869224,2016,8,regular,2016-10-21T02:15:00Z,1,0,0,Boise State,BYU,Mountain West,FBS Independents,28,27,58,,-7.5,2,13,75,516,4,0,28,14,83,271,1,2,13
+400869542,2016,8,regular,2016-10-21T23:00:00Z,1,0,1,Temple,South Florida,American Athletic,American Athletic,46,30,58.5,,6,2,12,75,503,4,2,37,12,54,332,4,1,30
+400869140,2016,8,regular,2016-10-22T02:30:00Z,1,0,1,California,Oregon,Pac-12,Pac-12,52,49,89.3,,1,2,15,122,611,6,3,52,15,85,469,7,0,49
+400869230,2016,8,regular,2016-10-22T02:30:00Z,1,0,1,San Diego State,San José State,Mountain West,Mountain West,42,3,48,,-23,2,11,61,456,6,0,42,12,66,196,0,1,3
+400868916,2016,8,regular,2016-10-22T16:00:00Z,1,0,0,Army,North Texas,FBS Independents,Conference USA,18,35,47.8,,-17.5,2,13,89,403,2,1,18,13,52,312,4,0,28
+400868964,2016,8,regular,2016-10-22T16:00:00Z,1,0,0,South Carolina,Massachusetts,SEC,FBS Independents,34,28,46,,-20,2,14,72,433,5,0,34,13,78,409,4,0,28
+400869313,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Toledo,Central Michigan,Mid-American,Mid-American,31,17,61.3,,-10,2,11,71,419,4,1,31,10,57,366,2,1,17
+400869316,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Bowling Green,Miami (OH),Mid-American,Mid-American,26,40,52,,-1,2,15,74,497,3,2,26,15,82,453,5,1,38
+400869469,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Louisville,NC State,ACC,ACC,54,13,65,,-19,2,14,84,518,6,4,54,16,61,257,2,0,13
+400869543,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,UConn,UCF,American Athletic,American Athletic,16,24,46,,4,2,13,84,398,1,3,16,13,77,391,3,1,24
+400869600,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Kansas,Oklahoma State,Big 12,Big 12,20,44,60.5,,23.5,2,14,76,444,1,2,13,14,76,462,4,3,37
+400869609,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Kansas State,Texas,Big 12,Big 12,24,21,54,,1,2,11,79,424,3,1,24,11,63,378,3,0,21
+400869638,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Minnesota,Rutgers,Big Ten,Big Ten,34,32,45,,-17.5,2,14,75,369,3,2,27,14,78,367,3,2,26
+400869674,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Iowa,Wisconsin,Big Ten,Big Ten,9,17,42.8,,3.5,2,12,64,231,0,2,9,12,76,432,2,1,17
+400869678,2016,8,regular,2016-10-22T16:00:00Z,1,0,1,Northwestern,Indiana,Big Ten,Big Ten,24,14,53.8,,-3,2,15,89,422,3,1,24,15,89,400,1,2,12
+400869468,2016,8,regular,2016-10-22T16:30:00Z,1,0,1,Boston College,Syracuse,ACC,ACC,20,28,50,,-3.5,2,13,62,326,1,2,13,14,74,512,4,0,28
+400869315,2016,8,regular,2016-10-22T17:00:00Z,1,0,1,Kent State,Ohio,Mid-American,Mid-American,10,14,43.5,,1,2,13,79,309,1,1,10,13,55,312,2,0,14
+400869225,2016,8,regular,2016-10-22T18:00:00Z,1,0,1,Air Force,Hawai'i,Mountain West,Mountain West,27,34,58,,-17,2,14,100,375,0,2,10,12,64,336,2,2,35
+400869143,2016,8,regular,2016-10-22T19:00:00Z,1,0,1,Stanford,Colorado,Pac-12,Pac-12,5,10,50.3,,-2,2,14,63,248,0,1,3,12,78,335,1,1,10
+400869311,2016,8,regular,2016-10-22T19:00:00Z,1,0,1,Ball State,Akron,Mid-American,Mid-American,25,35,62.3,,-3.5,2,9,79,453,3,1,25,10,71,538,5,0,35
+400869470,2016,8,regular,2016-10-22T19:00:00Z,1,0,1,Virginia,North Carolina,ACC,ACC,14,35,67.8,,10.5,2,15,85,218,2,0,14,15,67,473,5,0,35
+400869029,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Alabama,Texas A&M,SEC,SEC,33,14,58.3,,-17.5,2,12,85,478,3,2,27,13,69,277,2,0,14
+400869312,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Northern Illinois,Buffalo,Mid-American,Mid-American,44,7,61,,-24,2,14,82,539,5,1,37,15,70,330,1,0,7
+400869314,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Western Michigan,Eastern Michigan,Mid-American,Mid-American,45,31,61.3,,-25,2,11,74,541,6,1,45,11,76,464,4,1,31
+400869389,2016,8,regular,2016-10-22T19:30:00Z,1,0,0,Rice,Prairie View A&M,Conference USA,SWAC,65,44,,,-22,0,14,70,671,7,1,51,14,61,493,5,0,35
+400869546,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Navy,Memphis,American Athletic,American Athletic,42,28,57.3,,-1,2,10,79,542,6,0,42,11,72,426,3,0,21
+400869628,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,West Virginia,TCU,Big 12,Big 12,34,10,64.3,,-5.5,2,12,74,407,4,2,34,10,61,275,1,1,10
+400869676,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Michigan,Illinois,Big Ten,Big Ten,41,8,51.5,,-39.5,2,12,89,551,5,1,41,11,38,172,0,0,0
+400869677,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,Nebraska,Purdue,Big Ten,Big Ten,27,14,59.3,,-24,2,13,71,377,2,2,20,13,67,321,2,0,14
+400869831,2016,8,regular,2016-10-22T19:30:00Z,1,0,1,App State,Idaho,Sun Belt,Sun Belt,37,19,52.8,,-21.5,2,12,65,390,3,3,30,12,71,386,1,4,19
+400869833,2016,8,regular,2016-10-22T19:30:00Z,1,0,0,Georgia State,UT Martin,Sun Belt,OVC,31,6,,,-12.5,0,12,56,236,2,1,17,14,73,260,0,2,6
+400869547,2016,8,regular,2016-10-22T19:45:00Z,1,0,1,Tulsa,Tulane,American Athletic,American Athletic,50,27,53.8,,-10.5,2,14,83,588,6,2,48,14,70,386,4,0,27
+400869033,2016,8,regular,2016-10-22T20:00:00Z,1,0,0,Missouri,Middle Tennessee,SEC,Conference USA,45,51,72,,-8.5,2,15,105,609,6,1,45,16,87,629,5,3,44
+400869142,2016,8,regular,2016-10-22T20:00:00Z,1,0,1,UCLA,Utah,Pac-12,Pac-12,45,52,42.5,,-3.5,2,19,87,552,6,1,45,19,77,517,3,2,31
+400869226,2016,8,regular,2016-10-22T21:30:00Z,1,0,1,UNLV,Colorado State,Mountain West,Mountain West,23,42,56.8,,-1.5,2,12,57,345,3,1,23,12,78,447,6,0,42
+400869386,2016,8,regular,2016-10-22T21:30:00Z,1,0,1,Marshall,Charlotte,Conference USA,Conference USA,24,27,59.8,,-8.5,2,13,72,335,2,1,17,13,84,417,3,2,27
+400869030,2016,8,regular,2016-10-22T22:00:00Z,1,0,1,Auburn,Arkansas,SEC,SEC,56,3,53,,-10.5,2,13,69,632,7,0,49,13,65,191,0,0,3
+400869144,2016,8,regular,2016-10-22T22:30:00Z,1,0,1,Washington,Oregon State,Pac-12,Pac-12,41,17,52.8,,-36.5,2,12,72,519,5,1,41,12,59,310,2,1,17
+400869387,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,Florida International,Louisiana Tech,Conference USA,Conference USA,24,44,65.8,,18,2,12,79,400,3,1,24,12,60,376,4,3,37
+400869388,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,Western Kentucky,Old Dominion,Conference USA,Conference USA,59,24,64.8,,-15.5,2,14,69,619,8,1,59,13,58,322,3,1,24
+400869390,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,UTSA,UTEP,Conference USA,Conference USA,49,52,45.5,,-10.5,2,,,,,,,,,,,,
+400869544,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,Cincinnati,East Carolina,American Athletic,American Athletic,31,19,63.3,,-1,2,13,77,507,4,1,31,14,89,519,2,2,19
+400869545,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,SMU,Houston,American Athletic,American Athletic,38,16,60,,23.5,2,15,73,434,5,1,38,16,70,288,2,0,14
+400869834,2016,8,regular,2016-10-22T23:00:00Z,1,0,1,Texas State,Louisiana,Sun Belt,Sun Belt,3,27,65,,6,2,10,65,217,0,1,3,12,72,354,3,2,27
+400869031,2016,8,regular,2016-10-22T23:30:00Z,1,0,1,Kentucky,Mississippi State,SEC,SEC,40,38,54.3,,6.5,2,13,82,554,3,4,33,13,61,332,4,1,31
+400869034,2016,8,regular,2016-10-22T23:30:00Z,1,0,0,Vanderbilt,Tennessee State,SEC,OVC,35,17,,,-27.5,0,10,67,518,5,0,35,9,54,418,2,1,17
+400869675,2016,8,regular,2016-10-22T23:30:00Z,1,0,1,Maryland,Michigan State,Big Ten,Big Ten,28,17,49,,3,2,11,70,471,4,0,28,12,69,391,2,1,17
+400869616,2016,8,regular,2016-10-23T00:00:00Z,1,0,1,Texas Tech,Oklahoma,Big 12,Big 12,59,66,85.5,,16,2,14,110,794,8,1,59,14,77,814,9,1,66
+400869645,2016,8,regular,2016-10-23T00:00:00Z,1,0,1,Penn State,Ohio State,Big Ten,Big Ten,24,21,54.8,,17.5,2,13,62,286,2,1,17,15,86,393,2,2,19
+400869832,2016,8,regular,2016-10-23T00:00:00Z,1,0,1,New Mexico State,Georgia Southern,Sun Belt,Sun Belt,19,22,64.3,,14,2,13,82,425,2,2,19,14,80,377,2,3,22
+400869032,2016,8,regular,2016-10-23T01:00:00Z,1,0,1,LSU,Ole Miss,SEC,SEC,38,21,59.8,,-8.5,2,15,65,510,4,1,31,15,71,336,2,2,21
+400869227,2016,8,regular,2016-10-23T01:00:00Z,1,0,0,New Mexico,UL Monroe,Mountain West,Sun Belt,59,17,60.3,,-15.5,2,13,63,629,5,1,38,14,64,220,1,1,10
+400869141,2016,8,regular,2016-10-23T02:00:00Z,1,0,1,Arizona State,Washington State,Pac-12,Pac-12,32,37,64.5,,7.5,2,12,60,289,3,1,24,13,73,366,4,1,30
+400869228,2016,8,regular,2016-10-23T02:30:00Z,1,0,1,Utah State,Fresno State,Mountain West,Mountain West,38,20,50.8,,-19,2,11,70,422,4,1,31,11,85,309,2,2,20
+400869229,2016,8,regular,2016-10-23T02:30:00Z,1,0,1,Nevada,Wyoming,Mountain West,Mountain West,34,42,52.8,,7.5,2,,,,,,,,,,,,
+400869471,2016,9,regular,2016-10-27T23:00:00Z,1,0,1,Pittsburgh,Virginia Tech,ACC,ACC,36,39,53.8,,3.5,2,12,55,455,5,0,36,14,88,581,3,5,39
+400869317,2016,9,regular,2016-10-27T23:30:00Z,1,0,1,Buffalo,Akron,Mid-American,Mid-American,41,20,60.8,,19.5,2,16,65,498,5,2,41,14,86,302,1,2,13
+400869318,2016,9,regular,2016-10-27T23:30:00Z,1,0,1,Toledo,Ohio,Mid-American,Mid-American,26,31,56.8,,-15,2,15,77,551,3,2,26,14,72,517,4,1,31
+400869835,2016,9,regular,2016-10-27T23:30:00Z,1,0,1,Georgia Southern,App State,Sun Belt,Sun Belt,10,34,46.3,,5,2,13,56,165,0,1,3,15,77,503,4,2,34
+400869145,2016,9,regular,2016-10-28T02:30:00Z,1,0,1,USC,California,Pac-12,Pac-12,45,24,74,,-19.5,2,13,75,604,6,1,45,13,85,495,3,1,24
+400869548,2016,9,regular,2016-10-28T23:00:00Z,1,0,1,South Florida,Navy,American Athletic,American Athletic,52,45,66,,-6,2,12,76,584,6,1,45,13,81,611,6,0,45
+400869234,2016,9,regular,2016-10-29T00:00:00Z,1,0,1,Utah State,San Diego State,Mountain West,Mountain West,13,40,45,,4.5,2,11,54,262,2,0,13,11,71,424,3,4,33
+400869231,2016,9,regular,2016-10-29T02:30:00Z,1,0,1,Fresno State,Air Force,Mountain West,Mountain West,21,31,51,,14.5,2,13,68,356,3,0,21,12,84,414,3,1,24
+400868965,2016,9,regular,2016-10-29T16:00:00Z,1,0,0,Massachusetts,Wagner,FBS Independents,NEC,34,10,,,-21,0,11,67,507,4,2,34,11,68,318,1,1,10
+400869038,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Missouri,Kentucky,SEC,SEC,21,35,69.3,,-6.5,2,15,70,371,1,0,7,14,84,600,5,0,35
+400869319,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Central Michigan,Kent State,Mid-American,Mid-American,24,27,44.3,,-12.5,2,13,75,328,2,0,15,14,63,328,3,2,27
+400869474,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Georgia Tech,Duke,ACC,ACC,38,35,50.5,,-6.5,2,13,62,591,5,1,38,13,73,556,4,0,28
+400869475,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Virginia,Louisville,ACC,ACC,25,32,69.3,,32,2,14,70,304,3,1,25,14,76,483,4,1,32
+400869549,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Houston,UCF,American Athletic,American Athletic,31,24,59,,-9.5,2,16,87,375,4,1,31,14,66,233,3,1,24
+400869551,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,East Carolina,UConn,American Athletic,American Athletic,41,3,53.5,,-6.5,2,14,89,436,5,2,41,13,68,305,0,1,3
+400869592,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Iowa State,Kansas State,Big 12,Big 12,26,31,50.5,,6,2,11,75,482,3,1,24,10,72,418,4,1,31
+400869621,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Oklahoma State,West Virginia,Big 12,Big 12,37,20,65.3,,4.5,2,12,71,355,4,3,37,13,83,402,2,2,20
+400869679,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Illinois,Minnesota,Big Ten,Big Ten,17,40,46.5,,9,2,15,69,285,2,1,17,16,68,286,3,1,24
+400869681,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Michigan State,Michigan,Big Ten,Big Ten,23,32,50.3,,24.5,2,10,72,428,3,1,23,11,70,458,3,2,30
+400869682,2016,9,regular,2016-10-29T16:00:00Z,1,0,1,Purdue,Penn State,Big Ten,Big Ten,24,62,57.8,,14.5,2,13,83,346,3,1,24,15,65,536,7,2,55
+400869472,2016,9,regular,2016-10-29T16:30:00Z,1,0,1,NC State,Boston College,ACC,ACC,14,21,42.5,,-16,2,14,64,327,1,0,7,15,81,409,2,2,21
+400868881,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Texas,Baylor,Big 12,Big 12,35,34,74.3,,3.5,2,16,74,553,3,2,26,16,98,592,4,2,34
+400868917,2016,9,regular,2016-10-29T19:30:00Z,1,0,0,Wake Forest,Army,ACC,FBS Independents,13,21,41.8,,-8,2,12,69,313,1,2,13,13,74,368,2,0,14
+400868953,2016,9,regular,2016-10-29T19:30:00Z,1,0,0,Notre Dame,Miami,FBS Independents,ACC,30,27,58.3,,-2,2,12,70,402,3,3,30,14,79,294,3,2,27
+400869035,2016,9,regular,2016-10-29T19:30:00Z,1,1,1,Georgia,Florida,SEC,SEC,10,24,43,,7,2,13,53,179,1,1,10,13,74,280,3,1,24
+400869037,2016,9,regular,2016-10-29T19:30:00Z,1,0,0,Mississippi State,Samford,SEC,Southern,56,41,,,-21.5,0,16,82,662,7,0,49,16,106,600,5,2,41
+400869148,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Utah,Washington,Pac-12,Pac-12,24,31,52.5,,10,2,11,81,352,3,0,24,10,57,400,3,1,24
+400869392,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Florida Atlantic,Western Kentucky,Conference USA,Conference USA,3,52,66.5,,21.5,2,15,68,222,0,1,3,14,72,616,7,1,51
+400869550,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Temple,Cincinnati,American Athletic,American Athletic,34,13,52.8,,-8.5,2,12,81,484,4,2,34,12,49,181,2,0,13
+400869629,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,TCU,Texas Tech,Big 12,Big 12,24,27,86.8,,-9.5,2,13,91,408,3,1,24,13,91,355,3,2,27
+400869646,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Ohio State,Northwestern,Big Ten,Big Ten,24,20,53.5,,-25.5,2,10,74,421,3,1,24,10,75,386,2,2,20
+400869680,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Indiana,Maryland,Big Ten,Big Ten,42,36,54.8,,-3.5,2,12,85,650,6,1,42,12,85,532,4,1,36
+400869717,2016,9,regular,2016-10-29T19:30:00Z,1,0,1,Eastern Michigan,Miami (OH),Mid-American,Mid-American,15,28,50,,-7,2,11,63,334,2,1,15,12,66,440,4,0,28
+400869553,2016,9,regular,2016-10-29T20:00:00Z,1,0,1,Tulane,SMU,American Athletic,American Athletic,31,35,48,,1.5,2,15,73,363,4,1,31,14,75,439,5,0,35
+400869147,2016,9,regular,2016-10-29T21:00:00Z,1,0,1,Oregon,Arizona State,Pac-12,Pac-12,54,35,72.3,,-10,2,16,93,696,6,4,54,16,76,513,5,0,35
+400869837,2016,9,regular,2016-10-29T21:00:00Z,1,0,1,South Alabama,Georgia State,Sun Belt,Sun Belt,13,10,47,,-5,2,12,73,298,1,2,13,12,60,225,1,1,10
+400869232,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Wyoming,Boise State,Mountain West,Mountain West,30,28,62,,14.5,2,13,82,489,3,2,28,13,63,477,4,0,28
+400869391,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Florida International,Middle Tennessee,Conference USA,Conference USA,35,42,62.3,,17.5,2,13,84,497,5,0,35,13,54,462,5,0,35
+400869393,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Louisiana Tech,Rice,Conference USA,Conference USA,61,16,68,,-29.5,2,14,72,730,6,2,47,13,71,315,2,0,14
+400869394,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Southern Miss,Marshall,Conference USA,Conference USA,24,14,67.3,,-17,2,14,87,504,3,1,24,14,60,227,2,0,14
+400869395,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,UTSA,North Texas,Conference USA,Conference USA,31,17,51.5,,-4.5,2,11,61,318,4,1,31,13,73,413,2,1,17
+400869601,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Oklahoma,Kansas,Big 12,Big 12,56,3,64.5,,-39.5,2,12,71,543,6,0,42,15,66,170,0,1,3
+400869683,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Wisconsin,Nebraska,Big Ten,Big Ten,23,17,43.5,,-9,2,14,64,337,3,1,23,14,76,300,2,1,17
+400869836,2016,9,regular,2016-10-29T23:00:00Z,1,0,1,Arkansas State,UL Monroe,Sun Belt,Sun Belt,51,10,55,,-21,2,13,73,457,7,1,51,13,72,366,1,1,10
+400869036,2016,9,regular,2016-10-29T23:15:00Z,1,0,1,Ole Miss,Auburn,SEC,SEC,29,40,64.8,,4,2,11,93,565,3,3,29,12,78,554,4,4,40
+400869039,2016,9,regular,2016-10-29T23:15:00Z,1,0,1,South Carolina,Tennessee,SEC,SEC,24,21,51.5,,14.5,2,14,71,330,3,1,24,14,65,304,2,0,14
+400869040,2016,9,regular,2016-10-29T23:30:00Z,1,0,0,Texas A&M,New Mexico State,SEC,Sun Belt,52,10,71,,-43.5,2,13,75,515,5,1,38,15,78,339,1,1,10
+400869396,2016,9,regular,2016-10-30T00:00:00Z,1,0,1,UTEP,Old Dominion,Conference USA,Conference USA,21,31,54.8,,5,2,11,72,344,3,0,21,12,53,388,4,1,31
+400869473,2016,9,regular,2016-10-30T00:00:00Z,1,0,1,Florida State,Clemson,ACC,ACC,34,37,58.8,,4,2,14,63,419,3,0,20,15,84,508,4,3,37
+400869552,2016,9,regular,2016-10-30T00:00:00Z,1,0,1,Memphis,Tulsa,American Athletic,American Athletic,30,59,74,,-6,2,16,83,495,4,1,30,15,88,591,7,1,52
+400869235,2016,9,regular,2016-10-30T02:30:00Z,1,0,1,San José State,UNLV,Mountain West,Mountain West,30,24,55,,3,2,14,85,449,3,3,30,14,71,419,3,1,24
+400869149,2016,9,regular,2016-10-30T02:45:00Z,1,0,1,Oregon State,Washington State,Pac-12,Pac-12,31,35,55.5,,14,2,15,69,488,3,1,24,13,72,581,5,0,35
+400869146,2016,9,regular,2016-10-30T03:00:00Z,1,0,1,Arizona,Stanford,Pac-12,Pac-12,10,34,50,,3.5,2,14,65,281,1,1,10,15,75,346,3,2,27
+400869233,2016,9,regular,2016-10-30T03:59:00Z,1,0,1,Hawai'i,New Mexico,Mountain West,Mountain West,21,28,65.5,,-3,1,12,68,298,3,0,21,11,55,293,2,0,14

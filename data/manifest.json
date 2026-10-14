@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "file": "games_2015.csv",
+      "type": "games",
+      "season": 2015,
+      "rowCount": 870,
+      "bytes": 235507,
+      "pulledAt": "2026-10-14T17:30:28.318Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2015.csv",
+      "type": "lines",
+      "season": 2015,
+      "rowCount": 2320,
+      "bytes": 1672771,
+      "pulledAt": "2026-10-14T17:30:31.369Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2015.csv",
+      "type": "drives",
+      "season": 2015,
+      "rowCount": 22855,
+      "bytes": 5486198,
+      "pulledAt": "2026-10-14T17:30:37.278Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2016.csv",
+      "type": "games",
+      "season": 2016,
+      "rowCount": 873,
+      "bytes": 263290,
+      "pulledAt": "2026-10-14T17:30:39.999Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2016.csv",
+      "type": "lines",
+      "season": 2016,
+      "rowCount": 2347,
+      "bytes": 1680276,
+      "pulledAt": "2026-10-14T17:30:43.156Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2016.csv",
+      "type": "drives",
+      "season": 2016,
+      "rowCount": 22515,
+      "bytes": 5402847,
+      "pulledAt": "2026-10-14T17:30:50.274Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2017.csv",
+      "type": "games",
+      "season": 2017,
+      "rowCount": 874,
+      "bytes": 266417,
+      "pulledAt": "2026-10-14T17:30:52.889Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2017.csv",
+      "type": "lines",
+      "season": 2017,
+      "rowCount": 2400,
+      "bytes": 1727126,
+      "pulledAt": "2026-10-14T17:30:55.828Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2017.csv",
+      "type": "drives",
+      "season": 2017,
+      "rowCount": 22519,
+      "bytes": 5408513,
+      "pulledAt": "2026-10-14T17:31:02.868Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2018.csv",
+      "type": "games",
+      "season": 2018,
+      "rowCount": 884,
+      "bytes": 271502,
+      "pulledAt": "2026-10-14T17:31:05.962Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2018.csv",
+      "type": "lines",
+      "season": 2018,
+      "rowCount": 3034,
+      "bytes": 2690452,
+      "pulledAt": "2026-10-14T17:31:08.956Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2018.csv",
+      "type": "drives",
+      "season": 2018,
+      "rowCount": 22717,
+      "bytes": 5458578,
+      "pulledAt": "2026-10-14T17:31:14.772Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2019.csv",
+      "type": "games",
+      "season": 2019,
+      "rowCount": 888,
+      "bytes": 274638,
+      "pulledAt": "2026-10-14T17:31:17.447Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2019.csv",
+      "type": "lines",
+      "season": 2019,
+      "rowCount": 3506,
+      "bytes": 3473274,
+      "pulledAt": "2026-10-14T17:31:20.430Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2019.csv",
+      "type": "drives",
+      "season": 2019,
+      "rowCount": 22392,
+      "bytes": 5378882,
+      "pulledAt": "2026-10-14T17:31:25.683Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2020.csv",
+      "type": "games",
+      "season": 2020,
+      "rowCount": 568,
+      "bytes": 176371,
+      "pulledAt": "2026-10-14T17:31:28.254Z",
+      "warnings": [
+        "Game count outside typical range; 2020 was pandemic-shortened."
+      ]
+    },
+    {
+      "file": "lines_2020.csv",
+      "type": "lines",
+      "season": 2020,
+      "rowCount": 2752,
+      "bytes": 3104695,
+      "pulledAt": "2026-10-14T17:31:31.743Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2020.csv",
+      "type": "drives",
+      "season": 2020,
+      "rowCount": 14146,
+      "bytes": 3381950,
+      "pulledAt": "2026-10-14T17:31:36.428Z",
+      "warnings": [
+        "Drive count lower than a typical full season."
+      ]
+    },
+    {
+      "file": "games_2021.csv",
+      "type": "games",
+      "season": 2021,
+      "rowCount": 887,
+      "bytes": 240275,
+      "pulledAt": "2026-10-14T17:31:39.042Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2021.csv",
+      "type": "lines",
+      "season": 2021,
+      "rowCount": 3541,
+      "bytes": 3417716,
+      "pulledAt": "2026-10-14T17:31:42.355Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2021.csv",
+      "type": "drives",
+      "season": 2021,
+      "rowCount": 21611,
+      "bytes": 5188795,
+      "pulledAt": "2026-10-14T17:31:47.552Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2022.csv",
+      "type": "games",
+      "season": 2022,
+      "rowCount": 896,
+      "bytes": 244027,
+      "pulledAt": "2026-10-14T17:31:50.343Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2022.csv",
+      "type": "lines",
+      "season": 2022,
+      "rowCount": 3352,
+      "bytes": 3083178,
+      "pulledAt": "2026-10-14T17:31:55.883Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2022.csv",
+      "type": "drives",
+      "season": 2022,
+      "rowCount": 21917,
+      "bytes": 5257696,
+      "pulledAt": "2026-10-14T17:32:04.374Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2023.csv",
+      "type": "games",
+      "season": 2023,
+      "rowCount": 910,
+      "bytes": 248083,
+      "pulledAt": "2026-10-14T17:32:07.044Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2023.csv",
+      "type": "lines",
+      "season": 2023,
+      "rowCount": 2554,
+      "bytes": 1916159,
+      "pulledAt": "2026-10-14T17:32:11.011Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2023.csv",
+      "type": "drives",
+      "season": 2023,
+      "rowCount": 21866,
+      "bytes": 5248407,
+      "pulledAt": "2026-10-14T17:32:19.186Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2024.csv",
+      "type": "games",
+      "season": 2024,
+      "rowCount": 920,
+      "bytes": 253015,
+      "pulledAt": "2026-10-14T17:32:23.934Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2024.csv",
+      "type": "lines",
+      "season": 2024,
+      "rowCount": 2517,
+      "bytes": 1821308,
+      "pulledAt": "2026-10-14T17:32:28.374Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2024.csv",
+      "type": "drives",
+      "season": 2024,
+      "rowCount": 21766,
+      "bytes": 5222420,
+      "pulledAt": "2026-10-14T17:32:37.732Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2025.csv",
+      "type": "games",
+      "season": 2025,
+      "rowCount": 934,
+      "bytes": 256688,
+      "pulledAt": "2026-10-14T17:32:40.413Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2025.csv",
+      "type": "lines",
+      "season": 2025,
+      "rowCount": 2622,
+      "bytes": 1891426,
+      "pulledAt": "2026-10-14T17:32:44.393Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2025.csv",
+      "type": "drives",
+      "season": 2025,
+      "rowCount": 21762,
+      "bytes": 5227966,
+      "pulledAt": "2026-10-14T17:32:52.338Z",
+      "warnings": []
+    },
+    {
+      "file": "games_2026.csv",
+      "type": "games",
+      "season": 2026,
+      "rowCount": 888,
+      "bytes": 198581,
+      "pulledAt": "2026-10-14T17:32:55.015Z",
+      "warnings": []
+    },
+    {
+      "file": "lines_2026.csv",
+      "type": "lines",
+      "season": 2026,
+      "rowCount": 1045,
+      "bytes": 573170,
+      "pulledAt": "2026-10-14T17:32:58.749Z",
+      "warnings": []
+    },
+    {
+      "file": "drives_2026.csv",
+      "type": "drives",
+      "season": 2026,
+      "rowCount": 10523,
+      "bytes": 2522978,
+      "pulledAt": "2026-10-14T17:33:06.442Z",
+      "warnings": []
+    }
+  ]
+}

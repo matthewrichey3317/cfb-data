@@ -47,5 +47,18 @@ Thumbs.db
 # Replit
 .cache/
 .local/
-/data/
-/export/
+
+# Private environment files and credentials
+.env
+.env.*
+*.env
+*.env.*
+*.pem
+*.key
+
+# Collection runtime state, not public analysis inputs
+/data/job.json
+/data/*.tmp
+/data/.*.part.json
+/export/*.tmp
+/export/.build.lock
