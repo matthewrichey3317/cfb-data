@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </header>
         <p className="mt-2 font-mono text-[11px] text-muted-foreground">
-          Historical pull skips existing raw files. Refresh overwrites only {data?.currentSeason ?? 2026} raw files and rebuilds that season’s compact export.
+          Historical pull skips existing raw files. Refresh overwrites only {data?.currentSeason ?? 2026} raw files, rebuilds that season’s compact export, and pushes the updates to GitHub.
         </p>
 
         {mutationError && (
