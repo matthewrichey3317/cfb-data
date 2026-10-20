@@ -44,6 +44,12 @@ a publishing failure):
 node artifacts/api-server/publish-data.mjs
 ```
 
+Publish already-saved venue and weather files without weather/API requests:
+
+```sh
+node artifacts/api-server/publish-data.mjs --weather
+```
+
 Run the publication security check only:
 
 ```sh
