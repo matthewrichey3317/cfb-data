@@ -38,6 +38,15 @@
       "warnings": []
     },
     {
+      "file": "weather_2015.csv",
+      "type": "weather",
+      "season": 2015,
+      "rowCount": 870,
+      "bytes": 134172,
+      "pulledAt": "2026-10-20T14:55:00.180Z",
+      "warnings": []
+    },
+    {
       "file": "drives_2016.csv",
       "type": "drives",
       "season": 2016,
