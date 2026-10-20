@@ -186,8 +186,8 @@
       "type": "weather",
       "season": 2019,
       "rowCount": 888,
-      "bytes": 137104,
-      "pulledAt": "2026-10-20T15:10:33.525Z",
+      "bytes": 137992,
+      "pulledAt": "2026-10-20T17:50:10.559Z",
       "warnings": []
     },
     {
