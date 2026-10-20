@@ -296,6 +296,15 @@
       "warnings": []
     },
     {
+      "file": "weather_2022.csv",
+      "type": "weather",
+      "season": 2022,
+      "rowCount": 896,
+      "bytes": 138774,
+      "pulledAt": "2026-10-20T18:01:16.594Z",
+      "warnings": []
+    },
+    {
       "file": "drives_2023.csv",
       "type": "drives",
       "season": 2023,
