@@ -222,6 +222,17 @@
       "warnings": []
     },
     {
+      "file": "weather_2020.csv",
+      "type": "weather",
+      "season": 2020,
+      "rowCount": 568,
+      "bytes": 87832,
+      "pulledAt": "2026-10-20T17:53:04.632Z",
+      "warnings": [
+        "1 games have missing weather (see missing_reason)."
+      ]
+    },
+    {
       "file": "drives_2021.csv",
       "type": "drives",
       "season": 2021,
