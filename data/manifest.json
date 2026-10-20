@@ -74,6 +74,15 @@
       "warnings": []
     },
     {
+      "file": "weather_2016.csv",
+      "type": "weather",
+      "season": 2016,
+      "rowCount": 873,
+      "bytes": 133685,
+      "pulledAt": "2026-10-20T14:58:58.779Z",
+      "warnings": []
+    },
+    {
       "file": "drives_2017.csv",
       "type": "drives",
       "season": 2017,
@@ -98,6 +107,15 @@
       "rowCount": 2400,
       "bytes": 1727126,
       "pulledAt": "2026-10-14T17:30:55.828Z",
+      "warnings": []
+    },
+    {
+      "file": "weather_2017.csv",
+      "type": "weather",
+      "season": 2017,
+      "rowCount": 874,
+      "bytes": 134725,
+      "pulledAt": "2026-10-20T15:02:51.404Z",
       "warnings": []
     },
     {
@@ -128,6 +146,15 @@
       "warnings": []
     },
     {
+      "file": "weather_2018.csv",
+      "type": "weather",
+      "season": 2018,
+      "rowCount": 884,
+      "bytes": 137334,
+      "pulledAt": "2026-10-20T15:06:45.470Z",
+      "warnings": []
+    },
+    {
       "file": "drives_2019.csv",
       "type": "drives",
       "season": 2019,
@@ -152,6 +179,15 @@
       "rowCount": 3506,
       "bytes": 3473274,
       "pulledAt": "2026-10-14T17:31:20.430Z",
+      "warnings": []
+    },
+    {
+      "file": "weather_2019.csv",
+      "type": "weather",
+      "season": 2019,
+      "rowCount": 888,
+      "bytes": 137104,
+      "pulledAt": "2026-10-20T15:10:33.525Z",
       "warnings": []
     },
     {
