@@ -14,3 +14,9 @@ When repeated integration reconnection fails to provide CLI credentials, a GitHu
 **Why:** The integration remained unusable after reconnection, but a securely supplied token restored authenticated GitHub access.
 
 **How to apply:** Keep credentials out of Git URLs, command arguments, tracked configuration, and command-error logs. Use environment-based authentication and fail explicitly when credentials expire.
+
+Automated publishing must supply a credential-free Git author identity rather than relying on interactive Shell configuration.
+
+**Why:** Publishing worked from the Shell but the managed API server failed at `git commit`. Supplying an explicit bot identity fixed server-side commits.
+
+**How to apply:** Preserve the per-command bot identity for background publication. Verify publishing from the managed server, not only a CLI fixture, before considering it working.

@@ -13,9 +13,20 @@ async function command(root: string, program: string, args: string[], env = proc
     return (await exec(program, args, {
       cwd: root, env, maxBuffer: 32 * 1024 * 1024, timeout: 180000,
     })).stdout;
-  } catch {
+  } catch (error) {
     // Never include command stderr: credential helpers can expose sensitive values.
-    throw new Error(`${program} ${args[0]} failed. Check GitHub access, token expiry, and repository synchronization.`);
+    const stderr = String((error as { stderr?: string }).stderr ?? "");
+    const operation = args.find(arg => ["commit", "push", "fetch", "add", "read-tree", "reset"].includes(arg)) ?? args[0];
+    const reason = /Author identity unknown|unable to auto-detect email|empty ident name/i.test(stderr)
+      ? "Git author identity is unavailable to the server"
+      : /index\.lock|another git process|cannot lock ref/i.test(stderr)
+        ? "another Git operation holds a repository lock"
+        : /nothing to commit|no changes added/i.test(stderr)
+          ? "no staged changes were available"
+          : /Permission denied|Authentication failed|Bad credentials/i.test(stderr)
+            ? "authentication or repository permission was denied"
+            : "check GitHub access and repository synchronization";
+    throw new Error(`${program} ${operation} failed: ${reason}. Saved CSVs remain intact.`);
   }
 }
 
@@ -77,7 +88,9 @@ async function publishFiles(root: string, files: string[], message: string) {
     await command(root, "git", ["add", "-A", "--", ...files], env);
     const changed = (await command(root, "git", ["diff", "--cached", "--name-only"], env)).trim();
     if (changed) {
-      await command(root, "git", ["commit", "-m", message], env);
+      // Managed server workflows need not inherit the interactive Shell's
+      // per-user Git identity/configuration. Use a credential-free bot identity.
+      await command(root, "git", ["-c", "user.name=CFB Data Collector", "-c", "user.email=cfb-data-bot@users.noreply.github.com", "commit", "-m", message], env);
       await command(root, "git", ["reset", "HEAD", "--", ...files]);
     }
     await command(root, "git", [...gitAuth, "push", "origin", "HEAD:main"]);
