@@ -54,7 +54,7 @@ Compact columns use UTC kickoff times, 1/0 flags, blank missing data, one-decima
 
 ## User preferences
 
-Keep the UI simple. This is a backend data job. The pinned current-season refresh is 2026, not the system's automatically advancing year.
+Keep the UI simple. This is a backend data job. The pinned current-season refresh is 2026, not the system's automatically advancing year. The requested automatic schedule is Sunday and Thursday at 08:00 America/Chicago (including daylight-saving changes), using a headless Scheduled Deployment. Activation requires the owner's Publishing confirmation. Scheduled runs must clone the latest public GitHub main into an isolated temporary checkout; deployment-local data/cache is not durable and must never be treated as the latest published baseline. The status UI is development-only; production runs the headless command, not a public unauthenticated server.
 
 The analysis reader accepts text files only below about 100 KB; compact exports must stay strictly under 90,000 bytes including headers. Use the top-level `export` folder for these analysis inputs.
 

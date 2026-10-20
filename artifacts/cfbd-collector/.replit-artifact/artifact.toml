@@ -8,20 +8,11 @@ router = "path"
 
 [[services]]
 name = "web"
-paths = [ "/" ]
+paths = ["/"]
 localPort = 22387
 
 [services.development]
 run = "pnpm --filter @workspace/cfbd-collector run dev"
-
-[services.production]
-build = [ "pnpm", "--filter", "@workspace/cfbd-collector", "run", "build" ]
-serve = "static"
-publicDir = "artifacts/cfbd-collector/dist/public"
-
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
 
 [services.env]
 PORT = "22387"

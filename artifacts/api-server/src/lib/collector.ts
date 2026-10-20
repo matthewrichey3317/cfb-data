@@ -13,7 +13,7 @@ import { recoverSavedJob, type CollectorJob as Job } from "./job-recovery";
 const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist")
   ? path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
   : path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-export const dataDir = path.resolve(packageDir, "../../data");
+export let dataDir = path.resolve(packageDir, "../../data");
 const kinds = ["games", "lines", "drives"] as const;
 type Kind = typeof kinds[number];
 type Entry = { file: string; type: Kind | "venues" | "weather"; season: number; rowCount: number; pulledAt: string; bytes: number; warnings: string[] };
@@ -169,7 +169,7 @@ export async function getStatus() {
   return { files: await readManifest(), job: { ...job }, keyConfigured: !!process.env.CFBD_API_KEY, currentSeason: 2026, expectedFiles: 36 };
 }
 
-export async function startJob(mode: "historical" | "refresh" | "weather", refreshVenues = false, resume = false): Promise<Job> {
+async function beginJob(mode: "historical" | "refresh" | "weather", resume = false): Promise<void> {
   await initializeCollector();
   if (active) throw new Error("A pull is already running");
   if (!process.env.CFBD_API_KEY) throw new Error("CFBD_API_KEY is not configured");
@@ -183,7 +183,22 @@ export async function startJob(mode: "historical" | "refresh" | "weather", refre
     totalFiles: mode === "refresh" ? 5 : mode === "weather" ? 13 : 36,
     startedAt: previous.startedAt ?? new Date().toISOString() };
   try { await saveJob(); } catch (e) { active = false; throw e; }
+}
+
+export async function startJob(mode: "historical" | "refresh" | "weather", refreshVenues = false, resume = false): Promise<Job> {
+  await beginJob(mode, resume);
   void run(mode, refreshVenues);
+  return { ...job };
+}
+
+// A scheduled process uses an isolated checkout, not the web server's files.
+// Await the same pipeline as the button, including its verified GitHub push.
+export async function refreshCurrentSeasonHeadless(workspaceRoot: string): Promise<Job> {
+  if (initialization || active) throw new Error("Headless refresh requires its own fresh process");
+  dataDir = path.resolve(workspaceRoot, "data");
+  await beginJob("refresh");
+  await run("refresh", false);
+  if (job.state !== "completed") throw new Error(job.error ?? "Current-season refresh failed");
   return { ...job };
 }
 
