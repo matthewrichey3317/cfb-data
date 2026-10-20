@@ -368,6 +368,17 @@
       "warnings": []
     },
     {
+      "file": "weather_2024.csv",
+      "type": "weather",
+      "season": 2024,
+      "rowCount": 920,
+      "bytes": 141523,
+      "pulledAt": "2026-10-20T18:09:39.413Z",
+      "warnings": [
+        "1 games have missing weather (see missing_reason)."
+      ]
+    },
+    {
       "file": "drives_2025.csv",
       "type": "drives",
       "season": 2025,
