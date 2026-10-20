@@ -332,6 +332,15 @@
       "warnings": []
     },
     {
+      "file": "weather_2023.csv",
+      "type": "weather",
+      "season": 2023,
+      "rowCount": 910,
+      "bytes": 140485,
+      "pulledAt": "2026-10-20T18:05:22.488Z",
+      "warnings": []
+    },
+    {
       "file": "drives_2024.csv",
       "type": "drives",
       "season": 2024,
