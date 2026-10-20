@@ -57,6 +57,16 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CollectorJob"
+  /collector/weather/resume:
+    post:
+      operationId: resumeWeatherPull
+      responses:
+        "202":
+          description: Resumed interrupted weather job using saved caches
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectorJob"
   /healthz:
     get:
       operationId: healthCheck
@@ -91,7 +101,7 @@ components:
       type: object
       required: [state, mode, message, completedFiles, totalFiles, calls, skippedFiles, startedAt, finishedAt, error]
       properties:
-        state: { type: string, enum: [idle, running, completed, failed] }
+        state: { type: string, enum: [idle, running, completed, failed, interrupted] }
         mode: { type: string }
         message: { type: string }
         completedFiles: { type: integer }
@@ -100,6 +110,7 @@ components:
         skippedFiles: { type: integer }
         startedAt: { type: [string, "null"] }
         finishedAt: { type: [string, "null"] }
+        interruptedAt: { type: [string, "null"] }
         error: { type: [string, "null"] }
     CollectorStatus:
       type: object

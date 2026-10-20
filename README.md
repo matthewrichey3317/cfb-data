@@ -25,6 +25,14 @@ commits/pushes those files plus both manifests and the venue list. A publishing
 failure is shown as a failed job; successfully downloaded local files remain
 intact. There is no automatic schedule: use the refresh button each week.
 
+On server startup, a saved `running` job from the previous process is
+persistently marked `interrupted`. The status page shows the time the
+interruption was **detected** (the actual stop time may be unknown), previous
+progress, and a **Resume weather** action for interrupted/failed weather jobs.
+Resume preserves the request count and reuses completed venue archives; it does
+not re-download games, lines, drives, or cached historical weather. Starting the
+server alone does not automatically resume an interrupted job.
+
 Keep `CFBD_API_KEY` and `GH_TOKEN` in Replit Secrets. The GitHub token must belong
 to `matthewrichey3317` and have permission to update this public repository.
 Expired or revoked tokens prevent publishing. No credentials belong in this
@@ -124,9 +132,14 @@ The initial pull can take a long time. Calls are paced, rate-limit/server
 errors receive bounded backoff, and completed venue caches let another run
 resume without starting over. A season CSV is replaced atomically only after
 all its venue requests succeed. Completed season files are retained and
-published even if a later season fails. A weather failure never rolls back the
+published **as soon as each season finishes, before the next season starts**.
+A later season or publishing failure never undoes already-published seasons.
+If a process is interrupted, resume will also retry publishing any saved
+season whose push did not complete. A weather failure never rolls back the
 existing games, lines, drives, or compact exports. During Refresh 2026, those
 updated non-weather files are still published if weather collection fails.
+Request starts, HTTP statuses, retries, and season publication successes are
+logged without credentials; request counters are saved before each request.
 
 The free Open-Meteo service is for non-commercial use and has request limits;
 large date ranges may count as multiple calls against those limits. See its

@@ -1,5 +1,5 @@
 import { Router, type IRouter } from "express";
-import { GetCollectorStatusResponse, StartHistoricalPullResponse, RefreshCurrentSeasonResponse, StartWeatherPullBody, StartWeatherPullResponse } from "@workspace/api-zod";
+import { GetCollectorStatusResponse, StartHistoricalPullResponse, RefreshCurrentSeasonResponse, StartWeatherPullBody, StartWeatherPullResponse, ResumeWeatherPullResponse } from "@workspace/api-zod";
 import { getStatus, startJob } from "../lib/collector";
 
 const router: IRouter = Router();
@@ -10,12 +10,18 @@ for (const [route, mode, schema] of [
   ["/collector/pull", "historical", StartHistoricalPullResponse],
   ["/collector/refresh", "refresh", RefreshCurrentSeasonResponse],
   ["/collector/weather", "weather", StartWeatherPullResponse],
+  ["/collector/weather/resume", "resume", ResumeWeatherPullResponse],
 ] as const) {
   router.post(route, async (req, res): Promise<void> => {
     // Reject browser cross-origin commands to protect the API call budget.
     const origin = req.get("origin");
     if (origin && new URL(origin).host !== req.get("host") && new URL(origin).host !== req.get("x-forwarded-host")) {
       res.status(403).json({ error: "Cross-origin collection requests are not allowed" }); return;
+    }
+    if (mode === "resume") {
+      try { res.status(202).json(schema.parse(await startJob("weather", false, true))); }
+      catch (e) { res.status(409).json({ error: e instanceof Error ? e.message : "Unable to resume" }); }
+      return;
     }
     if (mode === "weather") {
       const input = StartWeatherPullBody.safeParse(req.body);

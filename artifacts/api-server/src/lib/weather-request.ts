@@ -1,20 +1,27 @@
+import { logger } from "./logger";
+
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 let lastCall = 0;
 
-export async function weatherRequest(url: URL, cfbd: boolean, progress: (message: string) => Promise<void>, counted: () => void): Promise<unknown> {
+export async function weatherRequest(url: URL, cfbd: boolean, progress: (message: string) => Promise<void>, counted: () => void | Promise<void>): Promise<unknown> {
   for (let attempt = 0; attempt < 5; attempt++) {
     await sleep(Math.max(0, 1500 - (Date.now() - lastCall)));
     lastCall = Date.now();
-    counted();
+    await counted();
+    const started = Date.now();
+    const details = { provider: url.hostname, path: url.pathname, startDate: url.searchParams.get("start_date"), endDate: url.searchParams.get("end_date"), latitude: url.searchParams.get("latitude"), longitude: url.searchParams.get("longitude"), attempt: attempt + 1 };
+    logger.info(details, "Weather request started");
     let response: Response;
     try {
       response = await fetch(url, { headers: cfbd ? { Authorization: `Bearer ${process.env.CFBD_API_KEY}` } : {},
         signal: AbortSignal.timeout(120000) });
     } catch {
+      logger.warn({ ...details, elapsedMs: Date.now() - started }, "Weather request network error or timeout");
       if (attempt === 4) throw new Error(`Weather network error (${url.hostname}); saved raw files are intact`);
       await sleep(5000 * 2 ** attempt);
       continue;
     }
+    logger.info({ ...details, status: response.status, elapsedMs: Date.now() - started }, "Weather request finished");
     if (response.status === 429 || response.status >= 500) {
       await response.body?.cancel();
       if (attempt === 4) throw new Error(`Weather provider HTTP ${response.status}; resume later to reuse cached venues`);

@@ -6,6 +6,7 @@ import {
   useStartHistoricalPull,
   useRefreshCurrentSeason,
   useStartWeatherPull,
+  useResumeWeatherPull,
 } from '@workspace/api-client-react';
 import type { CollectorJob, CollectorFile } from '@workspace/api-client-react';
 import { AlertTriangle, Database, RefreshCw, KeyRound, CloudSun } from 'lucide-react';
@@ -31,6 +32,7 @@ const stateStyle: Record<CollectorJob['state'], string> = {
   running: 'bg-accent text-accent-foreground',
   completed: 'bg-primary text-primary-foreground',
   failed: 'bg-destructive text-destructive-foreground',
+  interrupted: 'bg-accent text-accent-foreground',
 };
 
 export default function Home() {
@@ -42,6 +44,7 @@ export default function Home() {
   const pull = useStartHistoricalPull({ mutation: { onSettled: invalidate } });
   const refresh = useRefreshCurrentSeason({ mutation: { onSettled: invalidate } });
   const weather = useStartWeatherPull({ mutation: { onSettled: invalidate } });
+  const resume = useResumeWeatherPull({ mutation: { onSettled: invalidate } });
   const [refreshVenues, setRefreshVenues] = useState(false);
 
   const data = status.data;
@@ -51,9 +54,10 @@ export default function Home() {
   );
   const job = data?.job;
   const running = job?.state === 'running';
-  const disabled = !data || running || !data.keyConfigured || pull.isPending || refresh.isPending || weather.isPending;
+  const disabled = !data || running || !data.keyConfigured || pull.isPending || refresh.isPending || weather.isPending || resume.isPending;
+  const canResumeWeather = job?.mode === 'weather' && (job.state === 'interrupted' || job.state === 'failed');
   const pct = job && job.totalFiles > 0 ? Math.round((job.completedFiles / job.totalFiles) * 100) : 0;
-  const mutationError = errMsg(pull.error) ?? errMsg(refresh.error) ?? errMsg(weather.error);
+  const mutationError = errMsg(pull.error) ?? errMsg(refresh.error) ?? errMsg(weather.error) ?? errMsg(resume.error);
   const totalRows = files.reduce((s, f) => s + f.rowCount, 0);
 
   return (
@@ -95,7 +99,7 @@ export default function Home() {
           </div>
         </header>
         <p className="mt-2 font-mono text-[11px] text-muted-foreground">
-          Historical pull skips existing raw files. Refresh updates only {data?.currentSeason ?? 2026} raw files, compact exports, and weather, then pushes to GitHub. Weather pulls reuse historical caches; forecasts are refreshed and become archive data when available.
+          Historical pull skips existing raw files. Refresh updates only {data?.currentSeason ?? 2026} raw files, compact exports, and weather, then pushes to GitHub. Weather pulls reuse historical caches and publish each season as it finishes.
         </p>
         <label className="mt-2 flex items-center gap-2 font-mono text-[11px] text-muted-foreground">
           <input type="checkbox" data-testid="checkbox-refresh-venues" checked={refreshVenues} disabled={disabled} onChange={event => setRefreshVenues(event.target.checked)} />
@@ -130,6 +134,12 @@ export default function Home() {
                 <span data-testid="status-job" className={`rounded-sm px-2 py-0.5 font-mono text-xs uppercase tracking-wider ${stateStyle[job.state]}`}>{job.state}</span>
                 {job.mode && <span className="font-mono text-xs text-muted-foreground">mode: {job.mode}</span>}
                 <span data-testid="text-job-message" className="text-sm">{job.message}</span>
+                {canResumeWeather && (
+                  <button data-testid="button-resume-weather" disabled={disabled} onClick={() => resume.mutate()}
+                    className="inline-flex items-center gap-2 rounded-sm bg-primary px-3 py-2 text-sm font-medium text-primary-foreground disabled:opacity-40">
+                    <RefreshCw className="h-4 w-4" />{resume.isPending ? 'Resuming…' : 'Resume weather'}
+                  </button>
+                )}
               </div>
               <div className="mt-4 h-2 overflow-hidden rounded-sm bg-muted">
                 <div
@@ -145,6 +155,7 @@ export default function Home() {
                   ['On disk', `${files.length} CSVs`],
                   ['Started', fmtTime(job.startedAt)],
                   ['Finished', fmtTime(job.finishedAt)],
+                  ...(job.interruptedAt ? [['Interruption detected', fmtTime(job.interruptedAt)]] : []),
                 ].map(([k, v]) => (
                   <div key={k as string}>
                     <dt className="uppercase tracking-wider text-muted-foreground">{k}</dt>

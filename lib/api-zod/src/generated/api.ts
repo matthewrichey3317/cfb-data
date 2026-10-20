@@ -19,7 +19,7 @@ export const GetCollectorStatusResponse = zod.object({
   "warnings": zod.array(zod.string())
 })),
   "job": zod.object({
-  "state": zod.enum(['idle', 'running', 'completed', 'failed']),
+  "state": zod.enum(['idle', 'running', 'completed', 'failed', 'interrupted']),
   "mode": zod.string(),
   "message": zod.string(),
   "completedFiles": zod.number().int(),
@@ -28,6 +28,7 @@ export const GetCollectorStatusResponse = zod.object({
   "skippedFiles": zod.number().int(),
   "startedAt": zod.string().nullable(),
   "finishedAt": zod.string().nullable(),
+  "interruptedAt": zod.string().nullish(),
   "error": zod.string().nullable()
 }),
   "keyConfigured": zod.boolean(),
@@ -37,7 +38,7 @@ export const GetCollectorStatusResponse = zod.object({
 
 
 export const StartHistoricalPullResponse = zod.object({
-  "state": zod.enum(['idle', 'running', 'completed', 'failed']),
+  "state": zod.enum(['idle', 'running', 'completed', 'failed', 'interrupted']),
   "mode": zod.string(),
   "message": zod.string(),
   "completedFiles": zod.number().int(),
@@ -46,12 +47,13 @@ export const StartHistoricalPullResponse = zod.object({
   "skippedFiles": zod.number().int(),
   "startedAt": zod.string().nullable(),
   "finishedAt": zod.string().nullable(),
+  "interruptedAt": zod.string().nullish(),
   "error": zod.string().nullable()
 })
 
 
 export const RefreshCurrentSeasonResponse = zod.object({
-  "state": zod.enum(['idle', 'running', 'completed', 'failed']),
+  "state": zod.enum(['idle', 'running', 'completed', 'failed', 'interrupted']),
   "mode": zod.string(),
   "message": zod.string(),
   "completedFiles": zod.number().int(),
@@ -60,6 +62,7 @@ export const RefreshCurrentSeasonResponse = zod.object({
   "skippedFiles": zod.number().int(),
   "startedAt": zod.string().nullable(),
   "finishedAt": zod.string().nullable(),
+  "interruptedAt": zod.string().nullish(),
   "error": zod.string().nullable()
 })
 
@@ -71,7 +74,7 @@ export const StartWeatherPullBody = zod.object({
 })
 
 export const StartWeatherPullResponse = zod.object({
-  "state": zod.enum(['idle', 'running', 'completed', 'failed']),
+  "state": zod.enum(['idle', 'running', 'completed', 'failed', 'interrupted']),
   "mode": zod.string(),
   "message": zod.string(),
   "completedFiles": zod.number().int(),
@@ -80,6 +83,22 @@ export const StartWeatherPullResponse = zod.object({
   "skippedFiles": zod.number().int(),
   "startedAt": zod.string().nullable(),
   "finishedAt": zod.string().nullable(),
+  "interruptedAt": zod.string().nullish(),
+  "error": zod.string().nullable()
+})
+
+
+export const ResumeWeatherPullResponse = zod.object({
+  "state": zod.enum(['idle', 'running', 'completed', 'failed', 'interrupted']),
+  "mode": zod.string(),
+  "message": zod.string(),
+  "completedFiles": zod.number().int(),
+  "totalFiles": zod.number().int(),
+  "calls": zod.number().int(),
+  "skippedFiles": zod.number().int(),
+  "startedAt": zod.string().nullable(),
+  "finishedAt": zod.string().nullable(),
+  "interruptedAt": zod.string().nullish(),
   "error": zod.string().nullable()
 })
 

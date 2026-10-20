@@ -46,6 +46,7 @@ test("publisher commits only current-season files, handles deletions and verifie
     git("push", "origin", "main");
     const helper = path.join(bin, "gh");
     await fs.writeFile(helper, `#!/bin/sh
+if [ "$FAKE_FAIL" = "1" ]; then exit 1; fi
 if [ "$2" = "user" ]; then printf 'matthewrichey3317\\n'
 else git --git-dir="$FAKE_REMOTE" rev-parse refs/heads/main
 fi
@@ -69,10 +70,17 @@ fi
     assert.equal(git("ls-tree", "--name-only", "HEAD", "export/games_compact_2026_part2.csv"), "");
     assert.equal(git("diff", "--cached", "--name-only"), "unrelated.txt");
     assert.equal(git("rev-parse", "HEAD"), execFileSync("git", ["--git-dir", bare, "rev-parse", "main"], { encoding: "utf8" }).trim());
-    await publishWeather(root);
+    await publishWeather(root, 2026);
+    assert.equal(git("show", "HEAD:data/weather_2025.csv"), "original");
+    await publishWeather(root, 2025);
     assert.equal(git("show", "HEAD:data/weather_2025.csv"), "historical weather update");
     assert.equal(git("show", "HEAD:unrelated.txt"), "original");
     assert.equal(git("diff", "--cached", "--name-only"), "unrelated.txt");
+    const published = execFileSync("git", ["--git-dir", bare, "rev-parse", "main"], { encoding: "utf8" }).trim();
+    process.env.FAKE_FAIL = "1";
+    await assert.rejects(publishWeather(root, 2026), /failed/);
+    assert.equal(execFileSync("git", ["--git-dir", bare, "rev-parse", "main"], { encoding: "utf8" }).trim(), published);
+    assert.equal(git("show", "HEAD:data/weather_2025.csv"), "historical weather update");
   } finally {
     for (const key of Object.keys(process.env)) if (!(key in previous)) delete process.env[key];
     Object.assign(process.env, previous);

@@ -104,11 +104,13 @@ export async function publishCurrentSeason(root: string) {
   return publishFiles(root, files, "Refresh 2026 college football data, weather, and compact exports");
 }
 
-export async function publishWeather(root: string) {
+export async function publishWeather(root: string, season?: number) {
   const files = (await fs.readdir(path.join(root, "data")))
-    .filter(name => name === "venues.csv" || /^weather_(?:201[5-9]|202[0-6])\.csv$/.test(name))
+    .filter(name => name === "venues.csv" || (season === undefined
+      ? /^weather_(?:201[5-9]|202[0-6])\.csv$/.test(name)
+      : name === `weather_${season}.csv`))
     .map(name => `data/${name}`);
   if (!files.length) return null;
   files.push("data/manifest.json");
-  return publishFiles(root, files, "Update stadium venues and game weather");
+  return publishFiles(root, files, season === undefined ? "Update stadium venues and game weather" : `Publish ${season} game weather`);
 }

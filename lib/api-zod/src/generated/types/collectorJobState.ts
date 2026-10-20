@@ -14,4 +14,5 @@ export const CollectorJobState = {
   running: 'running',
   completed: 'completed',
   failed: 'failed',
+  interrupted: 'interrupted',
 } as const;

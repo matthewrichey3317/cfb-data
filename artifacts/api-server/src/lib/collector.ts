@@ -7,6 +7,7 @@ import { buildCompactExport } from "./compact-export";
 import { publishCurrentSeason, publishWeather } from "./github-publish";
 import { collectWeather, type WeatherEntry } from "./weather";
 import { weatherRequest } from "./weather-request";
+import { recoverSavedJob, type CollectorJob as Job } from "./job-recovery";
 
 // Both src/lib/collector.ts and bundled dist/index.mjs resolve to this package.
 const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist")
@@ -16,10 +17,10 @@ export const dataDir = path.resolve(packageDir, "../../data");
 const kinds = ["games", "lines", "drives"] as const;
 type Kind = typeof kinds[number];
 type Entry = { file: string; type: Kind | "venues" | "weather"; season: number; rowCount: number; pulledAt: string; bytes: number; warnings: string[] };
-type Job = { state: "idle" | "running" | "completed" | "failed"; mode: string; message: string; completedFiles: number; totalFiles: number; calls: number; skippedFiles: number; startedAt: string | null; finishedAt: string | null; error: string | null };
-const idleJob: Job = { state: "idle", mode: "", message: "Ready to collect", completedFiles: 0, totalFiles: 0, calls: 0, skippedFiles: 0, startedAt: null, finishedAt: null, error: null };
+const idleJob: Job = { state: "idle", mode: "", message: "Ready to collect", completedFiles: 0, totalFiles: 0, calls: 0, skippedFiles: 0, startedAt: null, finishedAt: null, interruptedAt: null, error: null };
 let job: Job = { ...idleJob };
 let active = false;
+let initialization: Promise<void> | undefined;
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const defaultColumns: Record<Kind, string[]> = {
   games: ["id", "season", "week", "seasonType", "startDate", "completed", "neutralSite", "conferenceGame", "venue", "homeTeam", "homeConference", "homePoints", "awayTeam", "awayConference", "awayPoints"],
@@ -155,19 +156,32 @@ async function pullFile(kind: Kind, season: number, refresh: boolean) {
   logger.info({ file, rowCount: rows.length }, "CFBD CSV saved");
 }
 
+export function initializeCollector(): Promise<void> {
+  initialization ??= (async () => {
+    job = await recoverSavedJob(dataDir, idleJob);
+    if (job.state === "interrupted") logger.warn({ interruptedAt: job.interruptedAt, mode: job.mode, calls: job.calls, message: job.message }, "Recovered interrupted collector job");
+  })();
+  return initialization;
+}
+
 export async function getStatus() {
-  if (!active && await exists("job.json")) {
-    job = JSON.parse(await fs.readFile(path.join(dataDir, "job.json"), "utf8"));
-    if (job.state === "running") job = { ...job, state: "failed", error: "Previous run was interrupted. Run again to resume.", message: "Interrupted" };
-  }
+  await initializeCollector();
   return { files: await readManifest(), job: { ...job }, keyConfigured: !!process.env.CFBD_API_KEY, currentSeason: 2026, expectedFiles: 36 };
 }
 
-export async function startJob(mode: "historical" | "refresh" | "weather", refreshVenues = false): Promise<Job> {
+export async function startJob(mode: "historical" | "refresh" | "weather", refreshVenues = false, resume = false): Promise<Job> {
+  await initializeCollector();
   if (active) throw new Error("A pull is already running");
   if (!process.env.CFBD_API_KEY) throw new Error("CFBD_API_KEY is not configured");
+  if (resume && (mode !== "weather" || job.mode !== "weather" || !["interrupted", "failed"].includes(job.state))) {
+    throw new Error("There is no interrupted or failed weather job to resume");
+  }
+  const previous = resume ? { ...job } : { ...idleJob };
   active = true;
-  job = { ...idleJob, state: "running", mode, message: "Starting collection", totalFiles: mode === "refresh" ? 5 : mode === "weather" ? 13 : 36, startedAt: new Date().toISOString() };
+  job = { ...previous, state: "running", mode, error: null, finishedAt: null, completedFiles: 0,
+    message: resume ? "Resuming weather using saved archive caches" : "Starting collection",
+    totalFiles: mode === "refresh" ? 5 : mode === "weather" ? 13 : 36,
+    startedAt: previous.startedAt ?? new Date().toISOString() };
   try { await saveJob(); } catch (e) { active = false; throw e; }
   void run(mode, refreshVenues);
   return { ...job };
@@ -179,7 +193,7 @@ async function runWeather(seasons: number[], refreshVenues = false) {
     progress: async message => { job.message = message; await saveJob(); },
     request: (url, cfbd = false) => weatherRequest(url, cfbd,
       async message => { job.message = message; await saveJob(); },
-      () => { job.calls++; }),
+      async () => { job.calls++; await saveJob(); }),
     saved: async (entry: WeatherEntry) => {
       const manifest = (await readManifest()).filter(file => file.file !== entry.file);
       manifest.push(entry);
@@ -187,6 +201,12 @@ async function runWeather(seasons: number[], refreshVenues = false) {
       await atomicJson("manifest.json", { version: 1, files: manifest });
       job.completedFiles++;
       await saveJob();
+      if (job.mode === "weather" && entry.type === "weather") {
+        job.message = `Publishing weather ${entry.season} to GitHub`;
+        await saveJob();
+        await publishWeather(path.resolve(dataDir, ".."), entry.season);
+        logger.info({ season: entry.season, file: entry.file, rowCount: entry.rowCount }, "Weather season saved and published");
+      }
     },
   });
 }
@@ -194,15 +214,9 @@ async function runWeather(seasons: number[], refreshVenues = false) {
 async function run(mode: "historical" | "refresh" | "weather", refreshVenues: boolean) {
   try {
     if (mode === "weather") {
-      let weatherError: unknown;
-      try { await runWeather(Array.from({ length: 12 }, (_, i) => 2015 + i), refreshVenues); }
-      catch (error) { weatherError = error; }
-      job.message = "Publishing saved weather files to GitHub";
-      await saveJob();
-      await publishWeather(path.resolve(dataDir, ".."));
-      if (weatherError) throw weatherError;
+      await runWeather(Array.from({ length: 12 }, (_, i) => 2015 + i), refreshVenues);
       job.state = "completed";
-      job.message = "Weather collection and GitHub push complete";
+      job.message = "All weather seasons saved and published to GitHub";
       return;
     }
     if (mode === "refresh") {

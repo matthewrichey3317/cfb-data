@@ -105,3 +105,35 @@ test("batches by venue/season, reuses archives and venues, refreshes forecasts, 
     await fs.rm(root, { recursive: true, force: true });
   }
 });
+
+test("a season is published before the next request and a later failure preserves it; resume uses its cache", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "cfb-weather-seasons-"));
+  const data = path.join(root, "data");
+  const events = [];
+  let fail = true;
+  try {
+    await fs.mkdir(data);
+    for (const season of [2015, 2016]) {
+      await fs.writeFile(path.join(data, `games_${season}.csv`), `id,season,week,venueId,startDate\n${season},${season},1,1,${season}-09-01T12:00:00Z\n`);
+    }
+    const options = {
+      now, progress: async () => {},
+      saved: async entry => { if (entry.type === "weather") events.push(`published ${entry.season}`); },
+      request: async (url, cfbd) => {
+        if (cfbd) return [venue];
+        const start = url.searchParams.get("start_date");
+        events.push(`requested ${start.slice(0, 4)}`);
+        if (start.startsWith("2016") && fail) throw new Error("Later season failed");
+        return payload(start, url.searchParams.get("end_date") + "T23:00Z");
+      },
+    };
+    await assert.rejects(collectWeather(data, [2015, 2016], options), /Later season failed/);
+    assert.deepEqual(events, ["requested 2015", "published 2015", "requested 2016"]);
+    const previous = await fs.readFile(path.join(data, "weather_2015.csv"));
+    events.length = 0;
+    fail = false;
+    await collectWeather(data, [2015, 2016], options);
+    assert.deepEqual(events, ["published 2015", "requested 2016", "published 2016"]);
+    assert.deepEqual(await fs.readFile(path.join(data, "weather_2015.csv")), previous);
+  } finally { await fs.rm(root, { recursive: true, force: true }); }
+});

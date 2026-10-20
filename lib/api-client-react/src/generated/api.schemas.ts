@@ -38,6 +38,7 @@ export const CollectorJobState = {
   running: 'running',
   completed: 'completed',
   failed: 'failed',
+  interrupted: 'interrupted',
 } as const;
 
 export interface CollectorJob {
@@ -52,6 +53,8 @@ export interface CollectorJob {
   startedAt: string | null;
   /** @nullable */
   finishedAt: string | null;
+  /** @nullable */
+  interruptedAt?: string | null;
   /** @nullable */
   error: string | null;
 }

@@ -28,7 +28,7 @@ type Options = {
 };
 const numeric = (value: unknown): number | null =>
   value === "" || value == null || !Number.isFinite(Number(value)) ? null : Number(value);
-const flag = (value: unknown) => value === true || value === "true" || value === "1" ? 1 : value === false || value === "false" || value === "0" ? 0 : "";
+const flag = (value: unknown) => value === true || value === 1 || value === "true" || value === "1" ? 1 : value === false || value === 0 || value === "false" || value === "0" ? 0 : "";
 const date = (ms: number) => new Date(ms).toISOString().slice(0, 10);
 const round = (value: number) => Math.round(value * 1000) / 1000;
 const hourKey = (ms: number) => new Date(ms).toISOString().slice(0, 13) + ":00";

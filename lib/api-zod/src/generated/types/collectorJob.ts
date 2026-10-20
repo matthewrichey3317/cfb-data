@@ -20,5 +20,7 @@ export interface CollectorJob {
   /** @nullable */
   finishedAt: string | null;
   /** @nullable */
+  interruptedAt?: string | null;
+  /** @nullable */
   error: string | null;
 }

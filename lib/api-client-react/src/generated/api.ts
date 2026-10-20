@@ -342,6 +342,74 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
       return useMutation(getStartWeatherPullMutationOptions(options));
     }
 
+export const getResumeWeatherPullUrl = () => {
+
+
+
+
+  return `/api/collector/weather/resume`
+}
+
+export const resumeWeatherPull = async ( options?: Parameters<typeof customFetch>[1]): Promise<CollectorJob> => {
+
+  return customFetch<CollectorJob>(getResumeWeatherPullUrl(),
+  {
+    ...options,
+    method: 'POST'
+
+
+  }
+);}
+
+
+
+
+
+export const getResumeWeatherPullMutationKey = () => ['resumeWeatherPull'] as const;
+
+export const getResumeWeatherPullMutationOptions = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof resumeWeatherPull>>, TError,void, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof resumeWeatherPull>>, TError,void, TContext> => {
+
+const mutationKey = getResumeWeatherPullMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof resumeWeatherPull>>, void> = () => {
+
+
+          return  resumeWeatherPull(requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type ResumeWeatherPullMutationResult = NonNullable<Awaited<ReturnType<typeof resumeWeatherPull>>>
+
+    export type ResumeWeatherPullMutationError = ErrorType<unknown>
+
+
+    export const useResumeWeatherPull = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof resumeWeatherPull>>, TError,void, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof resumeWeatherPull>>,
+        TError,
+        void,
+        TContext
+      > => {
+      return useMutation(getResumeWeatherPullMutationOptions(options));
+    }
+
 export const getHealthCheckUrl = () => {
 
 
