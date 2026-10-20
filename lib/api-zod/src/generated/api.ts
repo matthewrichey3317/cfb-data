@@ -12,7 +12,7 @@ export const GetCollectorStatusResponse = zod.object({
   "files": zod.array(zod.object({
   "file": zod.string(),
   "season": zod.number().int(),
-  "type": zod.enum(['games', 'lines', 'drives']),
+  "type": zod.enum(['games', 'lines', 'drives', 'venues', 'weather']),
   "rowCount": zod.number().int(),
   "pulledAt": zod.string(),
   "bytes": zod.number().int(),
@@ -51,6 +51,26 @@ export const StartHistoricalPullResponse = zod.object({
 
 
 export const RefreshCurrentSeasonResponse = zod.object({
+  "state": zod.enum(['idle', 'running', 'completed', 'failed']),
+  "mode": zod.string(),
+  "message": zod.string(),
+  "completedFiles": zod.number().int(),
+  "totalFiles": zod.number().int(),
+  "calls": zod.number().int(),
+  "skippedFiles": zod.number().int(),
+  "startedAt": zod.string().nullable(),
+  "finishedAt": zod.string().nullable(),
+  "error": zod.string().nullable()
+})
+
+
+export const startWeatherPullBodyRefreshVenuesDefault = false;
+
+export const StartWeatherPullBody = zod.object({
+  "refreshVenues": zod.boolean().default(startWeatherPullBodyRefreshVenuesDefault)
+})
+
+export const StartWeatherPullResponse = zod.object({
   "state": zod.enum(['idle', 'running', 'completed', 'failed']),
   "mode": zod.string(),
   "message": zod.string(),

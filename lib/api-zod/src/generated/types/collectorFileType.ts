@@ -13,4 +13,6 @@ export const CollectorFileType = {
   games: 'games',
   lines: 'lines',
   drives: 'drives',
+  venues: 'venues',
+  weather: 'weather',
 } as const;

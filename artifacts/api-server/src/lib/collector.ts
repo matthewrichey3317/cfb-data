@@ -4,7 +4,9 @@ import { fileURLToPath } from "node:url";
 import { logger } from "./logger";
 import { parseCsv, toCsv, type Row } from "./collector-csv";
 import { buildCompactExport } from "./compact-export";
-import { publishCurrentSeason } from "./github-publish";
+import { publishCurrentSeason, publishWeather } from "./github-publish";
+import { collectWeather, type WeatherEntry } from "./weather";
+import { weatherRequest } from "./weather-request";
 
 // Both src/lib/collector.ts and bundled dist/index.mjs resolve to this package.
 const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist")
@@ -13,7 +15,7 @@ const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist"
 export const dataDir = path.resolve(packageDir, "../../data");
 const kinds = ["games", "lines", "drives"] as const;
 type Kind = typeof kinds[number];
-type Entry = { file: string; type: Kind; season: number; rowCount: number; pulledAt: string; bytes: number; warnings: string[] };
+type Entry = { file: string; type: Kind | "venues" | "weather"; season: number; rowCount: number; pulledAt: string; bytes: number; warnings: string[] };
 type Job = { state: "idle" | "running" | "completed" | "failed"; mode: string; message: string; completedFiles: number; totalFiles: number; calls: number; skippedFiles: number; startedAt: string | null; finishedAt: string | null; error: string | null };
 const idleJob: Job = { state: "idle", mode: "", message: "Ready to collect", completedFiles: 0, totalFiles: 0, calls: 0, skippedFiles: 0, startedAt: null, finishedAt: null, error: null };
 let job: Job = { ...idleJob };
@@ -147,7 +149,7 @@ async function pullFile(kind: Kind, season: number, refresh: boolean) {
   const entry: Entry = { file, type: kind, season, rowCount: rows.length, bytes: Buffer.byteLength(csv), pulledAt: new Date().toISOString(), warnings };
   const manifest = (await readManifest()).filter(e => e.file !== file);
   manifest.push(entry);
-  manifest.sort((a, b) => a.season - b.season || kinds.indexOf(a.type) - kinds.indexOf(b.type));
+  manifest.sort((a, b) => a.season - b.season || a.type.localeCompare(b.type));
   await atomicJson("manifest.json", { version: 1, files: manifest });
   for (const st of ["regular", "postseason"]) await fs.rm(path.join(dataDir, `.${kind}_${season}_${st}.part.json`), { force: true });
   logger.info({ file, rowCount: rows.length }, "CFBD CSV saved");
@@ -161,18 +163,48 @@ export async function getStatus() {
   return { files: await readManifest(), job: { ...job }, keyConfigured: !!process.env.CFBD_API_KEY, currentSeason: 2026, expectedFiles: 36 };
 }
 
-export async function startJob(mode: "historical" | "refresh"): Promise<Job> {
+export async function startJob(mode: "historical" | "refresh" | "weather", refreshVenues = false): Promise<Job> {
   if (active) throw new Error("A pull is already running");
   if (!process.env.CFBD_API_KEY) throw new Error("CFBD_API_KEY is not configured");
   active = true;
-  job = { ...idleJob, state: "running", mode, message: "Starting collection", totalFiles: mode === "refresh" ? 3 : 36, startedAt: new Date().toISOString() };
+  job = { ...idleJob, state: "running", mode, message: "Starting collection", totalFiles: mode === "refresh" ? 5 : mode === "weather" ? 13 : 36, startedAt: new Date().toISOString() };
   try { await saveJob(); } catch (e) { active = false; throw e; }
-  void run(mode);
+  void run(mode, refreshVenues);
   return { ...job };
 }
 
-async function run(mode: "historical" | "refresh") {
+async function runWeather(seasons: number[], refreshVenues = false) {
+  await collectWeather(dataDir, seasons, {
+    refreshVenues,
+    progress: async message => { job.message = message; await saveJob(); },
+    request: (url, cfbd = false) => weatherRequest(url, cfbd,
+      async message => { job.message = message; await saveJob(); },
+      () => { job.calls++; }),
+    saved: async (entry: WeatherEntry) => {
+      const manifest = (await readManifest()).filter(file => file.file !== entry.file);
+      manifest.push(entry);
+      manifest.sort((a, b) => a.season - b.season || a.type.localeCompare(b.type));
+      await atomicJson("manifest.json", { version: 1, files: manifest });
+      job.completedFiles++;
+      await saveJob();
+    },
+  });
+}
+
+async function run(mode: "historical" | "refresh" | "weather", refreshVenues: boolean) {
   try {
+    if (mode === "weather") {
+      let weatherError: unknown;
+      try { await runWeather(Array.from({ length: 12 }, (_, i) => 2015 + i), refreshVenues); }
+      catch (error) { weatherError = error; }
+      job.message = "Publishing saved weather files to GitHub";
+      await saveJob();
+      await publishWeather(path.resolve(dataDir, ".."));
+      if (weatherError) throw weatherError;
+      job.state = "completed";
+      job.message = "Weather collection and GitHub push complete";
+      return;
+    }
     if (mode === "refresh") {
       // A new weekly refresh must not reuse parts from an older interrupted refresh.
       for (const kind of kinds) for (const st of ["regular", "postseason"]) {
@@ -191,13 +223,17 @@ async function run(mode: "historical" | "refresh") {
     await saveJob();
     await buildCompactExport(dataDir, path.resolve(dataDir, "../export"), seasons);
     if (mode === "refresh") {
+      let weatherError: unknown;
+      try { await runWeather([2026]); }
+      catch (error) { weatherError = error; }
       job.message = "Publishing updated 2026 files to GitHub";
       await saveJob();
       await publishCurrentSeason(path.resolve(dataDir, ".."));
+      if (weatherError) throw new Error(`Games and compact exports saved and pushed; weather failed: ${weatherError instanceof Error ? weatherError.message : "unknown weather error"}`);
     }
     job.state = "completed";
     job.message = mode === "refresh"
-      ? "2026 collection, compact export, and GitHub push complete"
+      ? "2026 collection, compact export, weather, and GitHub push complete"
       : "Collection and compact export complete";
   } catch (e) {
     job.state = "failed"; job.error = e instanceof Error ? e.message : "Collection failed";

@@ -1,13 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import {
   useGetCollectorStatus,
   getGetCollectorStatusQueryKey,
   useStartHistoricalPull,
   useRefreshCurrentSeason,
+  useStartWeatherPull,
 } from '@workspace/api-client-react';
 import type { CollectorJob, CollectorFile } from '@workspace/api-client-react';
-import { AlertTriangle, Database, RefreshCw, KeyRound } from 'lucide-react';
+import { AlertTriangle, Database, RefreshCw, KeyRound, CloudSun } from 'lucide-react';
 
 function fmtBytes(n: number) {
   if (n < 1024) return `${n} B`;
@@ -40,6 +41,8 @@ export default function Home() {
   const invalidate = () => qc.invalidateQueries({ queryKey: getGetCollectorStatusQueryKey() });
   const pull = useStartHistoricalPull({ mutation: { onSettled: invalidate } });
   const refresh = useRefreshCurrentSeason({ mutation: { onSettled: invalidate } });
+  const weather = useStartWeatherPull({ mutation: { onSettled: invalidate } });
+  const [refreshVenues, setRefreshVenues] = useState(false);
 
   const data = status.data;
   const files = useMemo<CollectorFile[]>(
@@ -48,9 +51,9 @@ export default function Home() {
   );
   const job = data?.job;
   const running = job?.state === 'running';
-  const disabled = !data || running || !data.keyConfigured || pull.isPending || refresh.isPending;
+  const disabled = !data || running || !data.keyConfigured || pull.isPending || refresh.isPending || weather.isPending;
   const pct = job && job.totalFiles > 0 ? Math.round((job.completedFiles / job.totalFiles) * 100) : 0;
-  const mutationError = errMsg(pull.error) ?? errMsg(refresh.error);
+  const mutationError = errMsg(pull.error) ?? errMsg(refresh.error) ?? errMsg(weather.error);
   const totalRows = files.reduce((s, f) => s + f.rowCount, 0);
 
   return (
@@ -61,7 +64,7 @@ export default function Home() {
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Backend job / status</p>
             <h1 className="mt-1 text-2xl font-semibold tracking-tight">CFBD Data Collector</h1>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 md:justify-end">
             <button
               data-testid="button-historical-pull"
               disabled={disabled}
@@ -70,6 +73,15 @@ export default function Home() {
             >
               <Database className="h-4 w-4" />
               {pull.isPending ? 'Starting…' : 'Full historical pull'}
+            </button>
+            <button
+              data-testid="button-weather-pull"
+              disabled={disabled}
+              onClick={() => weather.mutate({ data: { refreshVenues } })}
+              className="inline-flex items-center gap-2 rounded-sm border border-foreground/70 bg-card px-3.5 py-2 text-sm font-medium transition-colors hover:bg-accent/15 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              <CloudSun className="h-4 w-4" />
+              {weather.isPending ? 'Starting…' : 'Pull weather (all seasons)'}
             </button>
             <button
               data-testid="button-refresh-season"
@@ -83,8 +95,12 @@ export default function Home() {
           </div>
         </header>
         <p className="mt-2 font-mono text-[11px] text-muted-foreground">
-          Historical pull skips existing raw files. Refresh overwrites only {data?.currentSeason ?? 2026} raw files, rebuilds that season’s compact export, and pushes the updates to GitHub.
+          Historical pull skips existing raw files. Refresh updates only {data?.currentSeason ?? 2026} raw files, compact exports, and weather, then pushes to GitHub. Weather pulls reuse historical caches; forecasts are refreshed and become archive data when available.
         </p>
+        <label className="mt-2 flex items-center gap-2 font-mono text-[11px] text-muted-foreground">
+          <input type="checkbox" data-testid="checkbox-refresh-venues" checked={refreshVenues} disabled={disabled} onChange={event => setRefreshVenues(event.target.checked)} />
+          Refresh venue list on next weather pull (otherwise reuse venues.csv)
+        </label>
 
         {mutationError && (
           <div data-testid="text-mutation-error" className="mt-4 flex items-start gap-2 rounded-sm border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm text-destructive">
@@ -126,7 +142,7 @@ export default function Home() {
                   ['Files', `${job.completedFiles}/${job.totalFiles}`],
                   ['Skipped', job.skippedFiles],
                   ['API calls', job.calls],
-                  ['On disk', `${files.length}/${data.expectedFiles}`],
+                  ['On disk', `${files.length} CSVs`],
                   ['Started', fmtTime(job.startedAt)],
                   ['Finished', fmtTime(job.finishedAt)],
                 ].map(([k, v]) => (
@@ -164,7 +180,7 @@ export default function Home() {
                     <tbody>
                       {files.map((f) => (
                         <tr key={f.file} data-testid={`row-file-${f.file}`} title={f.file} className={`border-b border-border/60 transition-colors last:border-0 hover:bg-accent/10 ${f.season === data.currentSeason ? 'bg-primary/[0.04]' : ''}`}>
-                          <td className="px-3 py-2 font-semibold">{f.season}</td>
+                          <td className="px-3 py-2 font-semibold">{f.type === 'venues' ? '—' : f.season}</td>
                           <td className="px-3 py-2">{f.type}</td>
                           <td className="px-3 py-2 text-right tabular-nums">{f.rowCount.toLocaleString()}</td>
                           <td className="px-3 py-2 whitespace-nowrap text-muted-foreground">{fmtTime(f.pulledAt)}</td>

@@ -37,6 +37,7 @@ A backend collection tool for analysts: download historical FBS games, betting l
 ## Architecture decisions
 
 - The user explicitly requires plain CSV files in the top-level `data` folder for another analysis tool, not database records or object-storage-only exports.
+- Weather is an independent resumable job over saved games (2015–2026); it adds venues and one weather CSV per season to the same raw manifest and public repository. Refresh 2026 also refreshes only its weather. Weather errors must never roll back games, lines, drives, or compact exports; successful non-weather refresh results are still pushed. Archive-hour caches are local/ignored; forecast data is always re-requested and later promoted to archive. Free Open-Meteo use is non-commercial and quota-limited.
 - Collect whole seasons only: never add per-week/per-game API calls. A fresh historical run needs 72 calls, excluding retries; a 2026 refresh needs 6.
 - CFBD `/lines` lacks classification filtering; match lines to game IDs from the FBS games CSV. FBS includes games involving either FBS team, including FCS opponents.
 - The user explicitly requested public GitHub publication of raw CSVs, the raw manifest, compact parts, and the export index alongside app code. These analysis files are intentionally no longer Git-ignored. Runtime job state, partial downloads, environment files, dependencies, and build output remain ignored. Data folders remain excluded from app deployment images.

@@ -12,3 +12,4 @@ export * from './collectorJob';
 export * from './collectorJobState';
 export * from './collectorStatus';
 export * from './healthStatus';
+export * from './weatherInput';

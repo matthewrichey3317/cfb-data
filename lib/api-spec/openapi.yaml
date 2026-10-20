@@ -41,6 +41,22 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/CollectorJob"
+  /collector/weather:
+    post:
+      operationId: startWeatherPull
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WeatherInput"
+      responses:
+        "202":
+          description: Weather job started
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectorJob"
   /healthz:
     get:
       operationId: healthCheck
@@ -56,13 +72,17 @@ paths:
                 $ref: "#/components/schemas/HealthStatus"
 components:
   schemas:
+    WeatherInput:
+      type: object
+      properties:
+        refreshVenues: { type: boolean, default: false }
     CollectorFile:
       type: object
       required: [file, season, type, rowCount, pulledAt, bytes, warnings]
       properties:
         file: { type: string }
         season: { type: integer }
-        type: { type: string, enum: [games, lines, drives] }
+        type: { type: string, enum: [games, lines, drives, venues, weather] }
         rowCount: { type: integer }
         pulledAt: { type: string }
         bytes: { type: integer }

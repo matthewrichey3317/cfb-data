@@ -10,6 +10,8 @@ const result = await build({
 const publishing = await import(`data:text/javascript;base64,${Buffer.from(result.outputFiles[0].text).toString("base64")}`);
 if (process.argv.includes("--check")) {
   console.log("Security check passed:", await publishing.securityCheck(root));
+} else if (process.argv.includes("--weather")) {
+  console.log("Published weather:", await publishing.publishWeather(root));
 } else {
   console.log("Published and verified:", await publishing.publishCurrentSeason(root));
 }

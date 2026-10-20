@@ -10,7 +10,7 @@ const compiled = await build({
   entryPoints: ["src/lib/github-publish.ts"],
   bundle: true, write: false, platform: "node", format: "esm",
 });
-const { assertSafeContents, publishCurrentSeason } = await import(
+const { assertSafeContents, publishCurrentSeason, publishWeather } = await import(
   `data:text/javascript;base64,${Buffer.from(compiled.outputFiles[0].text).toString("base64")}`
 );
 
@@ -39,8 +39,8 @@ test("publisher commits only current-season files, handles deletions and verifie
     git("init", "--bare", bare);
     git("remote", "add", "origin", "https://github.com/matthewrichey3317/cfb-data.git");
     git("config", `url.${bare}.insteadOf`, "https://github.com/matthewrichey3317/cfb-data.git");
-    const names = ["data/games_2026.csv", "data/lines_2026.csv", "data/drives_2026.csv", "data/manifest.json", "export/index.json", "export/games_compact_2026_part1.csv"];
-    for (const name of [...names, "export/games_compact_2026_part2.csv", "data/games_2025.csv", "unrelated.txt"]) await write(name, "original\n");
+    const names = ["data/games_2026.csv", "data/lines_2026.csv", "data/drives_2026.csv", "data/manifest.json", "export/index.json", "export/games_compact_2026_part1.csv", "data/venues.csv", "data/weather_2026.csv"];
+    for (const name of [...names, "export/games_compact_2026_part2.csv", "data/games_2025.csv", "data/weather_2025.csv", "unrelated.txt"]) await write(name, "original\n");
     git("add", ".");
     git("commit", "-m", "Initial fixture");
     git("push", "origin", "main");
@@ -56,6 +56,7 @@ fi
     process.env.GH_TOKEN = "test-github-credential";
     process.env.CFBD_API_KEY = "test-cfbd-credential";
     for (const name of names) await write(name, "updated\n");
+    await write("data/weather_2025.csv", "historical weather update\n");
     await fs.unlink(path.join(root, "export/games_compact_2026_part2.csv"));
     await write("unrelated.txt", "must not be published\n");
     git("add", "unrelated.txt");
@@ -63,9 +64,15 @@ fi
     assert.equal(git("show", "HEAD:unrelated.txt"), "original");
     assert.equal(git("show", "HEAD:data/games_2025.csv"), "original");
     assert.equal(git("show", "HEAD:data/games_2026.csv"), "updated");
+    assert.equal(git("show", "HEAD:data/weather_2026.csv"), "updated");
+    assert.equal(git("show", "HEAD:data/weather_2025.csv"), "original");
     assert.equal(git("ls-tree", "--name-only", "HEAD", "export/games_compact_2026_part2.csv"), "");
     assert.equal(git("diff", "--cached", "--name-only"), "unrelated.txt");
     assert.equal(git("rev-parse", "HEAD"), execFileSync("git", ["--git-dir", bare, "rev-parse", "main"], { encoding: "utf8" }).trim());
+    await publishWeather(root);
+    assert.equal(git("show", "HEAD:data/weather_2025.csv"), "historical weather update");
+    assert.equal(git("show", "HEAD:unrelated.txt"), "original");
+    assert.equal(git("diff", "--cached", "--name-only"), "unrelated.txt");
   } finally {
     for (const key of Object.keys(process.env)) if (!(key in previous)) delete process.env[key];
     Object.assign(process.env, previous);

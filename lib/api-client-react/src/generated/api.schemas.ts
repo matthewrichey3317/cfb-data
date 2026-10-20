@@ -5,6 +5,10 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
+export interface WeatherInput {
+  refreshVenues?: boolean;
+}
+
 export type CollectorFileType = typeof CollectorFileType[keyof typeof CollectorFileType];
 
 
@@ -12,6 +16,8 @@ export const CollectorFileType = {
   games: 'games',
   lines: 'lines',
   drives: 'drives',
+  venues: 'venues',
+  weather: 'weather',
 } as const;
 
 export interface CollectorFile {

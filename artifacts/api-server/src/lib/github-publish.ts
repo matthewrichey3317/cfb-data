@@ -59,7 +59,7 @@ export async function securityCheck(root: string) {
   return { files: new Set(names).size, historicalBlobs: blobs };
 }
 
-export async function publishCurrentSeason(root: string) {
+async function publishFiles(root: string, files: string[], message: string) {
   if (!process.env.GH_TOKEN) throw new Error("GH_TOKEN is not configured; raw data and compact exports are saved locally");
   const account = (await command(root, "gh", ["api", "user", "--jq", ".login"])).trim();
   if (account !== "matthewrichey3317") throw new Error("GitHub token belongs to the wrong account");
@@ -69,14 +69,6 @@ export async function publishCurrentSeason(root: string) {
   const gitAuth = ["-c", "credential.helper=", "-c", "credential.helper=!gh auth git-credential"];
   await command(root, "git", [...gitAuth, "fetch", "origin", "main"]);
   await command(root, "git", ["merge-base", "--is-ancestor", "origin/main", "HEAD"]);
-  const files = [
-    "data/games_2026.csv", "data/lines_2026.csv", "data/drives_2026.csv",
-    "data/manifest.json", "export/index.json",
-  ];
-  const tracked = (await command(root, "git", ["ls-files", "-z", "export/games_compact_2026_part*.csv"])).split("\0").filter(Boolean);
-  const existing = (await fs.readdir(path.join(root, "export")))
-    .filter(name => /^games_compact_2026_part\d+\.csv$/.test(name)).map(name => `export/${name}`);
-  files.push(...new Set([...tracked, ...existing]));
   // An isolated index ensures unrelated staged files cannot enter this commit.
   const temp = await fs.mkdtemp(path.join(os.tmpdir(), "cfb-publish-"));
   const env = { ...process.env, GIT_INDEX_FILE: path.join(temp, "index") };
@@ -85,7 +77,7 @@ export async function publishCurrentSeason(root: string) {
     await command(root, "git", ["add", "-A", "--", ...files], env);
     const changed = (await command(root, "git", ["diff", "--cached", "--name-only"], env)).trim();
     if (changed) {
-      await command(root, "git", ["commit", "-m", "Refresh 2026 college football data and compact exports"], env);
+      await command(root, "git", ["commit", "-m", message], env);
       await command(root, "git", ["reset", "HEAD", "--", ...files]);
     }
     await command(root, "git", [...gitAuth, "push", "origin", "HEAD:main"]);
@@ -96,4 +88,27 @@ export async function publishCurrentSeason(root: string) {
   } finally {
     await fs.rm(temp, { recursive: true, force: true });
   }
+}
+
+export async function publishCurrentSeason(root: string) {
+  const files = [
+    "data/games_2026.csv", "data/lines_2026.csv", "data/drives_2026.csv",
+    "data/manifest.json", "export/index.json",
+  ];
+  const tracked = (await command(root, "git", ["ls-files", "-z", "export/games_compact_2026_part*.csv"])).split("\0").filter(Boolean);
+  const existing = (await fs.readdir(path.join(root, "export")))
+    .filter(name => /^games_compact_2026_part\d+\.csv$/.test(name)).map(name => `export/${name}`);
+  files.push(...new Set([...tracked, ...existing]));
+  const data = await fs.readdir(path.join(root, "data"));
+  for (const name of ["venues.csv", "weather_2026.csv"]) if (data.includes(name)) files.push(`data/${name}`);
+  return publishFiles(root, files, "Refresh 2026 college football data, weather, and compact exports");
+}
+
+export async function publishWeather(root: string) {
+  const files = (await fs.readdir(path.join(root, "data")))
+    .filter(name => name === "venues.csv" || /^weather_(?:201[5-9]|202[0-6])\.csv$/.test(name))
+    .map(name => `data/${name}`);
+  if (!files.length) return null;
+  files.push("data/manifest.json");
+  return publishFiles(root, files, "Update stadium venues and game weather");
 }

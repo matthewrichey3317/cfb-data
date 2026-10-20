@@ -22,11 +22,12 @@ import type {
 import type {
   CollectorJob,
   CollectorStatus,
-  HealthStatus
+  HealthStatus,
+  WeatherInput
 } from './api.schemas';
 
 import { customFetch } from '../custom-fetch';
-import type { ErrorType } from '../custom-fetch';
+import type { ErrorType , BodyType } from '../custom-fetch';
 
 type AwaitedInput<T> = PromiseLike<T> | T;
 
@@ -257,6 +258,88 @@ const {mutation: mutationOptions, request: requestOptions} = options ?
         TContext
       > => {
       return useMutation(getRefreshCurrentSeasonMutationOptions(options));
+    }
+
+export const getStartWeatherPullUrl = () => {
+
+
+
+
+  return `/api/collector/weather`
+}
+
+export const startWeatherPull = async (weatherInput: WeatherInput, options?: Parameters<typeof customFetch>[1]): Promise<CollectorJob> => {
+
+    const getHeaders = (h?: NonNullable<RequestInit['headers']>): Record<string, string | readonly string[]> => {
+    if (!h) return {};
+    if (h instanceof Headers) return Object.fromEntries(h.entries());
+    if (Symbol.iterator in h) {
+      return Object.fromEntries(
+        Array.from(h as Iterable<Iterable<string>>, (entry) => Array.from(entry) as [string, string]),
+      );
+    }
+    const headers: Record<string, string | readonly string[]> = {};
+    for (const [name, value] of Object.entries<string | readonly string[] | undefined>(h)) {
+      if (value !== undefined) headers[name] = value;
+    }
+    return headers;
+  };
+return customFetch<CollectorJob>(getStartWeatherPullUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getHeaders(options?.headers) },
+    body: JSON.stringify(weatherInput)
+  }
+);}
+
+
+
+
+
+export const getStartWeatherPullMutationKey = () => ['startWeatherPull'] as const;
+
+export const getStartWeatherPullMutationOptions = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof startWeatherPull>>, TError,StartWeatherPullMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof startWeatherPull>>, TError,StartWeatherPullMutationVariables, TContext> => {
+
+const mutationKey = getStartWeatherPullMutationKey();
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof startWeatherPull>>, StartWeatherPullMutationVariables> = (props) => {
+          const {data} = props ?? {};
+
+          return  startWeatherPull(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type StartWeatherPullMutationResult = NonNullable<Awaited<ReturnType<typeof startWeatherPull>>>
+    export type StartWeatherPullMutationBody = BodyType<WeatherInput>
+    export type StartWeatherPullMutationError = ErrorType<unknown>
+    export type StartWeatherPullMutationVariables = {data: BodyType<WeatherInput>}
+
+    export const useStartWeatherPull = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof startWeatherPull>>, TError,StartWeatherPullMutationVariables, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof startWeatherPull>>,
+        TError,
+        StartWeatherPullMutationVariables,
+        TContext
+      > => {
+      return useMutation(getStartWeatherPullMutationOptions(options));
     }
 
 export const getHealthCheckUrl = () => {

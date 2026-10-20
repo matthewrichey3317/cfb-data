@@ -9,6 +9,7 @@
     "start": "node --enable-source-maps ./dist/index.mjs",
     "export:compact": "node ./export-compact.mjs",
     "test:compact": "node --test ./compact-export.test.mjs",
+    "test:weather": "node --test ./weather.test.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
