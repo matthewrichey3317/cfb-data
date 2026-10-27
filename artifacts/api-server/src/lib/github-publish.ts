@@ -72,8 +72,15 @@ export async function securityCheck(root: string) {
 
 export async function verifyPublicationAccess(root: string) {
   if (!process.env.GH_TOKEN) throw new Error("GH_TOKEN is not configured; raw data and compact exports are saved locally");
-  const account = (await command(root, "gh", ["api", "user", "--jq", ".login"])).trim();
-  if (account !== "matthewrichey3317") throw new Error("GitHub token belongs to the wrong account");
+  if (process.env.GITHUB_ACTIONS === "true") {
+    if (process.env.GITHUB_REPOSITORY !== repository) throw new Error("Actions refresh is restricted to the cfb-data repository");
+    // Installation tokens cannot call /user; validate repository access instead.
+    const target = (await command(root, "gh", ["api", `repos/${repository}`, "--jq", ".full_name"])).trim();
+    if (target !== repository) throw new Error("Actions token cannot access the configured repository");
+  } else {
+    const account = (await command(root, "gh", ["api", "user", "--jq", ".login"])).trim();
+    if (account !== "matthewrichey3317") throw new Error("GitHub token belongs to the wrong account");
+  }
   const remote = (await command(root, "git", ["config", "--get", "remote.origin.url"])).trim();
   if (remote !== repositoryUrl) throw new Error("GitHub origin does not match the configured cfb-data repository");
 }

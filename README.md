@@ -23,9 +23,8 @@ The React status page supports a historical pull (skipping existing raw files),
 only 2026, rebuilds only 2026 compact parts, updates `weather_2026.csv`, and
 commits/pushes those files plus both manifests and the venue list. A publishing
 failure is shown as a failed job; successfully downloaded local files remain
-intact. A headless command and Scheduled Deployment configuration are prepared
-for automatic refreshes; the schedule becomes active only after you publish it
-in Replit (see below).
+intact. Automatic refreshes now run through GitHub Actions (see below).
+Do **not** publish a Replit Scheduled Deployment for this job.
 
 On server startup, a saved `running` job from the previous process is
 persistently marked `interrupted`. The status page shows the time the
@@ -70,69 +69,112 @@ The collector uses whole-season requests, short pauses, and bounded retries to
 conserve API quota. Current-season data can be incomplete, and the 2020 season
 was shortened.
 
-## Automatic Sunday/Thursday refresh
+## GitHub Actions automation
 
-The intended schedule is **Sunday and Thursday at 8:00 AM Central**:
+The previous Replit Scheduled Deployment instructions are **obsolete**.
+Do not publish that deployment: these jobs run on standard GitHub-hosted Linux
+runners in this public repository. No Replit deployment or personal GitHub token
+is required for the automation. The development status page/buttons still work.
 
-- Cron: `0 8 * * 0,4`
-- Time zone: **`America/Chicago`**, not a fixed UTC offset. This preserves 8 AM
-  through daylight-saving changes.
-- Deployment type: **Scheduled**, not Autoscale or a continuously running server.
-- Build command: `pnpm --filter @workspace/api-server run build`
-- Run command: `node artifacts/api-server/dist/refresh.mjs`
-- Job timeout: **30 minutes**.
-- Production Secrets: **`CFBD_API_KEY`** and **`GH_TOKEN`**, copied through
-  Replit's Secrets controls, never pasted into commands or files.
+### Owner setup and manual runs
 
-**Activation requires the owner's Publish confirmation.** Open Replit's
-**Publishing** tool, choose **Scheduled**, enter the cron and time zone above,
-check the build/run commands and timeout in its settings, and confirm both
-Secrets are available in the production environment. Review the displayed
-compute/billing terms, then click **Publish**. Verify the next two run times
-are Thursday/Sunday at 8 AM Chicago time and enable failure notifications if
-offered. The scheduled job has no public web page; the status UI remains in the
-development workspace.
+1. Open this repository's **Settings → Secrets and variables → Actions**.
+2. Click **New repository secret**, name it **`CFBD_API_KEY`**, and privately
+   supply your CFBD key. Never put the key in a workflow, CSV, or README.
+3. Open **Actions** and enable workflows if GitHub prompts.
+4. Choose **Refresh 2026 data → Run workflow → main → Run workflow**.
+   It will fail clearly if the CFBD secret is missing. No `GH_TOKEN` repository
+   secret is needed: the workflow passes its built-in, short-lived
+   `GITHUB_TOKEN` to the existing publisher as `GH_TOKEN`, with `contents: write`.
+5. **Wake picks app → Run workflow** can be tested separately without secrets,
+   after the picks app has published its wake endpoint.
 
-After building once, the single headless command is:
+In GitHub's notification settings, enable email notifications for failed Actions
+runs. Both workflows exit non-zero on errors; email delivery depends on the
+owner's GitHub notification preferences.
 
-```sh
-pnpm run refresh:2026
-```
+### Refresh 2026 data
 
-It uses exactly the same 2026 collection/export/weather/publication pipeline as
-the refresh button. It exits `0` only after the GitHub commit is verified, or
-non-zero with a `FAILED:` message. Production runs log to the Publishing logs.
-A read-only setup check (no CFBD or Open-Meteo requests, no commits/pushes) is:
+`.github/workflows/refresh-2026.yml` runs the existing headless pipeline:
+2026 games, lines, drives, `weather_2026.csv`, compact parts and both manifests,
+followed by a security scan, data-only commit, push, and remote verification.
+It starts from the latest `main`, never overwrites historical seasons, never
+force-pushes, and skips commits when the data is unchanged. Pull timestamps are
+preserved when file contents are identical, avoiding timestamp-only commits;
+Actions logs record checks even when no commit is necessary.
 
-```sh
-NODE_ENV=production node artifacts/api-server/dist/refresh.mjs --check
-```
+All target times are **America/Chicago**:
 
-Each invocation clones the latest GitHub `main` into a temporary checkout.
-This is essential: scheduled deployment disks are not persistent, and a build
-snapshot can be older than the most recent scheduled refresh. GitHub holds the
-durable CSVs and manifests. Only 2026 raw/compact/weather files, the venue list
-and shared manifests are eligible for publication; historical seasons remain
-unchanged. New forecast/recent weather is requested on every run and transitions
-to archive weather once eligible. Local ignored hourly caches are not durable
-across deployments, so a fresh scheduled instance may request the full current
-season's venue archive ranges again. It never pulls historical seasons.
+| When | Refresh time |
+| --- | --- |
+| Every day | Around 6:00 AM |
+| Saturday | 10 AM, noon, 2 PM, 4 PM, 6 PM, 8 PM, 10 PM |
+| Midnight after Saturday | Sunday 12:00 AM |
+| Sunday review preparation | Around 7:30 AM, before the 8:57 AM review |
 
-There are **6 CFBD requests per normal run**: three endpoints times two season
-types, never per game/week. Twice weekly is roughly **48–60 calls/month**;
-bounded retries could increase this to at most 240–300 scheduled calls/month.
-The existing venue list needs no CFBD call. This leaves headroom under the
-roughly 1,000-call free tier, but manual runs and other apps using the same key
-also consume that quota. Open-Meteo requests remain paced and retry bounded.
+The YAML contains UTC candidates for both daylight/standard offsets; the
+Central-time gate `.github/scripts/schedule.py` skips the incorrect offset.
+For example, daily 6 AM is 11:00 UTC in summer and 12:00 UTC in winter;
+Sunday 7:30 AM is 12:30/13:30 UTC. This handles the November daylight-saving
+change without editing cron. Manual runs bypass the time gate.
+GitHub schedules are best-effort and can be delayed or dropped during high
+load; they cannot guarantee a hard deadline for the weekly review.
 
-Failures never reset, force-push, delete, or roll back published GitHub history.
-If weather fails after the raw refresh, the shared pipeline still publishes the
-updated games/lines/drives and compact parts, then exits non-zero to report the
-weather failure. A later GitHub conflict/authentication failure also exits
-non-zero; already published commits remain intact. The next scheduled run
-starts with the latest published files. After changing collector code, republish
-the Scheduled Deployment to update its executable; GitHub code changes alone do
-not replace a deployment's built executable.
+Concurrency permits only one refresh at a time and never cancels an active
+refresh. The job timeout is **30 minutes**. It caches immutable archive weather,
+recent-refresh checkpoints, and a monthly API-usage ledger between runs;
+forecasts are always requested again and promoted to archive when eligible.
+
+CFBD usage is **at most six baseline requests per run**. Games use two
+whole-season requests so schedule corrections/new games are detected.
+Lines/drives use recent weeks when this saves work: at least eight days back
+(or an older saved checkpoint minus three days for catch-up), lines eight days
+ahead, and drives through the next day. Rows outside those scopes are preserved.
+If there are more than two week scopes, two whole-season calls are cheaper and
+are used instead. Missing checkpoints also trigger a full catch-up.
+Checkpoints are bound to the CSV content hash: a failed publication cannot
+advance the next run past data that never reached GitHub.
+There are no per-game requests. Expect at most about **456 baseline calls in
+a 31-day month**, before retries/manual runs. Actions limits each CFBD request
+to two attempts, counts attempts before sending, and stops at **900 cached
+attempts per UTC month**, leaving some headroom under the roughly 1,000-call
+free tier. This is not an account-wide quota meter: manual runs in Replit,
+other apps using the key, and lost/evicted caches can affect actual usage.
+Open-Meteo requests retain their pacing/backoff and archive-cache reuse.
+
+Weather failures still publish successful non-weather updates, then fail the
+job. Other failures also exit non-zero and never roll back earlier published
+commits. Nothing silently treats a failed refresh as a success.
+
+### Wake picks app
+
+`.github/workflows/wake-picks-app.yml` sends a GET request to:
+
+`https://college-football-model.replit.app/api/market-signal/wake`
+
+It requests every **15 minutes from Thursday 10 AM through Sunday 3 AM
+Central**, and **hourly the rest of the week**. UTC candidates and the same
+Central-time gate handle daylight saving. Each request has a timeout; a failure
+gets exactly one retry after ten seconds, then the run fails if both attempts
+fail. No CFBD requests, API keys, or personal GitHub token are used.
+
+The endpoint must be deployed and publicly callable in the picks app.
+A 404/401/403 is a real failure, not a successful wake; adding the workflow does
+not create the endpoint or bypass access protection.
+
+### Local headless use
+
+Build with `pnpm --filter @workspace/api-server run build`, then
+`pnpm run refresh:2026`. Outside Actions, this still uses a temporary latest
+GitHub checkout and the local Replit `GH_TOKEN` Secret. A read-only setup check
+is `NODE_ENV=production node artifacts/api-server/dist/refresh.mjs --check`.
+Inside Actions, `node artifacts/api-server/dist/refresh.mjs --actions` uses the
+runner's existing checkout/cache and built-in token. Updated code takes effect
+on the next workflow run; no Replit publishing is needed.
+Actions updates GitHub, not the workspace's local CSV snapshot. The development
+status page can therefore show older local pull dates. Local headless runs
+clone the latest data; sync the workspace safely before using its web refresh
+button if GitHub has advanced, since publication refuses a stale Git base.
 
 ## Stadium weather
 

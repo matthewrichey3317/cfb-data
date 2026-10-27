@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import { logger } from "./logger";
 import { parseCsv, toCsv, type Row } from "./collector-csv";
 import { buildCompactExport } from "./compact-export";
@@ -8,6 +9,8 @@ import { publishCurrentSeason, publishWeather } from "./github-publish";
 import { collectWeather, type WeatherEntry } from "./weather";
 import { weatherRequest } from "./weather-request";
 import { recoverSavedJob, type CollectorJob as Job } from "./job-recovery";
+import { countScheduledCfbdCall } from "./cfbd-budget";
+import { recentScopes, mergeRecentRows, reusableCheckpointTime, wholeSeason, type Scope, type EndpointCheckpoint } from "./recent-refresh";
 
 // Both src/lib/collector.ts and bundled dist/index.mjs resolve to this package.
 const packageDir = path.dirname(fileURLToPath(import.meta.url)).endsWith("/dist")
@@ -43,13 +46,17 @@ async function readManifest(): Promise<Entry[]> {
 }
 async function saveJob() { await atomicJson("job.json", job); }
 
-async function collectEndpoint(kind: Kind, season: number, seasonType: string): Promise<Row[]> {
+async function collectEndpoint(kind: Kind, season: number, seasonType: string, week?: number): Promise<Row[]> {
   const url = new URL(`https://api.collegefootballdata.com/${kind}`);
   url.searchParams.set("year", String(season));
   url.searchParams.set("seasonType", seasonType);
+  if (week !== undefined) url.searchParams.set("week", String(week));
   if (kind !== "lines") url.searchParams.set("classification", "fbs");
-  for (let attempt = 0; attempt < 5; attempt++) {
+  const actions = process.env.GITHUB_ACTIONS === "true";
+  const attempts = actions ? 2 : 5;
+  for (let attempt = 0; attempt < attempts; attempt++) {
     await sleep(1100);
+    if (actions) await countScheduledCfbdCall(path.resolve(dataDir, ".."));
     job.calls++;
     job.message = `Fetching ${kind} · ${season} · ${seasonType}`;
     await saveJob();
@@ -60,12 +67,12 @@ async function collectEndpoint(kind: Kind, season: number, seasonType: string): 
         signal: AbortSignal.timeout(120000),
       });
     } catch {
-      if (attempt === 4) throw new Error(`CFBD network/timeout error for ${kind} ${season} ${seasonType}`);
+      if (attempt === attempts - 1) throw new Error(`CFBD network/timeout error for ${kind} ${season} ${seasonType}`);
       await sleep(3000 * 2 ** attempt);
       continue;
     }
     if (response.status === 429 || response.status >= 500) {
-      if (attempt === 4) throw new Error(`CFBD HTTP ${response.status} after 5 attempts. Re-run to resume.`);
+      if (attempt === attempts - 1) throw new Error(`CFBD HTTP ${response.status} after ${attempts} attempts. Re-run to resume.`);
       const retry = response.headers.get("retry-after");
       const seconds = retry ? Number(retry) : NaN;
       const wait = retry && !Number.isFinite(seconds) ? Date.parse(retry) - Date.now() : seconds * 1000;
@@ -102,12 +109,27 @@ async function pullFile(kind: Kind, season: number, refresh: boolean) {
     job.skippedFiles++; return;
   }
   let rows: Row[] = [];
-  for (const seasonType of ["regular", "postseason"]) {
+  let scopes: Scope[] = wholeSeason;
+  const actions = refresh && process.env.GITHUB_ACTIONS === "true";
+  let games: Row[] = [];
+  const checkpointFile = path.resolve(dataDir, "../.cache/cfbd/checked.json");
+  let checkpoints: Record<string, EndpointCheckpoint> = {};
+  if (actions && kind !== "games") {
+    games = parseCsv(await fs.readFile(path.join(dataDir, `games_${season}.csv`), "utf8"));
+    try { checkpoints = JSON.parse(await fs.readFile(checkpointFile, "utf8")); }
+    catch (error) { if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error; }
+    const baseline = await exists(file) ? await fs.readFile(path.join(dataDir, file), "utf8") : "";
+    const previous = reusableCheckpointTime(checkpoints[kind], baseline) ??
+      (await readManifest()).find(entry => entry.file === file)?.pulledAt;
+    scopes = recentScopes(kind, games, previous);
+    logger.info({ kind, scopes }, "Quota-efficient refresh plan");
+  }
+  for (const { seasonType, week } of scopes) {
     // Persist successful half-pulls so failures do not waste earlier calls.
-    const part = `.${kind}_${season}_${seasonType}.part.json`;
+    const part = `.${kind}_${season}_${seasonType}${week === undefined ? "" : `_${week}`}.part.json`;
     const raw: Row[] = await exists(part)
       ? JSON.parse(await fs.readFile(path.join(dataDir, part), "utf8"))
-      : await collectEndpoint(kind, season, seasonType);
+      : await collectEndpoint(kind, season, seasonType, week);
     if (!await exists(part)) await atomicJson(part, raw);
     rows.push(...raw.map(r => ({ ...r, season: r.season ?? season, seasonType: r.seasonType ?? seasonType })));
   }
@@ -133,6 +155,13 @@ async function pullFile(kind: Kind, season: number, refresh: boolean) {
       return flat;
     });
   }
+  if (actions && kind !== "games") {
+    const existing = await exists(file) ? parseCsv(await fs.readFile(path.join(dataDir, file), "utf8")) : [];
+    rows = mergeRecentRows(existing, rows, games, scopes);
+    // Canonical ordering avoids commits caused solely by merging week slices.
+    rows.sort((a, b) => String(a.gameId ?? a.id).localeCompare(String(b.gameId ?? b.id), "en", { numeric: true }) ||
+      String(kind === "lines" ? a.provider : a.id).localeCompare(String(kind === "lines" ? b.provider : b.id), "en", { numeric: true }));
+  }
   // Deduplicate by stable identifiers without dropping any provider columns.
   const seen = new Set<string>();
   rows = rows.filter(r => {
@@ -141,18 +170,28 @@ async function pullFile(kind: Kind, season: number, refresh: boolean) {
     seen.add(key); return true;
   });
   const csv = toCsv(rows, defaultColumns[kind]);
+  const unchanged = await exists(file) && await fs.readFile(path.join(dataDir, file), "utf8") === csv;
   const warnings: string[] = [];
   if (season < 2026 && kind === "games" && (rows.length < 700 || rows.length > 1100)) warnings.push("Game count outside typical range; 2020 was pandemic-shortened.");
   if (season < 2026 && kind === "drives" && rows.length < 15000) warnings.push("Drive count lower than a typical full season.");
   if (!rows.length) warnings.push("CFBD returned no rows; future postseason data may not be available yet.");
-  await fs.writeFile(path.join(dataDir, `${file}.tmp`), csv);
-  await fs.rename(path.join(dataDir, `${file}.tmp`), path.join(dataDir, file));
+  if (!unchanged) {
+    await fs.writeFile(path.join(dataDir, `${file}.tmp`), csv);
+    await fs.rename(path.join(dataDir, `${file}.tmp`), path.join(dataDir, file));
+  }
   const entry: Entry = { file, type: kind, season, rowCount: rows.length, bytes: Buffer.byteLength(csv), pulledAt: new Date().toISOString(), warnings };
-  const manifest = (await readManifest()).filter(e => e.file !== file);
-  manifest.push(entry);
+  const previousManifest = await readManifest();
+  const manifest = previousManifest.filter(e => e.file !== file);
+  manifest.push(unchanged ? previousManifest.find(e => e.file === file) ?? entry : entry);
   manifest.sort((a, b) => a.season - b.season || a.type.localeCompare(b.type));
   await atomicJson("manifest.json", { version: 1, files: manifest });
-  for (const st of ["regular", "postseason"]) await fs.rm(path.join(dataDir, `.${kind}_${season}_${st}.part.json`), { force: true });
+  for (const { seasonType, week } of scopes) await fs.rm(path.join(dataDir, `.${kind}_${season}_${seasonType}${week === undefined ? "" : `_${week}`}.part.json`), { force: true });
+  if (actions && kind !== "games") {
+    checkpoints[kind] = { checkedAt: new Date().toISOString(), csvHash: createHash("sha256").update(csv).digest("hex") };
+    await fs.mkdir(path.dirname(checkpointFile), { recursive: true });
+    await fs.writeFile(`${checkpointFile}.tmp`, JSON.stringify(checkpoints) + "\n");
+    await fs.rename(`${checkpointFile}.tmp`, checkpointFile);
+  }
   logger.info({ file, rowCount: rows.length }, "CFBD CSV saved");
 }
 
@@ -203,6 +242,12 @@ export async function refreshCurrentSeasonHeadless(workspaceRoot: string): Promi
 }
 
 async function runWeather(seasons: number[], refreshVenues = false) {
+  const fingerprints = new Map<string, string>();
+  const fingerprint = (content: Buffer) => createHash("sha256").update(content).digest("hex");
+  for (const name of ["venues.csv", ...seasons.map(season => `weather_${season}.csv`)]) {
+    try { fingerprints.set(name, fingerprint(await fs.readFile(path.join(dataDir, name)))); }
+    catch (error) { if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error; }
+  }
   await collectWeather(dataDir, seasons, {
     refreshVenues,
     progress: async message => { job.message = message; await saveJob(); },
@@ -210,8 +255,10 @@ async function runWeather(seasons: number[], refreshVenues = false) {
       async message => { job.message = message; await saveJob(); },
       async () => { job.calls++; await saveJob(); }),
     saved: async (entry: WeatherEntry) => {
-      const manifest = (await readManifest()).filter(file => file.file !== entry.file);
-      manifest.push(entry);
+      const previous = await readManifest();
+      const manifest = previous.filter(file => file.file !== entry.file);
+      const unchanged = fingerprints.get(entry.file) === fingerprint(await fs.readFile(path.join(dataDir, entry.file)));
+      manifest.push(unchanged ? previous.find(file => file.file === entry.file) ?? entry : entry);
       manifest.sort((a, b) => a.season - b.season || a.type.localeCompare(b.type));
       await atomicJson("manifest.json", { version: 1, files: manifest });
       job.completedFiles++;
@@ -236,8 +283,8 @@ async function run(mode: "historical" | "refresh" | "weather", refreshVenues: bo
     }
     if (mode === "refresh") {
       // A new weekly refresh must not reuse parts from an older interrupted refresh.
-      for (const kind of kinds) for (const st of ["regular", "postseason"]) {
-        await fs.rm(path.join(dataDir, `.${kind}_2026_${st}.part.json`), { force: true });
+      for (const file of await fs.readdir(dataDir)) {
+        if (/^\.(?:games|lines|drives)_2026_(?:regular|postseason)(?:_\d+)?\.part\.json$/.test(file)) await fs.rm(path.join(dataDir, file), { force: true });
       }
     }
     const seasons = mode === "refresh" ? [2026] : Array.from({ length: 12 }, (_, i) => 2015 + i);

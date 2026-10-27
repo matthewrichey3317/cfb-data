@@ -8,6 +8,7 @@ import { repository, verifyPublicationAccess } from "./github-publish";
 
 const exec = promisify(execFile);
 type Options = {
+  actions?: boolean;
   checkOnly?: boolean;
   clone?: (destination: string) => Promise<void>;
   verify?: (root: string) => Promise<void>;
@@ -31,9 +32,23 @@ async function cloneRepository(destination: string): Promise<void> {
 
 export async function runScheduledRefresh(options: Options = {}): Promise<void> {
   if (!process.env.CFBD_API_KEY || !process.env.GH_TOKEN) {
-    throw new Error("CFBD_API_KEY and GH_TOKEN must be configured in deployment Secrets");
+    throw new Error("CFBD_API_KEY and GH_TOKEN must be configured (Actions uses its built-in token as GH_TOKEN)");
   }
   const log = options.log ?? console.log;
+  if (options.actions) {
+    if (process.env.GITHUB_ACTIONS !== "true" || process.env.GITHUB_REPOSITORY !== repository || !process.env.GITHUB_WORKSPACE) {
+      throw new Error("--actions requires a GitHub Actions runner for the cfb-data repository");
+    }
+    const root = process.env.GITHUB_WORKSPACE;
+    await (options.verify ?? verifyPublicationAccess)(root);
+    for (const name of ["data/manifest.json", "data/venues.csv", "export/index.json"]) {
+      await fs.access(path.join(root, name));
+    }
+    if (options.checkOnly) { log("Actions repository/token preflight passed; no data API calls made."); return; }
+    await (options.refresh ?? refreshCurrentSeasonHeadless)(root);
+    log(`SUCCESS: 2026 refresh verified on https://github.com/${repository}`);
+    return;
+  }
   const temp = await fs.mkdtemp(path.join(os.tmpdir(), "cfb-scheduled-"));
   const checkout = path.join(temp, "checkout");
   try {

@@ -1,0 +1,48 @@
+name: Wake picks app
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+    # Extra quarter-hour candidates for Thu 10:00 through Sun 03:00 Central.
+    - cron: '15,30,45 15-23 * * 4'
+    - cron: '15,30,45 * * * 5,6'
+    - cron: '15,30,45 0-8 * * 0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wake-picks-app
+  cancel-in-progress: false
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Check Central-time schedule
+        id: schedule
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 .github/scripts/schedule.py wake
+      - name: Wake picks app, with one retry
+        if: steps.schedule.outputs.run == 'true'
+        shell: bash
+        run: |
+          for attempt in 1 2; do
+            if curl --fail --silent --show-error --location \
+              --connect-timeout 15 --max-time 90 --output /dev/null \
+              https://college-football-model.replit.app/api/market-signal/wake; then
+              echo "Picks app wake succeeded on attempt $attempt."
+              exit 0
+            fi
+            if [ "$attempt" = 1 ]; then sleep 10; fi
+          done
+          echo "::error::Picks app wake failed on both attempts."
+          exit 1

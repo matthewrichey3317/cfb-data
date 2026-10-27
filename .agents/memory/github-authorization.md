@@ -20,3 +20,9 @@ Automated publishing must supply a credential-free Git author identity rather th
 **Why:** Publishing worked from the Shell but the managed API server failed at `git commit`. Supplying an explicit bot identity fixed server-side commits.
 
 **How to apply:** Preserve the per-command bot identity for background publication. Verify publishing from the managed server, not only a CLI fixture, before considering it working.
+
+Authorized workspace Git writes may require an explicit `DANGEROUSLY_ALLOW_GIT=1` prefix when the platform's Git-directory guard requests it.
+
+**Why:** The workspace guard rejected a normal `git fetch` with its increased-scrutiny message despite valid GitHub authorization.
+
+**How to apply:** Retry only the user-authorized, non-destructive Git operation with the requested prefix. This is not permission to reset history or bypass approval for destructive changes.

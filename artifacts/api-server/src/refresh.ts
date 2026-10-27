@@ -9,7 +9,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       process.exit(signal === "SIGTERM" ? 143 : 130);
     });
   }
-  runScheduledRefresh({ checkOnly: process.argv.includes("--check") }).catch(error => {
+  runScheduledRefresh({ checkOnly: process.argv.includes("--check"), actions: process.argv.includes("--actions") }).catch(error => {
     console.error(`FAILED: ${error instanceof Error ? error.message : "Current-season refresh failed"}`);
     console.error("Previously published files remain on GitHub. The next run starts from the latest published snapshot.");
     process.exitCode = 1;

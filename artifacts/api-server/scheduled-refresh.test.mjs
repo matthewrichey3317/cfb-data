@@ -37,12 +37,18 @@ test("headless CLI refreshes/pushes latest 2026, fails non-zero, and preserves e
     await fs.writeFile(path.join(bin, "gh"), `#!/bin/sh
 if [ "$1" = "--version" ]; then echo "fixture gh"
 elif [ "$2" = "user" ]; then echo "matthewrichey3317"
+elif [ "$2" = "repos/matthewrichey3317/cfb-data" ]; then echo "matthewrichey3317/cfb-data"
 else git --git-dir="$TEST_REMOTE" rev-parse refs/heads/main
 fi
 `);
     await fs.chmod(path.join(bin, "gh"), 0o700);
     await fs.writeFile(mock, `
 import fs from "node:fs";
+const RealDate=Date;
+globalThis.Date=class extends RealDate {
+  constructor(...args){super(...(args.length?args:["2026-01-08T12:00:00Z"]));}
+  static now(){return RealDate.parse("2026-01-08T12:00:00Z");}
+};
 const calls=[];
 globalThis.fetch=async input=>{
   const u=new URL(input);calls.push(u.toString());fs.writeFileSync(process.env.TEST_CALLS,JSON.stringify(calls));
@@ -87,6 +93,24 @@ globalThis.fetch=async input=>{
     assert.equal(remote("show", "main:data/weather_2025.csv") + "\n", files["data/weather_2025.csv"]);
     assert.equal(remote("show", "main:export/games_compact_2025_part1.csv") + "\n", files["export/games_compact_2025_part1.csv"]);
     assert.equal(remote("ls-tree", "--name-only", "main", "data/job.json", ".cache"), "");
+    // Exercise installation-token auth and the in-place Actions checkout.
+    const actions = path.join(temp, "actions");
+    execFileSync("git", ["clone", "--branch", "main", bare, actions], { stdio: "pipe" });
+    execFileSync("git", ["remote", "set-url", "origin", "https://github.com/matthewrichey3317/cfb-data.git"], { cwd: actions });
+    const invokeActions = () => spawnSync(process.execPath, ["--import", mock, cli, "--actions"], {
+      env: { ...env, GITHUB_ACTIONS: "true", GITHUB_REPOSITORY: "matthewrichey3317/cfb-data", GITHUB_WORKSPACE: actions },
+      encoding: "utf8", timeout: 60000,
+    });
+    const firstActions = invokeActions();
+    assert.equal(firstActions.status, 0, firstActions.stderr);
+    const unchangedHead = remote("rev-parse", "main");
+    const secondActions = invokeActions();
+    assert.equal(secondActions.status, 0, secondActions.stderr);
+    assert.equal(remote("rev-parse", "main"), unchangedHead, "identical data must not create timestamp-only commits");
+    const recentRequests = JSON.parse(await fs.readFile(calls, "utf8")).filter(url => url.includes("api.collegefootballdata.com"));
+    assert.equal(recentRequests.length, 4, "two game calls plus one recent week each for lines/drives");
+    assert.ok(recentRequests.filter(url => !new URL(url).pathname.endsWith("/games")).every(url => new URL(url).searchParams.get("week") === "1"));
+    assert.ok(Object.values(JSON.parse(await fs.readFile(path.join(actions, ".cache/cfbd/usage.json"), "utf8"))).some(n => n > 0));
     const published = remote("rev-parse", "main");
     const failure = invoke("cfbd");
     assert.equal(failure.status, 1); assert.match(failure.stderr, /FAILED:.*401/);

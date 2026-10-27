@@ -1,0 +1,92 @@
+name: Refresh 2026 data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily 06:00 CDT/CST; the Central-time gate selects the correct UTC hour.
+    - cron: '0 11,12 * * *'
+    # Saturday 10:00,12:00,...,22:00 and midnight into Sunday, both offsets.
+    - cron: '0 15-23 * * 6'
+    - cron: '0 0-6 * * 0'
+    # Sunday 07:30 CDT/CST, before the 08:57 review.
+    - cron: '30 12,13 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-2026-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Check Central-time schedule
+        id: schedule
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 .github/scripts/schedule.py refresh
+      - name: Check required secret
+        if: steps.schedule.outputs.run == 'true'
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        run: |
+          if [ -z "$CFBD_API_KEY" ]; then
+            echo "::error::Add CFBD_API_KEY under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+      - uses: pnpm/action-setup@v4
+        if: steps.schedule.outputs.run == 'true'
+        with:
+          version: 10.26.1
+      - uses: actions/setup-node@v4
+        if: steps.schedule.outputs.run == 'true'
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Cache month
+        if: steps.schedule.outputs.run == 'true'
+        id: month
+        run: echo "value=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        if: steps.schedule.outputs.run == 'true'
+        id: cache
+        with:
+          path: |
+            .cache/weather
+            .cache/cfbd
+          key: ${{ runner.os }}-cfb-2026-${{ steps.month.outputs.value }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-cfb-2026-${{ steps.month.outputs.value }}-
+            ${{ runner.os }}-cfb-2026-
+      - name: Install and build collector
+        if: steps.schedule.outputs.run == 'true'
+        run: |
+          pnpm install --frozen-lockfile --filter @workspace/api-server...
+          pnpm --filter @workspace/api-server run build
+      - name: Refresh and publish changed data
+        if: steps.schedule.outputs.run == 'true'
+        env:
+          NODE_ENV: production
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+          # Built-in, short-lived Actions token; no personal token secret.
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # checkout may omit ".git"; normalize to the publisher's allowlisted URL.
+          git remote set-url origin https://github.com/matthewrichey3317/cfb-data.git
+          node artifacts/api-server/dist/refresh.mjs --actions
+      - name: Preserve archive cache and API usage, including failed runs
+        if: always() && steps.schedule.outputs.run == 'true' && steps.cache.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache/weather
+            .cache/cfbd
+          key: ${{ steps.cache.outputs.cache-primary-key }}

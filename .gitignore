@@ -10,6 +10,7 @@ out-tsc
 
 # dependencies
 node_modules
+__pycache__/
 
 # IDEs and editors
 /.idea
