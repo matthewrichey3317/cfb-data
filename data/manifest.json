@@ -420,9 +420,9 @@
       "file": "drives_2026.csv",
       "type": "drives",
       "season": 2026,
-      "rowCount": 10523,
-      "bytes": 2522978,
-      "pulledAt": "2026-10-14T17:33:06.442Z",
+      "rowCount": 13242,
+      "bytes": 3174196,
+      "pulledAt": "2026-10-27T22:31:24.599Z",
       "warnings": []
     },
     {
@@ -430,17 +430,17 @@
       "type": "games",
       "season": 2026,
       "rowCount": 888,
-      "bytes": 198581,
-      "pulledAt": "2026-10-14T17:32:55.015Z",
+      "bytes": 207949,
+      "pulledAt": "2026-10-27T22:31:10.217Z",
       "warnings": []
     },
     {
       "file": "lines_2026.csv",
       "type": "lines",
       "season": 2026,
-      "rowCount": 1045,
-      "bytes": 573170,
-      "pulledAt": "2026-10-14T17:32:58.749Z",
+      "rowCount": 1264,
+      "bytes": 695456,
+      "pulledAt": "2026-10-27T22:31:17.918Z",
       "warnings": []
     },
     {
@@ -448,10 +448,10 @@
       "type": "weather",
       "season": 2026,
       "rowCount": 888,
-      "bytes": 127008,
-      "pulledAt": "2026-10-20T18:20:21.557Z",
+      "bytes": 130457,
+      "pulledAt": "2026-10-27T22:42:13.877Z",
       "warnings": [
-        "312 games have missing weather (see missing_reason)."
+        "210 games have missing weather (see missing_reason)."
       ]
     }
   ]

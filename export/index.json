@@ -194,18 +194,18 @@
       "season": 2026,
       "part": 1,
       "firstWeek": 1,
-      "lastWeek": 9,
-      "rowCount": 622,
-      "bytes": 86677
+      "lastWeek": 8,
+      "rowCount": 566,
+      "bytes": 84026
     },
     {
       "file": "games_compact_2026_part2.csv",
       "season": 2026,
       "part": 2,
-      "firstWeek": 10,
+      "firstWeek": 9,
       "lastWeek": 15,
-      "rowCount": 266,
-      "bytes": 30318
+      "rowCount": 322,
+      "bytes": 37175
     }
   ]
 }
