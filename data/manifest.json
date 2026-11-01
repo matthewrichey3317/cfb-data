@@ -431,7 +431,7 @@
       "season": 2026,
       "rowCount": 888,
       "bytes": 212876,
-      "pulledAt": "2026-11-01T12:39:17.961Z",
+      "pulledAt": "2026-11-01T13:21:39.012Z",
       "warnings": []
     },
     {
@@ -449,7 +449,7 @@
       "season": 2026,
       "rowCount": 888,
       "bytes": 131357,
-      "pulledAt": "2026-11-01T12:42:05.928Z",
+      "pulledAt": "2026-11-01T13:24:25.657Z",
       "warnings": [
         "186 games have missing weather (see missing_reason)."
       ]
