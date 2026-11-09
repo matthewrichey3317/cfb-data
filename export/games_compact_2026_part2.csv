@@ -55,136 +55,136 @@ game_id,season,week,season_type,kickoff_utc,completed,neutral_site,conference_ga
 401860908,2026,9,regular,2026-11-01T02:00:00Z,1,0,1,Boise State,Texas State,Pac-12,Pac-12,46,45,63.5,64.8,-10.5,2,14,86,511,7,0,46,13,64,430,5,1,38
 401864530,2026,9,regular,2026-11-01T02:30:00Z,1,0,1,UNLV,Northern Illinois,Mountain West,Mountain West,31,24,55,53.3,-21.8,2,11,63,463,4,1,31,11,78,483,3,1,24
 401860924,2026,9,regular,2026-11-01T03:00:00Z,1,0,1,Fresno State,Oregon State,Pac-12,Pac-12,38,22,58,56.5,6,2,13,58,382,5,1,38,12,90,427,2,3,22
-401866453,2026,10,regular,2026-11-04T00:00:00Z,1,0,1,Akron,Ohio,Mid-American,Mid-American,20,28,52.3,50.3,12.3,2,11,84,425,1,4,23,10,47,343,2,0,14
-401866454,2026,10,regular,2026-11-04T01:00:00Z,1,0,1,Miami (OH),Buffalo,Mid-American,Mid-American,31,34,45.3,44.8,-6.5,2,12,75,357,3,1,27,14,81,519,4,2,34
-401866455,2026,10,regular,2026-11-05T00:00:00Z,1,0,1,Massachusetts,Ball State,Mid-American,Mid-American,31,30,48.8,49,-2.5,2,13,66,495,4,1,31,13,67,325,4,1,30
-401866457,2026,10,regular,2026-11-05T00:00:00Z,1,0,1,Sacramento State,Toledo,Mid-American,Mid-American,17,20,52.5,52.3,25.5,2,13,65,234,2,1,17,13,68,289,2,2,20
+401866453,2026,10,regular,2026-11-04T00:00:00Z,1,0,1,Akron,Ohio,Mid-American,Mid-American,20,28,52.3,50.3,12.3,2,11,84,427,1,4,23,10,47,343,2,0,14
+401866454,2026,10,regular,2026-11-04T01:00:00Z,1,0,1,Miami (OH),Buffalo,Mid-American,Mid-American,31,34,45.3,44.8,-6.5,2,12,74,367,3,1,30,14,81,519,4,2,34
+401866455,2026,10,regular,2026-11-05T00:00:00Z,1,0,1,Massachusetts,Ball State,Mid-American,Mid-American,31,30,48.8,49,-2.5,2,13,66,495,4,1,31,13,65,345,4,1,30
+401866457,2026,10,regular,2026-11-05T00:00:00Z,1,0,1,Sacramento State,Toledo,Mid-American,Mid-American,17,20,52.5,52.3,25.5,2,13,65,229,2,1,17,13,68,300,2,2,20
 401866456,2026,10,regular,2026-11-05T00:30:00Z,1,1,1,Eastern Michigan,Central Michigan,Mid-American,Mid-American,7,35,44.5,45.5,2.8,2,8,44,157,1,0,7,9,76,425,5,0,35
-401862817,2026,10,regular,2026-11-06T00:30:00Z,1,0,1,Florida Atlantic,UTSA,American Athletic,American Athletic,60,29,72.3,71.3,7,2,14,76,580,7,1,52,14,75,428,4,1,29
-401869964,2026,10,regular,2026-11-06T01:00:00Z,1,0,1,Southern Miss,James Madison,Sun Belt,Sun Belt,23,54,58.3,56.8,13.5,2,12,72,370,3,1,23,12,72,496,5,4,54
-401858288,2026,10,regular,2026-11-07T00:00:00Z,1,0,1,SMU,Virginia Tech,ACC,ACC,51,28,57,56.3,-6,2,11,71,570,5,3,44,12,66,428,4,0,28
-401862818,2026,10,regular,2026-11-07T00:30:00Z,1,0,1,East Carolina,South Florida,American Athletic,American Athletic,20,17,39.3,42.8,-2,2,12,74,377,2,2,20,12,60,321,2,1,17
+401862817,2026,10,regular,2026-11-06T00:30:00Z,1,0,1,Florida Atlantic,UTSA,American Athletic,American Athletic,60,29,72.3,71.3,7,2,14,76,580,7,1,52,14,75,418,4,1,29
+401869964,2026,10,regular,2026-11-06T01:00:00Z,1,0,1,Southern Miss,James Madison,Sun Belt,Sun Belt,23,54,58.3,56.8,13.5,2,12,73,380,3,1,23,12,71,497,5,4,54
+401858288,2026,10,regular,2026-11-07T00:00:00Z,1,0,1,SMU,Virginia Tech,ACC,ACC,51,28,57,56.3,-6,2,11,71,569,5,3,44,12,66,414,4,0,28
+401862818,2026,10,regular,2026-11-07T00:30:00Z,1,0,1,East Carolina,South Florida,American Athletic,American Athletic,20,17,39.3,42.8,-2,2,12,74,390,2,2,20,12,60,324,2,1,17
 401858510,2026,10,regular,2026-11-07T01:00:00Z,1,0,1,Illinois,Nebraska,Big Ten,Big Ten,24,13,51.5,50,4.5,2,10,66,360,3,1,24,9,76,391,2,0,13
-401864533,2026,10,regular,2026-11-07T02:00:00Z,1,0,1,Nevada,New Mexico,Mountain West,Mountain West,3,31,39,41,10.3,2,12,50,159,0,1,3,13,68,364,4,1,31
-401856855,2026,10,regular,2026-11-07T03:15:00Z,1,0,1,Arizona,TCU,Big 12,Big 12,29,28,46.5,44,-6.8,2,13,73,425,3,3,29,10,64,347,3,0,21
-401856743,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Missouri,Texas,SEC,SEC,20,34,43.3,46.5,2.5,2,14,72,310,2,2,20,13,71,378,4,2,34
-401856849,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Utah,BYU,Big 12,Big 12,28,20,49.3,49.5,-4.3,2,12,62,354,4,0,28,13,66,368,1,2,13
-401856853,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Baylor,Iowa State,Big 12,Big 12,42,31,50.8,50.3,-10,2,13,65,453,5,0,42,12,83,472,4,1,34
-401858285,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Syracuse,Clemson,ACC,ACC,13,18,50,49.8,1.8,2,13,75,359,1,2,13,11,68,369,0,4,12
-401858289,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Boston College,Florida State,ACC,ACC,24,31,53,51.8,6,2,10,62,305,3,1,24,11,68,334,4,1,31
-401858292,2026,10,regular,2026-11-07T17:00:00Z,1,0,0,UConn,North Carolina,FBS Independents,ACC,21,38,55,52.8,7.5,2,12,67,378,3,0,21,11,76,382,4,1,31
-401858512,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Minnesota,UCLA,Big Ten,Big Ten,20,34,38,41,3.8,2,13,70,266,2,2,20,13,57,429,4,2,34
-401862822,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Tulane,Tulsa,American Athletic,American Athletic,10,60,50.3,49.3,3,2,12,66,199,1,1,10,12,77,561,8,1,60
-401858286,2026,10,regular,2026-11-07T17:30:00Z,1,0,1,NC State,Duke,ACC,ACC,3,41,52.5,50,4.5,2,11,58,237,0,1,3,10,71,487,4,2,34
-401858515,2026,10,regular,2026-11-07T17:30:00Z,1,0,1,Purdue,Maryland,Big Ten,Big Ten,29,34,57,57.5,-5,2,11,85,478,2,5,29,10,45,360,5,0,34
-401856738,2026,10,regular,2026-11-07T17:45:00Z,1,0,1,Auburn,Arkansas,SEC,SEC,26,23,53.8,50.8,-10.5,2,12,76,337,3,2,26,13,78,375,2,3,23
-401856854,2026,10,regular,2026-11-07T18:00:00Z,1,0,1,Kansas State,Oklahoma State,Big 12,Big 12,28,66,63.5,61.3,7,2,14,73,334,3,0,21,15,65,601,9,1,80
-401869945,2026,10,regular,2026-11-07T18:00:00Z,1,0,1,Coastal Carolina,Old Dominion,Sun Belt,Sun Belt,8,21,44.3,45,-6.5,2,15,70,226,0,2,6,14,68,253,1,0,7
-401869927,2026,10,regular,2026-11-07T19:30:00Z,1,0,1,App State,Georgia State,Sun Belt,Sun Belt,23,39,53.8,56.5,-6.5,2,12,62,332,3,1,23,11,74,343,3,4,32
-401856744,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,South Carolina,Texas A&M,SEC,SEC,17,9,52.5,51.3,-6.8,2,10,60,412,1,1,10,11,90,416,0,3,9
-401869936,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,Arkansas State,UL Monroe,Sun Belt,Sun Belt,17,19,52.8,52,-14.5,2,8,56,336,2,1,17,10,70,383,2,2,19
-401871073,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,Kennesaw State,Delaware,Conference USA,Conference USA,42,40,57,53.8,1.3,2,13,79,397,4,3,36,14,87,507,4,2,32
-401856740,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,LSU,Alabama,SEC,SEC,13,31,53.5,53.5,-6,2,10,84,455,1,2,13,12,54,260,3,1,24
+401864533,2026,10,regular,2026-11-07T02:00:00Z,1,0,1,Nevada,New Mexico,Mountain West,Mountain West,3,31,39,41,10.3,2,12,50,87,0,1,3,13,68,364,4,1,31
+401856855,2026,10,regular,2026-11-07T03:15:00Z,1,0,1,Arizona,TCU,Big 12,Big 12,29,28,46.5,44,-6.8,2,13,73,441,3,3,29,10,64,347,3,0,21
+401856743,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Missouri,Texas,SEC,SEC,20,34,43.3,46.5,2.5,2,14,72,346,2,2,20,13,71,391,4,2,34
+401856849,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Utah,BYU,Big 12,Big 12,28,20,49.3,49.5,-4.3,2,13,63,355,4,0,28,13,66,355,1,2,13
+401856853,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Baylor,Iowa State,Big 12,Big 12,42,31,50.8,50.3,-10,2,13,63,453,6,0,42,12,82,472,4,1,34
+401858285,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Syracuse,Clemson,ACC,ACC,13,18,50,49.8,1.8,2,13,76,379,1,2,13,11,68,369,0,4,12
+401858289,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Boston College,Florida State,ACC,ACC,24,31,53,51.8,6,2,10,62,320,3,1,24,11,72,357,4,1,31
+401858292,2026,10,regular,2026-11-07T17:00:00Z,1,0,0,UConn,North Carolina,FBS Independents,ACC,21,38,55,52.8,7.5,2,12,67,378,3,0,21,11,76,389,4,1,31
+401858512,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Minnesota,UCLA,Big Ten,Big Ten,20,34,38,41,3.8,2,13,70,276,2,2,20,13,57,431,4,2,34
+401862822,2026,10,regular,2026-11-07T17:00:00Z,1,0,1,Tulane,Tulsa,American Athletic,American Athletic,10,60,50.3,49.3,3,2,12,66,199,1,1,10,12,77,562,8,1,60
+401858286,2026,10,regular,2026-11-07T17:30:00Z,1,0,1,NC State,Duke,ACC,ACC,3,41,52.5,50,4.5,2,14,70,295,0,1,3,8,59,412,3,1,24
+401858515,2026,10,regular,2026-11-07T17:30:00Z,1,0,1,Purdue,Maryland,Big Ten,Big Ten,29,34,57,57.5,-5,2,11,85,482,2,5,29,10,45,360,5,0,34
+401856738,2026,10,regular,2026-11-07T17:45:00Z,1,0,1,Auburn,Arkansas,SEC,SEC,26,23,53.8,50.8,-10.5,2,12,76,358,3,2,26,13,79,367,2,3,23
+401856854,2026,10,regular,2026-11-07T18:00:00Z,1,0,1,Kansas State,Oklahoma State,Big 12,Big 12,28,66,63.5,61.3,7,2,14,73,337,3,0,21,15,65,582,9,1,80
+401869945,2026,10,regular,2026-11-07T18:00:00Z,1,0,1,Coastal Carolina,Old Dominion,Sun Belt,Sun Belt,8,21,44.3,45,-6.5,2,15,70,268,0,2,6,14,69,252,1,0,7
+401869927,2026,10,regular,2026-11-07T19:30:00Z,1,0,1,App State,Georgia State,Sun Belt,Sun Belt,23,39,53.8,56.5,-6.5,2,12,62,336,3,1,23,11,74,340,3,4,32
+401856744,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,South Carolina,Texas A&M,SEC,SEC,17,9,52.5,51.3,-6.8,2,10,60,360,1,1,10,11,90,419,0,3,9
+401869936,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,Arkansas State,UL Monroe,Sun Belt,Sun Belt,17,19,52.8,52,-14.5,2,8,56,323,2,1,17,10,70,377,2,2,19
+401871073,2026,10,regular,2026-11-07T20:00:00Z,1,0,1,Kennesaw State,Delaware,Conference USA,Conference USA,42,40,57,53.8,1.3,2,13,79,381,4,3,36,14,88,624,4,2,32
+401856740,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,LSU,Alabama,SEC,SEC,13,31,53.5,53.5,-6,2,10,84,446,1,2,13,12,54,260,3,1,24
 401856851,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Houston,Cincinnati,Big 12,Big 12,31,24,61.3,62,-10.3,2,9,60,463,4,1,31,8,72,389,3,1,24
-401858290,2026,10,regular,2026-11-07T20:30:00Z,1,0,0,Wake Forest,Merrimack,ACC,FCS Independents,77,0,55.5,59.5,-46.5,1,13,61,748,9,0,63,15,73,202,0,0,0
-401858514,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Ohio State,Oregon,Big Ten,Big Ten,28,41,44.8,50.5,-7.8,2,13,71,392,4,0,28,14,77,408,5,2,41
+401858290,2026,10,regular,2026-11-07T20:30:00Z,1,0,0,Wake Forest,Merrimack,ACC,FCS Independents,77,0,55.5,59.5,-46.5,1,13,61,740,9,0,63,15,73,212,0,0,0
+401858514,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Ohio State,Oregon,Big Ten,Big Ten,28,41,44.8,50.5,-7.8,2,13,71,413,4,0,28,14,77,405,5,2,41
 401858516,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Washington,Penn State,Big Ten,Big Ten,25,28,45.3,44.5,-2.5,2,10,61,321,2,3,25,11,64,419,4,0,28
 401862819,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,UAB,Charlotte,American Athletic,American Athletic,23,12,47.5,49.5,-8,2,13,74,306,2,3,23,12,65,204,1,2,12
 401862820,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Navy,Temple,American Athletic,American Athletic,42,35,55,53,-7.8,2,14,79,454,6,0,42,12,48,218,4,0,28
-401869951,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Georgia Southern,Marshall,Sun Belt,Sun Belt,49,13,54.5,54.3,-7.8,2,13,63,444,5,0,56,14,69,412,2,0,13
-401871076,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Middle Tennessee,Western Kentucky,Conference USA,Conference USA,51,42,53.3,52.8,2,2,13,74,518,5,1,38,13,70,536,5,2,42
-401856850,2026,10,regular,2026-11-07T20:45:00Z,1,0,1,Kansas,UCF,Big 12,Big 12,32,33,48,48.5,-4.8,2,12,72,385,4,1,32,14,71,378,4,2,33
-401862821,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,North Texas,Rice,American Athletic,American Athletic,52,23,65,64.3,-15,2,11,65,484,7,1,52,12,67,451,3,1,23
-401864534,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,San José State,Northern Illinois,Mountain West,Mountain West,30,19,52.5,51.3,-11.5,2,13,64,338,2,3,23,12,74,404,3,0,19
-401871074,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,Florida International,Missouri State,Conference USA,Conference USA,23,20,50.3,49.8,-4.8,2,12,74,424,2,3,23,11,71,352,0,4,12
-401871098,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,Troy,Louisiana Tech,Sun Belt,Sun Belt,17,41,48.3,46.5,6.5,2,13,66,212,1,1,10,13,71,363,3,2,27
-401856742,2026,10,regular,2026-11-07T21:15:00Z,1,0,1,Mississippi State,Vanderbilt,SEC,SEC,23,25,48.5,48.5,-3,2,12,56,297,2,1,16,14,85,327,1,6,25
-401858517,2026,10,regular,2026-11-07T21:15:00Z,1,0,1,Wisconsin,Rutgers,Big Ten,Big Ten,31,10,45.5,46,-19.5,2,10,56,293,3,3,31,11,61,245,1,1,10
-401869968,2026,10,regular,2026-11-07T22:00:00Z,1,0,1,Louisiana,South Alabama,Sun Belt,Sun Belt,28,26,57.3,57.8,-7,2,10,59,414,3,0,21,11,59,325,2,2,19
-401860911,2026,10,regular,2026-11-07T23:00:00Z,1,0,1,Colorado State,Boise State,Pac-12,Pac-12,38,64,69.3,68.5,16.3,2,11,66,493,5,1,38,12,63,663,9,0,64
-401856745,2026,10,regular,2026-11-07T23:15:00Z,1,0,1,Tennessee,Kentucky,SEC,SEC,34,6,49.5,50.8,-6.3,2,11,54,369,3,2,27,11,73,310,0,2,6
-401871075,2026,10,regular,2026-11-08T00:00:00Z,1,0,1,Jacksonville State,Sam Houston,Conference USA,Conference USA,47,14,45.8,47.8,-17,2,11,64,501,5,1,38,14,51,236,2,0,14
-401856741,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Ole Miss,Georgia,SEC,SEC,7,42,56.5,56,3.5,2,10,70,242,1,0,7,11,64,495,6,0,42
-401856852,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Arizona State,Colorado,Big 12,Big 12,20,10,47,49.3,-3.3,2,11,66,291,2,2,20,11,68,296,1,1,10
-401858287,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Georgia Tech,Louisville,ACC,ACC,17,44,62.5,60,14.8,2,12,79,395,2,1,17,12,65,476,5,3,44
-401858291,2026,10,regular,2026-11-08T00:30:00Z,1,0,0,Notre Dame,Miami,FBS Independents,ACC,31,24,54.5,56,-7.3,2,12,71,409,4,1,31,12,71,434,3,1,24
-401858511,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Michigan,Michigan State,Big Ten,Big Ten,6,15,39.8,45,-14,2,11,53,235,1,0,6,11,81,276,0,5,15
-401858513,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Northwestern,Iowa,Big Ten,Big Ten,10,24,42.8,43.5,2.8,2,11,70,297,1,1,10,10,55,264,2,1,17
+401869951,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Georgia Southern,Marshall,Sun Belt,Sun Belt,49,13,54.5,54.3,-7.8,2,13,63,444,5,0,49,14,69,452,3,0,20
+401871076,2026,10,regular,2026-11-07T20:30:00Z,1,0,1,Middle Tennessee,Western Kentucky,Conference USA,Conference USA,51,42,53.3,52.8,2,2,14,75,528,5,1,38,13,71,537,5,2,42
+401856850,2026,10,regular,2026-11-07T20:45:00Z,1,0,1,Kansas,UCF,Big 12,Big 12,32,33,48,48.5,-4.8,2,12,72,389,4,1,39,14,71,397,4,2,33
+401862821,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,North Texas,Rice,American Athletic,American Athletic,52,23,65,64.3,-15,2,11,65,482,7,1,52,12,67,451,3,1,23
+401864534,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,San José State,Northern Illinois,Mountain West,Mountain West,30,19,52.5,51.3,-11.5,2,13,64,341,2,3,23,12,74,404,3,0,19
+401871074,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,Florida International,Missouri State,Conference USA,Conference USA,23,20,50.3,49.8,-4.8,2,12,75,474,2,3,23,11,71,342,0,4,15
+401871098,2026,10,regular,2026-11-07T21:00:00Z,1,0,1,Troy,Louisiana Tech,Sun Belt,Sun Belt,17,41,48.3,46.5,6.5,2,13,66,278,1,1,10,13,70,371,3,2,27
+401856742,2026,10,regular,2026-11-07T21:15:00Z,1,0,1,Mississippi State,Vanderbilt,SEC,SEC,23,25,48.5,48.5,-3,2,12,56,297,2,1,16,14,85,339,1,6,25
+401858517,2026,10,regular,2026-11-07T21:15:00Z,1,0,1,Wisconsin,Rutgers,Big Ten,Big Ten,31,10,45.5,46,-19.5,2,10,56,399,3,3,31,11,61,245,1,1,10
+401869968,2026,10,regular,2026-11-07T22:00:00Z,1,0,1,Louisiana,South Alabama,Sun Belt,Sun Belt,28,26,57.3,57.8,-7,2,10,59,424,3,0,21,11,60,429,2,2,19
+401860911,2026,10,regular,2026-11-07T23:00:00Z,1,0,1,Colorado State,Boise State,Pac-12,Pac-12,38,64,69.3,68.5,16.3,2,11,66,493,5,1,38,12,63,659,9,0,64
+401856745,2026,10,regular,2026-11-07T23:15:00Z,1,0,1,Tennessee,Kentucky,SEC,SEC,34,6,49.5,50.8,-6.3,2,11,54,369,3,2,27,11,73,336,0,2,6
+401871075,2026,10,regular,2026-11-08T00:00:00Z,1,0,1,Jacksonville State,Sam Houston,Conference USA,Conference USA,47,14,45.8,47.8,-17,2,11,64,501,5,1,38,14,51,237,2,0,14
+401856741,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Ole Miss,Georgia,SEC,SEC,7,42,56.5,56,3.5,2,10,70,259,1,0,7,11,64,506,6,0,42
+401856852,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Arizona State,Colorado,Big 12,Big 12,20,10,47,49.3,-3.3,2,11,66,299,2,2,20,11,66,299,1,1,10
+401858287,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Georgia Tech,Louisville,ACC,ACC,17,44,62.5,60,14.8,2,12,78,395,2,1,17,12,65,476,5,3,44
+401858291,2026,10,regular,2026-11-08T00:30:00Z,1,0,0,Notre Dame,Miami,FBS Independents,ACC,31,24,54.5,56,-7.3,2,12,71,412,4,1,31,12,72,408,3,1,24
+401858511,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Michigan,Michigan State,Big Ten,Big Ten,6,15,39.8,45,-14,2,11,53,222,1,0,6,11,80,283,0,5,15
+401858513,2026,10,regular,2026-11-08T00:30:00Z,1,0,1,Northwestern,Iowa,Big Ten,Big Ten,10,24,42.8,43.5,2.8,2,10,70,301,1,1,10,11,55,286,2,1,17
 401862823,2026,10,regular,2026-11-08T00:30:00Z,1,0,0,Army,Air Force,American Athletic,Mountain West,21,24,43.5,50,-3.5,2,9,55,220,3,0,21,9,61,349,3,1,24
-401856739,2026,10,regular,2026-11-08T00:45:00Z,1,0,1,Florida,Oklahoma,SEC,SEC,7,23,46,47,-4.8,2,10,48,188,1,0,7,10,76,321,2,3,23
+401856739,2026,10,regular,2026-11-08T00:45:00Z,1,0,1,Florida,Oklahoma,SEC,SEC,7,23,46,47,-4.8,2,10,47,188,1,0,7,10,76,321,2,3,23
 401870795,2026,10,regular,2026-11-08T01:00:00Z,1,0,1,New Mexico State,Liberty,Conference USA,Conference USA,14,30,46.3,47.3,15.3,2,10,51,280,2,0,14,10,75,364,3,3,30
-401856856,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,Texas Tech,West Virginia,Big 12,Big 12,53,48,67,63.3,-16.5,2,16,82,653,7,1,57,15,77,566,6,2,48
-401860913,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,Utah State,Fresno State,Pac-12,Pac-12,17,10,43.8,41.8,-0.3,2,11,56,301,2,1,17,10,67,279,1,1,10
-401864532,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,UTEP,Hawai'i,Mountain West,Mountain West,14,17,48.8,49,7.5,2,10,49,284,2,0,14,10,80,443,2,1,17
-401860912,2026,10,regular,2026-11-08T03:30:00Z,1,0,1,Oregon State,Texas State,Pac-12,Pac-12,21,42,72,68.8,-4.8,2,12,71,346,3,0,21,13,84,632,6,0,42
-401864535,2026,10,regular,2026-11-08T03:30:00Z,1,0,1,UNLV,Wyoming,Mountain West,Mountain West,35,41,49.5,46.8,-3.5,2,13,62,309,5,0,35,14,73,460,5,2,41
-401866458,2026,11,regular,2026-11-11T00:00:00Z,0,0,1,Akron,Western Michigan,Mid-American,Mid-American,,,47.5,47.5,13.5,1,,,,,,,,,,,,
-401866459,2026,11,regular,2026-11-11T00:00:00Z,0,0,1,Bowling Green,Kent State,Mid-American,Mid-American,,,44.5,44.5,-5.5,1,,,,,,,,,,,,
-401866460,2026,11,regular,2026-11-11T01:00:00Z,0,0,1,Miami (OH),Ohio,Mid-American,Mid-American,,,47.5,47.5,-1.5,1,,,,,,,,,,,,
-401866461,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Ball State,Buffalo,Mid-American,Mid-American,,,51.5,51.5,3,1,,,,,,,,,,,,
-401866462,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Central Michigan,Sacramento State,Mid-American,Mid-American,,,44.5,44.5,-15.5,1,,,,,,,,,,,,
-401866463,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Toledo,Massachusetts,Mid-American,Mid-American,,,53.5,53.5,-14,1,,,,,,,,,,,,
-401862824,2026,11,regular,2026-11-13T01:00:00Z,0,0,1,South Florida,Memphis,American Athletic,American Athletic,,,49.5,49.5,6.5,1,,,,,,,,,,,,
-401869969,2026,11,regular,2026-11-13T02:00:00Z,0,0,1,UL Monroe,Louisiana,Sun Belt,Sun Belt,,,48.5,48.5,11.5,1,,,,,,,,,,,,
-401858293,2026,11,regular,2026-11-14T00:00:00Z,0,0,1,Pittsburgh,Florida State,ACC,ACC,,,53.5,53.5,-3.5,1,,,,,,,,,,,,
-401858526,2026,11,regular,2026-11-14T02:00:00Z,0,0,1,UCLA,Illinois,Big Ten,Big Ten,,,47.5,47.5,-9.5,1,,,,,,,,,,,,
-401856860,2026,11,regular,2026-11-14T03:15:00Z,0,0,1,Colorado,Houston,Big 12,Big 12,,,48.5,47.5,10.5,1,,,,,,,,,,,,
-401856857,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,UCF,Arizona State,Big 12,Big 12,,,,,,,,,,,,,,,,,,
-401856858,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,BYU,Baylor,Big 12,Big 12,,,48.5,47.5,-6.5,1,,,,,,,,,,,,
-401856859,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Iowa State,Cincinnati,Big 12,Big 12,,,,,,,,,,,,,,,,,,
-401856861,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,West Virginia,Kansas,Big 12,Big 12,,,,,,,,,,,,,,,,,,
-401856862,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,TCU,Kansas State,Big 12,Big 12,,,,,,,,,,,,,,,,,,
-401856863,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Oklahoma State,Texas Tech,Big 12,Big 12,,,68.5,61.5,-2.5,1,,,,,,,,,,,,
-401856864,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Arizona,Utah,Big 12,Big 12,,,52.5,51.5,2.5,1,,,,,,,,,,,,
-401856883,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Georgia,Missouri,SEC,SEC,,,47.5,46.5,-13.5,1,,,,,,,,,,,,
-401856884,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Kentucky,Florida,SEC,SEC,,,53.5,55.5,-2.5,1,,,,,,,,,,,,
-401856885,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,LSU,Texas,SEC,SEC,,,45.5,54.5,-4.5,1,,,,,,,,,,,,
-401856887,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Oklahoma,Ole Miss,SEC,SEC,,,50.5,53.5,2.5,1,,,,,,,,,,,,
-401856888,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Texas A&M,Tennessee,SEC,SEC,,,43.5,55.5,3,1,,,,,,,,,,,,
-401858298,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,North Carolina,Louisville,ACC,ACC,,,59.5,59.5,2.5,1,,,,,,,,,,,,
-401858299,2026,11,regular,2026-11-14T05:00:00Z,0,0,1,Virginia Tech,Stanford,ACC,ACC,,,,,,,,,,,,,,,,,,
-401856886,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Mississippi State,Auburn,SEC,SEC,,,,,,,,,,,,,,,,,,
-401858296,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Miami,Duke,ACC,ACC,,,54.5,55.5,-15.5,1,,,,,,,,,,,,
-401858300,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,NC State,Syracuse,ACC,ACC,,,,,,,,,,,,,,,,,,
-401858301,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,SMU,Wake Forest,ACC,ACC,,,61.5,55.5,2.5,1,,,,,,,,,,,,
-401858520,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Maryland,Wisconsin,Big Ten,Big Ten,,,,,,,,,,,,,,,,,,
-401858522,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Ohio State,Northwestern,Big Ten,Big Ten,,,47.5,48.5,-10.5,1,,,,,,,,,,,,
-401861967,2026,11,regular,2026-11-14T17:00:00Z,0,0,0,UConn,James Madison,FBS Independents,Sun Belt,,,,,,,,,,,,,,,,,,
-401858297,2026,11,regular,2026-11-14T17:30:00Z,0,0,1,Clemson,Georgia Tech,ACC,ACC,,,,,,,,,,,,,,,,,,
-401858525,2026,11,regular,2026-11-14T17:30:00Z,0,0,1,Rutgers,Nebraska,Big Ten,Big Ten,,,,,,,,,,,,,,,,,,
-401856889,2026,11,regular,2026-11-14T17:45:00Z,0,0,1,Vanderbilt,Alabama,SEC,SEC,,,54.5,54.5,19.5,1,,,,,,,,,,,,
-401862825,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Charlotte,East Carolina,American Athletic,American Athletic,,,,,,,,,,,,,,,,,,
-401862829,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Temple,UAB,American Athletic,American Athletic,,,,,,,,,,,,,,,,,,
-401869937,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Coastal Carolina,Arkansas State,Sun Belt,Sun Belt,,,,,,,,,,,,,,,,,,
-401862828,2026,11,regular,2026-11-14T19:00:00Z,0,0,1,Rice,Tulane,American Athletic,American Athletic,,,,,,,,,,,,,,,,,,
-401870769,2026,11,regular,2026-11-14T19:00:00Z,0,0,1,Sam Houston,Kennesaw State,Conference USA,Conference USA,,,,,,,,,,,,,,,,,,
-401870796,2026,11,regular,2026-11-14T20:00:00Z,0,0,1,Missouri State,New Mexico State,Conference USA,Conference USA,,,,,,,,,,,,,,,,,,
-401871060,2026,11,regular,2026-11-14T20:00:00Z,0,0,1,Delaware,Florida International,Conference USA,Conference USA,,,,,,,,,,,,,,,,,,
-401858294,2026,11,regular,2026-11-14T20:30:00Z,0,0,0,Notre Dame,Boston College,FBS Independents,ACC,,,52.5,52.5,-31.5,1,,,,,,,,,,,,
-401858295,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Virginia,California,ACC,ACC,,,,,,,,,,,,,,,,,,
-401858518,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Indiana,USC,Big Ten,Big Ten,,,49.5,58.5,-7,1,,,,,,,,,,,,
-401858523,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Oregon,Michigan,Big Ten,Big Ten,,,41.5,53.5,-9.5,1,,,,,,,,,,,,
-401862826,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Tulsa,Florida Atlantic,American Athletic,American Athletic,,,,,,,,,,,,,,,,,,
-401864536,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Northern Illinois,Nevada,Mountain West,Mountain West,,,,,,,,,,,,,,,,,,
-401869952,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Georgia State,Georgia Southern,Sun Belt,Sun Belt,,,,,,,,,,,,,,,,,,
-401870752,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Western Kentucky,Jacksonville State,Conference USA,Conference USA,,,,,,,,,,,,,,,,,,
-401871061,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Liberty,Middle Tennessee,Conference USA,Conference USA,,,,,,,,,,,,,,,,,,
-401860916,2026,11,regular,2026-11-14T21:00:00Z,0,0,1,Texas State,Fresno State,Pac-12,Pac-12,,,,,,,,,,,,,,,,,,
-401858521,2026,11,regular,2026-11-14T21:15:00Z,0,0,1,Michigan State,Washington,Big Ten,Big Ten,,,,,,,,,,,,,,,,,,
-401871099,2026,11,regular,2026-11-14T22:00:00Z,0,0,1,Louisiana Tech,Southern Miss,Sun Belt,Sun Belt,,,,,,,,,,,,,,,,,,
-401860914,2026,11,regular,2026-11-14T23:00:00Z,0,0,1,Boise State,Oregon State,Pac-12,Pac-12,,,62.5,62.5,-4.5,1,,,,,,,,,,,,
-401869928,2026,11,regular,2026-11-14T23:00:00Z,0,0,1,Marshall,App State,Sun Belt,Sun Belt,,,,,,,,,,,,,,,,,,
-401858524,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,Penn State,Minnesota,Big Ten,Big Ten,,,43.5,43.5,-7,1,,,,,,,,,,,,
-401864538,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,Air Force,San José State,Mountain West,Mountain West,,,,,,,,,,,,,,,,,,
-401871100,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,South Alabama,Troy,Sun Belt,Sun Belt,,,,,,,,,,,,,,,,,,
-401858519,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,Iowa,Purdue,Big Ten,Big Ten,,,,,,,,,,,,,,,,,,
-401864539,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,New Mexico,UNLV,Mountain West,Mountain West,,,,,,,,,,,,,,,,,,
-401856882,2026,11,regular,2026-11-15T00:45:00Z,0,0,1,Arkansas,South Carolina,SEC,SEC,,,51.5,51.5,8.5,1,,,,,,,,,,,,
-401862827,2026,11,regular,2026-11-15T02:00:00Z,0,0,1,UTSA,North Texas,American Athletic,American Athletic,,,,,,,,,,,,,,,,,,
-401860915,2026,11,regular,2026-11-15T02:30:00Z,0,0,1,San Diego State,Utah State,Pac-12,Pac-12,,,,,,,,,,,,,,,,,,
-401864540,2026,11,regular,2026-11-15T03:00:00Z,0,0,1,UTEP,Wyoming,Mountain West,Mountain West,,,,,,,,,,,,,,,,,,
-401860917,2026,11,regular,2026-11-15T03:30:00Z,0,0,1,Washington State,Colorado State,Pac-12,Pac-12,,,,,,,,,,,,,,,,,,
-401864537,2026,11,regular,2026-11-15T04:00:00Z,0,0,1,Hawai'i,North Dakota State,Mountain West,Mountain West,,,,,,,,,,,,,,,,,,
+401856856,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,Texas Tech,West Virginia,Big 12,Big 12,53,48,67,63.3,-16.5,2,16,82,653,7,1,51,15,77,561,6,2,48
+401860913,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,Utah State,Fresno State,Pac-12,Pac-12,17,10,43.8,41.8,-0.3,2,11,56,301,2,1,17,10,67,287,1,1,10
+401864532,2026,10,regular,2026-11-08T02:30:00Z,1,0,1,UTEP,Hawai'i,Mountain West,Mountain West,14,17,48.8,49,7.5,2,10,49,318,2,0,14,10,80,454,2,1,17
+401860912,2026,10,regular,2026-11-08T03:30:00Z,1,0,1,Oregon State,Texas State,Pac-12,Pac-12,21,42,72,68.8,-4.8,2,12,70,347,3,0,21,13,83,590,6,0,42
+401864535,2026,10,regular,2026-11-08T03:30:00Z,1,0,1,UNLV,Wyoming,Mountain West,Mountain West,35,41,49.5,46.8,-3.5,2,13,62,309,5,0,35,14,73,470,5,2,41
+401866458,2026,11,regular,2026-11-11T00:00:00Z,0,0,1,Akron,Western Michigan,Mid-American,Mid-American,,,47.8,47.8,14.3,2,,,,,,,,,,,,
+401866459,2026,11,regular,2026-11-11T00:00:00Z,0,0,1,Bowling Green,Kent State,Mid-American,Mid-American,,,45.3,44.8,-6,2,,,,,,,,,,,,
+401866460,2026,11,regular,2026-11-11T01:00:00Z,0,0,1,Miami (OH),Ohio,Mid-American,Mid-American,,,48.5,48,1.3,2,,,,,,,,,,,,
+401866461,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Ball State,Buffalo,Mid-American,Mid-American,,,51.3,51.3,2.5,2,,,,,,,,,,,,
+401866462,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Central Michigan,Sacramento State,Mid-American,Mid-American,,,43.8,44.3,-17.8,2,,,,,,,,,,,,
+401866463,2026,11,regular,2026-11-12T00:30:00Z,0,0,1,Toledo,Massachusetts,Mid-American,Mid-American,,,52.5,53,-14.5,2,,,,,,,,,,,,
+401862824,2026,11,regular,2026-11-13T01:00:00Z,0,0,1,South Florida,Memphis,American Athletic,American Athletic,,,48.5,49,5,2,,,,,,,,,,,,
+401869969,2026,11,regular,2026-11-13T02:00:00Z,0,0,1,UL Monroe,Louisiana,Sun Belt,Sun Belt,,,48.8,48.8,11,2,,,,,,,,,,,,
+401858293,2026,11,regular,2026-11-14T00:00:00Z,0,0,1,Pittsburgh,Florida State,ACC,ACC,,,53.8,53.8,-3.5,2,,,,,,,,,,,,
+401858526,2026,11,regular,2026-11-14T02:00:00Z,0,0,1,UCLA,Illinois,Big Ten,Big Ten,,,46.3,46.8,-10,2,,,,,,,,,,,,
+401856860,2026,11,regular,2026-11-14T03:15:00Z,0,0,1,Colorado,Houston,Big 12,Big 12,,,50.8,49.3,10,2,,,,,,,,,,,,
+401856859,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Iowa State,Cincinnati,Big 12,Big 12,,,60.8,60.8,-2.8,2,,,,,,,,,,,,
+401856886,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Mississippi State,Auburn,SEC,SEC,,,50.3,50.8,3,2,,,,,,,,,,,,
+401858296,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Miami,Duke,ACC,ACC,,,54.3,54.8,-13.5,2,,,,,,,,,,,,
+401858300,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,NC State,Syracuse,ACC,ACC,,,54.3,55.3,3,2,,,,,,,,,,,,
+401858301,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,SMU,Wake Forest,ACC,ACC,,,61,58,1.5,2,,,,,,,,,,,,
+401858520,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Maryland,Wisconsin,Big Ten,Big Ten,,,43.3,43.3,8.8,2,,,,,,,,,,,,
+401858522,2026,11,regular,2026-11-14T17:00:00Z,0,0,1,Ohio State,Northwestern,Big Ten,Big Ten,,,47.5,48,-11.5,2,,,,,,,,,,,,
+401861967,2026,11,regular,2026-11-14T17:00:00Z,0,0,0,UConn,James Madison,FBS Independents,Sun Belt,,,57.5,57,3.5,2,,,,,,,,,,,,
+401858297,2026,11,regular,2026-11-14T17:30:00Z,0,0,1,Clemson,Georgia Tech,ACC,ACC,,,47.8,48.8,-13.5,2,,,,,,,,,,,,
+401858525,2026,11,regular,2026-11-14T17:30:00Z,0,0,1,Rutgers,Nebraska,Big Ten,Big Ten,,,52.8,53.8,13.5,2,,,,,,,,,,,,
+401856889,2026,11,regular,2026-11-14T17:45:00Z,0,0,1,Vanderbilt,Alabama,SEC,SEC,,,52.5,53.5,17.3,2,,,,,,,,,,,,
+401862825,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Charlotte,East Carolina,American Athletic,American Athletic,,,44.8,46.3,11.8,2,,,,,,,,,,,,
+401862829,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Temple,UAB,American Athletic,American Athletic,,,48.8,50.3,-2.5,2,,,,,,,,,,,,
+401869937,2026,11,regular,2026-11-14T18:00:00Z,0,0,1,Coastal Carolina,Arkansas State,Sun Belt,Sun Belt,,,50.8,50.8,-1.5,2,,,,,,,,,,,,
+401856862,2026,11,regular,2026-11-14T19:00:00Z,0,0,1,TCU,Kansas State,Big 12,Big 12,,,46.3,45.8,-9.3,2,,,,,,,,,,,,
+401862828,2026,11,regular,2026-11-14T19:00:00Z,0,0,1,Rice,Tulane,American Athletic,American Athletic,,,48.5,47.5,-3,2,,,,,,,,,,,,
+401870769,2026,11,regular,2026-11-14T19:00:00Z,0,0,1,Sam Houston,Kennesaw State,Conference USA,Conference USA,,,47.3,45.8,8.3,2,,,,,,,,,,,,
+401856888,2026,11,regular,2026-11-14T20:00:00Z,0,0,1,Texas A&M,Tennessee,SEC,SEC,,,42.5,49,2.5,2,,,,,,,,,,,,
+401870796,2026,11,regular,2026-11-14T20:00:00Z,0,0,1,Missouri State,New Mexico State,Conference USA,Conference USA,,,49.3,49.8,-2,2,,,,,,,,,,,,
+401871060,2026,11,regular,2026-11-14T20:00:00Z,0,0,1,Delaware,Florida International,Conference USA,Conference USA,,,54.5,52.5,-5.3,2,,,,,,,,,,,,
+401856857,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,UCF,Arizona State,Big 12,Big 12,,,48.8,50.8,-3,2,,,,,,,,,,,,
+401856858,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,BYU,Baylor,Big 12,Big 12,,,49.3,48.3,-7.5,2,,,,,,,,,,,,
+401856883,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Georgia,Missouri,SEC,SEC,,,47.3,46.8,-14.5,2,,,,,,,,,,,,
+401858294,2026,11,regular,2026-11-14T20:30:00Z,0,0,0,Notre Dame,Boston College,FBS Independents,ACC,,,52.5,52.5,-29.8,2,,,,,,,,,,,,
+401858295,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Virginia,California,ACC,ACC,,,47.5,47.5,-12,2,,,,,,,,,,,,
+401858518,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Indiana,USC,Big Ten,Big Ten,,,49.5,54,-7.5,2,,,,,,,,,,,,
+401858523,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Oregon,Michigan,Big Ten,Big Ten,,,39.8,46.8,-10.5,2,,,,,,,,,,,,
+401862826,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Tulsa,Florida Atlantic,American Athletic,American Athletic,,,74.5,70.5,-5.5,2,,,,,,,,,,,,
+401864536,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Northern Illinois,Nevada,Mountain West,Mountain West,,,46.5,46.5,7,2,,,,,,,,,,,,
+401869952,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Georgia State,Georgia Southern,Sun Belt,Sun Belt,,,56.5,56,5.3,2,,,,,,,,,,,,
+401870752,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Western Kentucky,Jacksonville State,Conference USA,Conference USA,,,53.5,53,7.3,2,,,,,,,,,,,,
+401871061,2026,11,regular,2026-11-14T20:30:00Z,0,0,1,Liberty,Middle Tennessee,Conference USA,Conference USA,,,53.5,54,-21.8,2,,,,,,,,,,,,
+401860916,2026,11,regular,2026-11-14T21:00:00Z,0,0,1,Texas State,Fresno State,Pac-12,Pac-12,,,60.5,59.5,-9.5,2,,,,,,,,,,,,
+401856887,2026,11,regular,2026-11-14T21:15:00Z,0,0,1,Oklahoma,Ole Miss,SEC,SEC,,,49.5,51.5,1.8,2,,,,,,,,,,,,
+401858521,2026,11,regular,2026-11-14T21:15:00Z,0,0,1,Michigan State,Washington,Big Ten,Big Ten,,,43.3,44.3,4.3,2,,,,,,,,,,,,
+401871099,2026,11,regular,2026-11-14T22:00:00Z,0,0,1,Louisiana Tech,Southern Miss,Sun Belt,Sun Belt,,,55.3,54.8,-17.5,2,,,,,,,,,,,,
+401856861,2026,11,regular,2026-11-14T22:30:00Z,0,0,1,West Virginia,Kansas,Big 12,Big 12,,,66.5,65.5,-3,2,,,,,,,,,,,,
+401860914,2026,11,regular,2026-11-14T23:00:00Z,0,0,1,Boise State,Oregon State,Pac-12,Pac-12,,,66.5,64.5,-10.8,2,,,,,,,,,,,,
+401869928,2026,11,regular,2026-11-14T23:00:00Z,0,0,1,Marshall,App State,Sun Belt,Sun Belt,,,53.3,53.3,1.5,2,,,,,,,,,,,,
+401856884,2026,11,regular,2026-11-14T23:15:00Z,0,0,1,Kentucky,Florida,SEC,SEC,,,51.8,53.8,-3,2,,,,,,,,,,,,
+401858298,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,North Carolina,Louisville,ACC,ACC,,,60.5,60,3,2,,,,,,,,,,,,
+401858524,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,Penn State,Minnesota,Big Ten,Big Ten,,,43.5,43.5,-9.5,2,,,,,,,,,,,,
+401864538,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,Air Force,San José State,Mountain West,Mountain West,,,47.5,48.5,-11.3,2,,,,,,,,,,,,
+401871100,2026,11,regular,2026-11-15T00:00:00Z,0,0,1,South Alabama,Troy,Sun Belt,Sun Belt,,,55.8,56.3,-2.5,2,,,,,,,,,,,,
+401856864,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,Arizona,Utah,Big 12,Big 12,,,53.8,52.8,2.5,2,,,,,,,,,,,,
+401856885,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,LSU,Texas,SEC,SEC,,,45.8,50.3,-3.5,2,,,,,,,,,,,,
+401858299,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,Virginia Tech,Stanford,ACC,ACC,,,59.3,59.3,-15.3,2,,,,,,,,,,,,
+401858519,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,Iowa,Purdue,Big Ten,Big Ten,,,47.8,46.8,-17.5,2,,,,,,,,,,,,
+401864539,2026,11,regular,2026-11-15T00:30:00Z,0,0,1,New Mexico,UNLV,Mountain West,Mountain West,,,46.5,47,-14.5,2,,,,,,,,,,,,
+401856882,2026,11,regular,2026-11-15T00:45:00Z,0,0,1,Arkansas,South Carolina,SEC,SEC,,,51.5,51.5,7.8,2,,,,,,,,,,,,
+401862827,2026,11,regular,2026-11-15T02:00:00Z,0,0,1,UTSA,North Texas,American Athletic,American Athletic,,,77.5,76.5,1.3,2,,,,,,,,,,,,
+401856863,2026,11,regular,2026-11-15T02:30:00Z,0,0,1,Oklahoma State,Texas Tech,Big 12,Big 12,,,72.8,67.3,-3.5,2,,,,,,,,,,,,
+401860915,2026,11,regular,2026-11-15T02:30:00Z,0,0,1,San Diego State,Utah State,Pac-12,Pac-12,,,41.3,42.8,1.5,2,,,,,,,,,,,,
+401864540,2026,11,regular,2026-11-15T03:00:00Z,0,0,1,UTEP,Wyoming,Mountain West,Mountain West,,,40.5,42,9.3,2,,,,,,,,,,,,
+401860917,2026,11,regular,2026-11-15T03:30:00Z,0,0,1,Washington State,Colorado State,Pac-12,Pac-12,,,67.3,64.8,-9.8,2,,,,,,,,,,,,
+401864537,2026,11,regular,2026-11-15T04:00:00Z,0,0,1,Hawai'i,North Dakota State,Mountain West,Mountain West,,,38.5,40,6.5,2,,,,,,,,,,,,
 401866464,2026,12,regular,2026-11-18T00:00:00Z,0,0,1,Ohio,Ball State,Mid-American,Mid-American,,,,,,,,,,,,,,,,,,
 401866465,2026,12,regular,2026-11-18T00:00:00Z,0,0,1,Western Michigan,Eastern Michigan,Mid-American,Mid-American,,,,,,,,,,,,,,,,,,
 401866466,2026,12,regular,2026-11-18T00:00:00Z,0,0,1,Kent State,Miami (OH),Mid-American,Mid-American,,,,,,,,,,,,,,,,,,
