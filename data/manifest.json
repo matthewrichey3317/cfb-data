@@ -430,8 +430,8 @@
       "type": "games",
       "season": 2026,
       "rowCount": 888,
-      "bytes": 217968,
-      "pulledAt": "2026-11-09T12:58:19.319Z",
+      "bytes": 217808,
+      "pulledAt": "2026-11-10T12:53:48.935Z",
       "warnings": []
     },
     {
@@ -439,8 +439,8 @@
       "type": "lines",
       "season": 2026,
       "rowCount": 1510,
-      "bytes": 834279,
-      "pulledAt": "2026-11-09T12:58:21.905Z",
+      "bytes": 834222,
+      "pulledAt": "2026-11-10T12:53:52.694Z",
       "warnings": []
     },
     {
@@ -448,10 +448,10 @@
       "type": "weather",
       "season": 2026,
       "rowCount": 888,
-      "bytes": 134431,
-      "pulledAt": "2026-11-09T13:01:48.205Z",
+      "bytes": 135339,
+      "pulledAt": "2026-11-10T12:57:17.000Z",
       "warnings": [
-        "106 games have missing weather (see missing_reason)."
+        "79 games have missing weather (see missing_reason)."
       ]
     }
   ]
