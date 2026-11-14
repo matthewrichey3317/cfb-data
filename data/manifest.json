@@ -420,9 +420,9 @@
       "file": "drives_2026.csv",
       "type": "drives",
       "season": 2026,
-      "rowCount": 16247,
-      "bytes": 3895899,
-      "pulledAt": "2026-11-13T12:55:15.496Z",
+      "rowCount": 16343,
+      "bytes": 3918193,
+      "pulledAt": "2026-11-14T20:16:15.167Z",
       "warnings": []
     },
     {
@@ -430,8 +430,8 @@
       "type": "games",
       "season": 2026,
       "rowCount": 888,
-      "bytes": 218409,
-      "pulledAt": "2026-11-13T12:54:59.113Z",
+      "bytes": 218732,
+      "pulledAt": "2026-11-14T20:15:33.716Z",
       "warnings": []
     },
     {
@@ -439,8 +439,8 @@
       "type": "lines",
       "season": 2026,
       "rowCount": 1517,
-      "bytes": 836660,
-      "pulledAt": "2026-11-13T12:55:07.400Z",
+      "bytes": 836753,
+      "pulledAt": "2026-11-14T20:15:47.337Z",
       "warnings": []
     },
     {
